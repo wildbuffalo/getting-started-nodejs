@@ -4,7 +4,7 @@ pipeline {
     agent {
 
       docker {
-          image 'node:10-alpine'
+          image 'merrillcorporation/docker-cicd-node'
           args '-p 3000:3000'
        }   
       }
