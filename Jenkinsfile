@@ -1,12 +1,26 @@
 pipeline {
      // git branch: 'develop', credentialsId: 'GitHub', url: 'https://github.com/wildbuffalo/dealworks-graphql-service.git'
-
+    parameters {
+        booleanParam(defaultValue: true, description: '', name: 'booleanExample')
+        string(defaultValue: "TEST", description: 'What environment?', name: 'stringExample')
+        text(defaultValue: "This is a multiline\n text", description: "Multiline Text", name: "textExample")
+        choice(choices: 'US-EAST-1\nUS-WEST-2', description: 'What AWS region?', name: 'choiceExample')
+        password(defaultValue: "Password", description: "Password Parameter", name: "passwordExample")
+        
+        string(defaultValue: "3.0.3.778", description: '', name: 'SONAR_SCANNER_VERSION')
+    }
     agent {
 
-      docker {
-          image 'merrillcorporation/docker-cicd-node'
-          args '-p 3000:3000'
-       }   
+         docker.withRegistry('https://registry.example.com') {
+
+             docker.image('node:10-alpine').inside {
+                 sh "apt-get update && apt-get install -y --no-install-recommends \
+                   unzip && \
+                   wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${params.SONAR_SCANNER_VERSION}-linux.zip && \
+                   unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux -d /usr/local/share/ && \
+                   chown -R node: /usr/local/share/sonar-scanner-${params.SONAR_SCANNER_VERSION}-linux"
+             }
+         }
       }
     stages {
         stage('echo path') {
