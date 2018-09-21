@@ -9,7 +9,7 @@ pipeline {
         
         string(defaultValue: "3.0.3.778", description: '', name: 'SONAR_SCANNER_VERSION')
     }
-    agent {
+   // agent {
 
          docker.withRegistry('https://registry.example.com') {
 
@@ -17,11 +17,11 @@ pipeline {
                  sh "apt-get update && apt-get install -y --no-install-recommends \
                    unzip && \
                    wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${params.SONAR_SCANNER_VERSION}-linux.zip && \
-                   unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux -d /usr/local/share/ && \
+                   unzip sonar-scanner-cli-${params.SONAR_SCANNER_VERSION}-linux -d /usr/local/share/ && \
                    chown -R node: /usr/local/share/sonar-scanner-${params.SONAR_SCANNER_VERSION}-linux"
              }
          }
-      }
+   //   }
     stages {
         stage('echo path') {
             steps('echo') {
