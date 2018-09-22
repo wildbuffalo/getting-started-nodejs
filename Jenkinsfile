@@ -32,6 +32,14 @@ pipeline {
                 sh 'npm run test'
                 }
             }
+
+      
+           }
+
+   }
+pipeline {
+    agent none
+    stages {
         stage('Static Analysis'){
              agent { docker 'newtmitch/sonar-scanner:3.2.0-alpine' }
             steps('Sonar'){
@@ -42,7 +50,5 @@ pipeline {
                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
             }
         }
-      
-           }
-
-   }
+    }
+}
