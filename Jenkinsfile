@@ -9,34 +9,30 @@ pipeline {
         
         string(defaultValue: "3.0.3.778", description: '', name: 'SONAR_SCANNER_VERSION')
     }
-
+     agent none
     stages {
-      agent {
-                docker { image 'node:10-alpine' }
-            }
+
         stage('echo path') {
             steps('echo') {
                 sh 'pwd'
                 sh 'printenv'
                 }
             }
-        stage('Example Build') {
-
+        stage('Build/Test') {
+          agent { docker { image 'node:10-alpine' }}
             steps('install'){
                 sh 'npm install'
             
                 }
             }
-        stage('Test') {
-            steps('install'){
+      
+            steps('Test'){
                 sh 'npm run test'
-                }
             }
 
       
            }
      
-    stages {
         stage('Static Analysis'){
              agent { docker 'newtmitch/sonar-scanner:3.2.0-alpine' }
             steps('Sonar'){
@@ -47,7 +43,7 @@ pipeline {
                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
             }
         }
-    }
+    
    }
 
 
