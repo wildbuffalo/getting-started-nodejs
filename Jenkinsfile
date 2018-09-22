@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         stage('Static Analysis'){
-             agent { docker 'mavenewtmitch/sonar-scanner:3.2.0-alpine' }
+             agent { docker 'newtmitch/sonar-scanner:3.2.0-alpine' }
             steps('Sonar'){
               sh "sonar-scanner \
                 -Dsonar.projectKey=graphql \
