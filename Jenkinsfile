@@ -24,7 +24,7 @@ pipeline {
                 sh 'npm install'
             
                 }
-            }
+            
       
             steps('Test'){
                 sh 'npm run test'
@@ -46,5 +46,5 @@ pipeline {
     
    }
 
-
+}
 
