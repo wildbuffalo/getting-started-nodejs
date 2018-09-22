@@ -9,20 +9,11 @@ pipeline {
         
         string(defaultValue: "3.0.3.778", description: '', name: 'SONAR_SCANNER_VERSION')
     }
-   // agent {
-
-         docker.withRegistry('https://registry.example.com') {
-
-             docker.image('node:10-alpine').inside {
-                 sh "apt-get update && apt-get install -y --no-install-recommends \
-                   unzip && \
-                   wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${params.SONAR_SCANNER_VERSION}-linux.zip && \
-                   unzip sonar-scanner-cli-${params.SONAR_SCANNER_VERSION}-linux -d /usr/local/share/ && \
-                   chown -R node: /usr/local/share/sonar-scanner-${params.SONAR_SCANNER_VERSION}-linux"
-             }
-         }
-   //   }
+      agent {
+                docker { image 'node:10-alpine' }
+            }
     stages {
+
         stage('echo path') {
             steps('echo') {
                 sh 'pwd'
@@ -30,6 +21,7 @@ pipeline {
                 }
             }
         stage('Example Build') {
+
             steps('install'){
                 sh 'npm install'
             
@@ -41,6 +33,7 @@ pipeline {
                 }
             }
         stage('Static Analysis'){
+             agent { docker 'mavenewtmitch/sonar-scanner:3.2.0-alpine' }
             steps('Sonar'){
               sh "sonar-scanner \
                 -Dsonar.projectKey=graphql \
