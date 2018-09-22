@@ -18,7 +18,7 @@ pipeline {
                 sh 'printenv'
                 }
             }
-        stage('Build/Test') {
+        stage('Build_Test') {
           agent { docker { image 'node:10-alpine' }}
             steps('install'){
                 sh 'npm install'
