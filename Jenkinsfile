@@ -9,11 +9,11 @@ pipeline {
         
         string(defaultValue: "3.0.3.778", description: '', name: 'SONAR_SCANNER_VERSION')
     }
+
+    stages {
       agent {
                 docker { image 'node:10-alpine' }
             }
-    stages {
-
         stage('echo path') {
             steps('echo') {
                 sh 'pwd'
@@ -35,10 +35,7 @@ pipeline {
 
       
            }
-
-   }
-pipeline {
-    agent none
+     
     stages {
         stage('Static Analysis'){
              agent { docker 'newtmitch/sonar-scanner:3.2.0-alpine' }
@@ -51,4 +48,7 @@ pipeline {
             }
         }
     }
-}
+   }
+
+
+
