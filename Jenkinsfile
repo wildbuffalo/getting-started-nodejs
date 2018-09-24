@@ -89,7 +89,7 @@ pipeline {
                         docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside('-v $PWD:/src/') {
                             sh "sonar-scanner \
                                 -Dsonar.projectKey=tryout \
-                                -Dsonar.sources=/src/ \
+                                -Dsonar.sources=/src \
                                 -Dsonar.host.url=http://10.68.17.183:9000 \
                                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
                         }
