@@ -71,7 +71,7 @@ pipeline {
             post {
                 success {
                     echo 'success'
-                    sh 'printenv'
+               
                     //                 junit '**/surefire-reports/**/*.xml'
                     //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
                 }
