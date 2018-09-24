@@ -9,7 +9,7 @@ pipeline {
     post{
         always {
             echo 'One way or another, I have finished'
-            cleanWS() /* clean up our workspace */
+            deleteDir() /* clean up our workspace */
         }
     }//Post: notifications; hipchat, slack, send email etc.
     stages {
