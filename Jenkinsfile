@@ -7,8 +7,9 @@ pipeline {
 //        skipDefaultCheckout()
 //    }
     post{
-        cleanup{
-            cleanWs()
+        always {
+            echo 'One way or another, I have finished'
+            cleanWS() /* clean up our workspace */
         }
     }//Post: notifications; hipchat, slack, send email etc.
     stages {
