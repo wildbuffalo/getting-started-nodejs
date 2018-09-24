@@ -94,7 +94,7 @@ pipeline {
                                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
                             sh "printenv"
                             sh "ls"
-                            sh "$PWD"
+                            sh "$(PWD)"
                         }
                         }
                     }
