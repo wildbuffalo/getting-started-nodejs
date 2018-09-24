@@ -70,12 +70,13 @@ pipeline {
 //            }
             post {
                 success {
-                    sh 'echo success'
+                    echo 'success'
+                    sh 'printenv'
                     //                 junit '**/surefire-reports/**/*.xml'
                     //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
                 }
                 unstable {
-                    sh 'echo unstable'
+                    echo 'unstable'
                     //                 junit '**/surefire-reports/**/*.xml'
                     //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
                 }
