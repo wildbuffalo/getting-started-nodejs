@@ -15,23 +15,30 @@ pipeline {
 //            }
 //        }
         stage('Build') {
-            agent {
-                docker {
-                    image 'node:10-alpine'
+            node {
+                                    docker.image('maven:10-alpine').inside() {
 
-                }
-            }
-            steps {
-//                unstash 'ws'
-                sh 'npm install'
-//                stash name: 'war', includes: 'module/**/*'
-            }
-//            post {
-//                success {
-//                    sh 'printenv'
-//                    archive '**/*.zip'
+                                        sh 'npm install'
+                                    }
+                                }
+//            agent {
+//                docker {
+//                    image 'node:10-alpine'
+//                    args '-v $PWD:/src'
+//
 //                }
 //            }
+//            steps {
+////                unstash 'ws'
+//                sh 'npm install'
+////                stash name: 'war', includes: 'module/**/*'
+//            }
+////            post {
+////                success {
+////                    sh 'printenv'
+////                    archive '**/*.zip'
+////                }
+////            }
         }
         stage('Test Backend') {
             agent {
