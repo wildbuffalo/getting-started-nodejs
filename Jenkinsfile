@@ -18,7 +18,7 @@ pipeline {
             steps{
                 script {
                     node {
-                        docker.image('node:10-alpine').inside('-v $(PWD):/src/') {
+                        docker.image('node:10-alpine').inside('-v ${PWD}:/src/') {
                             sh 'printenv'
                             sh 'npm install'
                         }
@@ -49,7 +49,7 @@ pipeline {
             steps{
                 script {
                     node {
-                        docker.image('node:10-alpine').inside('-v $(PWD):/src/') {
+                        docker.image('node:10-alpine').inside('-v ${PWD}:/src/') {
 
                             sh 'npm test'
                         }
