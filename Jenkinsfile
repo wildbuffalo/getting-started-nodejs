@@ -24,14 +24,14 @@ pipeline {
             steps {
                 unstash 'ws'
                 sh 'npm install'
-                stash name: 'war', includes: 'target/**/*'
+                stash name: 'war', includes: 'module/**/*'
             }
-            post {
-                success {
-                    sh 'printenv'
-                    archive 'target/**/*.zip'
-                }
-            }
+//            post {
+//                success {
+//                    sh 'printenv'
+//                    archive '**/*.zip'
+//                }
+//            }
         }
         stage('Test Backend') {
             agent {
@@ -43,7 +43,7 @@ pipeline {
             steps {
                 unstash 'ws'
                 unstash 'war'
-                sh './mvnw -B test findbugs:findbugs'
+                sh 'npm test'
             }
             post {
                 success {
