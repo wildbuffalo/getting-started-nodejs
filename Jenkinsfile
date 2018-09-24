@@ -3,15 +3,16 @@ pipeline {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
     }
     agent none
+    deleteDir()
 //    options {
 //        skipDefaultCheckout()
 //    }
-    post{
-        always {
-            echo 'One way or another, I have finished'
-            deleteDir() /* clean up our workspace */
-        }
-    }//Post: notifications; hipchat, slack, send email etc.
+//    post{
+ //       always {
+ //           echo 'One way or another, I have finished'
+ //           deleteDir() /* clean up our workspace */
+ //       }
+   // }//Post: notifications; hipchat, slack, send email etc.
     stages {
 //        stage('Checkout') {
 //            agent any
