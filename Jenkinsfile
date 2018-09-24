@@ -6,7 +6,7 @@ pipeline {
 //    options {
 //        skipDefaultCheckout()
 //    }
-    Post{
+    post{
         cleanup{
             cleanWs()
         }
