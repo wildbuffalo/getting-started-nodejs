@@ -15,7 +15,7 @@ pipeline {
 //            }
 //        }
         stage('Build') {
-            node {
+            node none {
                                     docker.image('maven:10-alpine').inside() {
 
                                         sh 'npm install'
