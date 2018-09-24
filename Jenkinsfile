@@ -19,7 +19,7 @@ pipeline {
                 script {
                     node {
                         docker.image('node:10-alpine').inside('-v $PWD:/src/') {
-
+                            sh 'printenv'
                             sh 'npm install'
                         }
                     }
@@ -45,7 +45,7 @@ pipeline {
 ////                }
 ////            }
         }
-        stage('Test Backend') {
+        stage('Test') {
             steps{
                 script {
                     node {
@@ -53,7 +53,6 @@ pipeline {
 
                             sh 'npm test'
                         }
-
                     }
                 }
             }
@@ -69,18 +68,34 @@ pipeline {
 ////                unstash 'war'
 //                sh 'npm test'
 //            }
-                        post {
-                            success {
-                                echo 'success'
-                                //                 junit '**/surefire-reports/**/*.xml'
-                                //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
-                            }
-                            unstable {
-                                echo 'unstable'
-                                //                 junit '**/surefire-reports/**/*.xml'
-                                //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
-                            }
+            post {
+                success {
+                    sh 'echo success'
+                    sh 'printenv'
+                    //                 junit '**/surefire-reports/**/*.xml'
+                    //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
+                }
+                unstable {
+                    sh 'echo unstable'
+                    //                 junit '**/surefire-reports/**/*.xml'
+                    //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
+                }
+            }
+        }
+        stage('Static Analysis') {
+            steps {
+                script {
+                    node {
+                        docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside('-v $PWD:/src/') {
+                            sh "sonar-scanner \
+                                -Dsonar.projectKey=tryout \
+                                -Dsonar.sources=/src/ \
+                                -Dsonar.host.url=http://10.68.17.183:9000 \
+                                -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
                         }
+                    }
+                }
+            }
         }
 //        stage('Test More') {
 //            agent none
