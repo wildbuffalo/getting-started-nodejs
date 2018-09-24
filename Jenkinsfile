@@ -53,6 +53,18 @@ pipeline {
 
                             sh 'npm test'
                         }
+                        post {
+                            success {
+                                sh 'echo success'
+                                //                 junit '**/surefire-reports/**/*.xml'
+                                //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
+                            }
+                            unstable {
+                                sh 'echo unstable'
+                                //                 junit '**/surefire-reports/**/*.xml'
+                                //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
+                            }
+                        }
                     }
                 }
             }
@@ -68,18 +80,7 @@ pipeline {
 ////                unstash 'war'
 //                sh 'npm test'
 //            }
-            post {
-                success {
-                    sh 'echo success'
-                    //                 junit '**/surefire-reports/**/*.xml'
-                    //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
-                }
-                unstable {
-                    sh 'echo unstable'
-                    //                 junit '**/surefire-reports/**/*.xml'
-                    //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
-                }
-            }
+
         }
 //        stage('Test More') {
 //            agent none
