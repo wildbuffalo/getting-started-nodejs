@@ -71,7 +71,7 @@ pipeline {
             post {
                 success {
                     echo 'success'
-               
+
                     //                 junit '**/surefire-reports/**/*.xml'
                     //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
                 }
@@ -86,10 +86,10 @@ pipeline {
             steps {
                 script {
                     node {
-                        docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside('-v $PWD:/src/') {
+                        docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside() {
                             sh "sonar-scanner \
                                 -Dsonar.projectKey=tryout \
-                                -Dsonar.sources=/src \
+                                -Dsonar.sources=. \
                                 -Dsonar.host.url=http://10.68.17.183:9000 \
                                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
                         }
