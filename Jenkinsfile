@@ -7,13 +7,13 @@ pipeline {
 //        skipDefaultCheckout()
 //    }
     stages {
-        stage('Checkout') {
-            agent any
-            steps {
-                checkout scm
-                stash(name: 'ws', includes: '**')
-            }
-        }
+//        stage('Checkout') {
+//            agent any
+//            steps {
+//                checkout scm
+//                stash(name: 'ws', includes: '**')
+//            }
+//        }
         stage('Build') {
             agent {
                 docker {
@@ -22,9 +22,9 @@ pipeline {
                 }
             }
             steps {
-                unstash 'ws'
+//                unstash 'ws'
                 sh 'npm install'
-                stash name: 'war', includes: 'module/**/*'
+//                stash name: 'war', includes: 'module/**/*'
             }
 //            post {
 //                success {
