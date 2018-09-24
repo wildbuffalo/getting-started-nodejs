@@ -6,6 +6,11 @@ pipeline {
 //    options {
 //        skipDefaultCheckout()
 //    }
+    Post{
+        cleanup{
+            cleanWs()
+        }
+    }//Post: notifications; hipchat, slack, send email etc.
     stages {
 //        stage('Checkout') {
 //            agent any
@@ -183,9 +188,5 @@ pipeline {
 //            }
 //        }
         }
-    Post{
-        cleanup{
-            cleanWs()
-        }
-    }//Post: notifications; hipchat, slack, send email etc.
+
     }
