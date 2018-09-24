@@ -15,12 +15,12 @@ pipeline {
 //            }
 //        }
         stage('Build') {
-            node none {
+        
                                     docker.image('maven:10-alpine').inside() {
 
                                         sh 'npm install'
                                     }
-                                }
+                                
 //            agent {
 //                docker {
 //                    image 'node:10-alpine'
