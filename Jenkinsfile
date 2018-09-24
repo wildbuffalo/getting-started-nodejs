@@ -183,5 +183,7 @@ pipeline {
 //            }
 //        }
         }
-        //Post: notifications; hipchat, slack, send email etc.
+    Post{
+        cleanWs()
+    }//Post: notifications; hipchat, slack, send email etc.
     }
