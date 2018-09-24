@@ -17,13 +17,13 @@ pipeline {
         stage('Build') {
             steps{
                 script {
-                                node {
-                                    docker.image('node:10-alpine').inside() {
+                    node {
+                        docker.image('node:10-alpine').inside('-v $PWD:/src/') {
 
-                                        sh 'npm install'
-                                    }
-                                }
-                            }
+                            sh 'npm install'
+                        }
+                    }
+                }
             }
 
 //            agent {
@@ -46,17 +46,28 @@ pipeline {
 ////            }
         }
         stage('Test Backend') {
-            agent {
-                docker {
-                    image 'node:10-alpine'
+            steps{
+                script {
+                    node {
+                        docker.image('node:10-alpine').inside('-v $PWD:/src/') {
 
+                            sh 'npm test'
+                        }
+                    }
                 }
             }
-            steps {
-//                unstash 'ws'
-//                unstash 'war'
-                sh 'npm test'
-            }
+//            agent {
+//                docker {
+//                    image 'node:10-alpine'
+//                    arg
+//
+//                }
+//            }
+//            steps {
+////                unstash 'ws'
+////                unstash 'war'
+//                sh 'npm test'
+//            }
             post {
                 success {
                     sh 'echo success'
