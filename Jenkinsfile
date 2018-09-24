@@ -3,9 +3,9 @@ pipeline {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
     }
     agent none
-    options {
-        skipDefaultCheckout()
-    }
+//    options {
+//        skipDefaultCheckout()
+//    }
     stages {
         stage('Checkout') {
             agent any
@@ -41,8 +41,8 @@ pipeline {
                 }
             }
             steps {
-                unstash 'ws'
-                unstash 'war'
+//                unstash 'ws'
+//                unstash 'war'
                 sh 'npm test'
             }
             post {
