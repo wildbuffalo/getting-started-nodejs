@@ -184,6 +184,8 @@ pipeline {
 //        }
         }
     Post{
-        cleanWs()
+        cleanup{
+            cleanWs()
+        }
     }//Post: notifications; hipchat, slack, send email etc.
     }
