@@ -25,9 +25,10 @@ pipeline {
         }
         stage('Build') {
             steps{
-                unstash 'scm'
+                
                 script {
                     node {
+                        unstash 'scm'
                     //    def PWD = pwd();
                       //  deleteDir()
                         docker.image('node:10-alpine').inside {
