@@ -3,7 +3,7 @@ pipeline {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
     }
     agent none
-    deleteDir()
+    
 //    options {
 //        skipDefaultCheckout()
 //    }
@@ -25,7 +25,8 @@ pipeline {
             steps{
                 script {
                     node {
-                        docker.image('node:10-alpine').inside('-v ${PWD}:/src/') {
+                        deleteDir()
+                        docker.image('node:10-alpine').inside() {
                             sh 'printenv'
                             sh 'npm install'
                         }
@@ -56,7 +57,8 @@ pipeline {
             steps{
                 script {
                     node {
-                        docker.image('node:10-alpine').inside('-v ${PWD}:/src/') {
+                        deleteDir()
+                        docker.image('node:10-alpine').inside() {
 
                             sh 'npm test'
                         }
@@ -93,6 +95,7 @@ pipeline {
             steps {
                 script {
                     node {
+                        deleteDir()
                     //    withDockerContainer(args: '-v $(PWD):/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine')
                         withDockerContainer(image: 'newtmitch/sonar-scanner:3.2.0-alpine') {
                             sh "sonar-scanner \
