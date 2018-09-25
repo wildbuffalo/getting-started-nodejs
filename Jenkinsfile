@@ -3,7 +3,7 @@ pipeline {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
     }
     agent none
-    
+    checkout scm
 //    options {
 //        skipDefaultCheckout()
 //    }
