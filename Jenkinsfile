@@ -26,7 +26,7 @@ pipeline {
                 script {
                     node {
                         deleteDir()
-                        docker.image('node:10-alpine').inside() {
+                        docker.image('node:10-alpine').inside('-v ${PWD}:/src/') {
                             sh 'printenv'
                             sh 'npm install'
                         }
@@ -58,8 +58,8 @@ pipeline {
                 script {
                     node {
                         deleteDir()
-                        docker.image('node:10-alpine').inside() {
-
+                        docker.image('node:10-alpine').inside('-v ${PWD}:/src/') {
+                            sh 'printenv'
                             sh 'npm test'
                         }
                     }
