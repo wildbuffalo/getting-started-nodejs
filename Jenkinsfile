@@ -1,7 +1,7 @@
 pipeline {
     environment {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
-        def PWD = pwd();
+        
     }
     agent none
    
@@ -19,6 +19,7 @@ pipeline {
             agent any
             steps {
                 checkout scm
+                def PWD = pwd();
              //   stash(name: 'ws', includes: '**')
             }
         }
