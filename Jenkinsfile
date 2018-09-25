@@ -19,22 +19,24 @@ pipeline {
             agent any
             steps {
                 checkout scm
-                
+                stash name:'scm', includes:'*'
              //   stash(name: 'ws', includes: '**')
             }
         }
         stage('Build') {
             steps{
+                unstash 'scm'
                 script {
                     node {
-                        def PWD = pwd();
+                    //    def PWD = pwd();
                       //  deleteDir()
-                        docker.image('node:10-alpine').inside('-v .:/src/') {
+                        docker.image('node:10-alpine').inside {
                             sh 'ls /src'
                          
                             sh 'pwd'
                             sh 'printenv'
                             sh 'npm install'
+                            stash name:'scm-installed', includes:'*'
                         }
                     }
                 }
@@ -61,11 +63,12 @@ pipeline {
         }
         stage('Test') {
             steps{
+                unstash 'scm-installed'
                 script {
                     node {
                         deleteDir()
-                        def PWD = pwd();
-                        docker.image('node:10-alpine').inside('-v PWD:/src/') {
+                        
+                        docker.image('node:10-alpine').inside {
                             sh 'printenv'
                             sh 'npm test'
                         }
