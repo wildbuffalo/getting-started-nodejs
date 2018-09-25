@@ -1,6 +1,7 @@
 pipeline {
     environment {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
+        def PWD = pwd();
     }
     agent none
    
@@ -26,8 +27,8 @@ pipeline {
                 script {
                     node {
                       //  deleteDir()
-                        docker.image('node:10-alpine').inside() {
-                            sh 'echo $(pwd)'
+                        docker.image('node:10-alpine').inside('-v PWD:/src/') {
+                            echo 'PWD'
                             sh 'printenv'
                             sh 'npm install'
                         }
