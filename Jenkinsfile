@@ -65,12 +65,14 @@ pipeline {
         }
         stage('Test') {
             steps{
-                unstash 'scm-installed'
+                
                 script {
                     node {
                         deleteDir()
                         
                         docker.image('node:10-alpine').inside {
+                            unstash 'scm-installed'
+                            sh 'ls'
                             sh 'printenv'
                             sh 'npm test'
                         }
