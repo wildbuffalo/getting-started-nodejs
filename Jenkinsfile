@@ -27,7 +27,7 @@ pipeline {
                     node {
                       //  deleteDir()
                         docker.image('node:10-alpine').inside() {
-                            sh '${env.PWD}'
+                            sh 'echo ${env.PWD}'
                             sh 'printenv'
                             sh 'npm install'
                         }
