@@ -74,6 +74,7 @@ pipeline {
                             sh 'ls'
                             sh 'printenv'
                             sh 'npm test'
+                            stash name:'scm-posttest', includes:'*'
                         }
                     }
                 }
@@ -111,6 +112,7 @@ pipeline {
                   
                     //    withDockerContainer(args: '-v $(PWD):/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine')
                         withDockerContainer(image: 'newtmitch/sonar-scanner:3.2.0-alpine') {
+                            unstash 'scm-posttest'
                             sh "sonar-scanner \
                                 -Dsonar.projectKey=tryout \
                                 -Dsonar.sources=. \
