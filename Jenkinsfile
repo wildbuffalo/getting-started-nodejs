@@ -3,10 +3,10 @@ pipeline {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
     }
     agent none
-    checkout scm
-//    options {
-//        skipDefaultCheckout()
-//    }
+   
+    options {
+        skipDefaultCheckout()
+    }
 //    post{
  //       always {
  //           echo 'One way or another, I have finished'
@@ -14,13 +14,13 @@ pipeline {
  //       }
    // }//Post: notifications; hipchat, slack, send email etc.
     stages {
-//        stage('Checkout') {
-//            agent any
-//            steps {
-//                checkout scm
-//                stash(name: 'ws', includes: '**')
-//            }
-//        }
+        stage('Checkout') {
+            agent any
+            steps {
+                checkout scm
+             //   stash(name: 'ws', includes: '**')
+            }
+        }
         stage('Build') {
             steps{
                 script {
