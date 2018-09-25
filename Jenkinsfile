@@ -108,7 +108,7 @@ pipeline {
             steps {
                 script {
                     node {
-                        deleteDir()
+                  
                     //    withDockerContainer(args: '-v $(PWD):/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine')
                         withDockerContainer(image: 'newtmitch/sonar-scanner:3.2.0-alpine') {
                             sh "sonar-scanner \
