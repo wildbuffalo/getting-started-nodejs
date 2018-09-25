@@ -1,40 +1,40 @@
 pipeline {
     environment {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
-        
+
     }
     agent none
-   
+
     options {
         skipDefaultCheckout()
     }
 //    post{
- //       always {
- //           echo 'One way or another, I have finished'
- //           deleteDir() /* clean up our workspace */
- //       }
-   // }//Post: notifications; hipchat, slack, send email etc.
+    //       always {
+    //           echo 'One way or another, I have finished'
+    //           deleteDir() /* clean up our workspace */
+    //       }
+    // }//Post: notifications; hipchat, slack, send email etc.
     stages {
         stage('Checkout') {
             agent any
             steps {
                 checkout scm
                 stash name:'scm', includes:'*'
-             //   stash(name: 'ws', includes: '**')
+                //   stash(name: 'ws', includes: '**')
             }
         }
         stage('Build') {
             steps{
-                
+
                 script {
                     node {
-                        
-                    //    def PWD = pwd();
-                      //  deleteDir()
+
+                        //    def PWD = pwd();
+                        //  deleteDir()
                         docker.image('node:10-alpine').inside {
                             unstash 'scm'
                             sh 'ls'
-                         
+
                             sh 'pwd'
                             sh 'printenv'
                             sh 'npm install'
@@ -65,10 +65,10 @@ pipeline {
         }
         stage('Test') {
             steps{
-                
+
                 script {
                     node {
-                        
+
                         docker.image('node:10-alpine').inside {
                             unstash 'scm-installed'
                             sh 'ls'
@@ -109,25 +109,36 @@ pipeline {
             steps {
                 script {
                     node {
-                  
-                    //    withDockerContainer(args: '-v $(PWD):/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine')
-                        withDockerContainer(args: '-v ${PWD}:/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine') {
-                           // unstash 'scm-posttest'
-                            sh "printenv"
-                            sh "ls"
-                            sh "ls /root/src"
+                        docker.image('nnewtmitch/sonar-scanner:3.2.0-alpine').inside {
+                            unstash 'scm-posttest'
+                            sh 'ls'
+                            sh 'printenv'
                             sh "sonar-scanner \
                                 -Dsonar.projectKey=tryout \
                                 -Dsonar.sources=. \
                                 -Dsonar.host.url=http://10.68.17.183:9000 \
                                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
-
-                          
+                            
+                            
                         }
-                        }
+//                        //    withDockerContainer(args: '-v $(PWD):/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine')
+//                        withDockerContainer(args: '-v ${PWD}:/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine') {
+//                            // unstash 'scm-posttest'
+//                            sh "printenv"
+//                            sh "ls"
+//                            sh "ls /root/src"
+//                            sh "sonar-scanner \
+//                                -Dsonar.projectKey=tryout \
+//                                -Dsonar.sources=. \
+//                                -Dsonar.host.url=http://10.68.17.183:9000 \
+//                                -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
+//
+//
+//                        }
                     }
                 }
             }
+        }
 //        stage('Test More') {
 //            agent none
 //            when {
@@ -209,6 +220,6 @@ pipeline {
 //                }
 //            }
 //        }
-        }
-
     }
+
+}
