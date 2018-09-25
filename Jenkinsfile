@@ -68,7 +68,6 @@ pipeline {
                 
                 script {
                     node {
-                        deleteDir()
                         
                         docker.image('node:10-alpine').inside {
                             unstash 'scm-installed'
