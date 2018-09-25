@@ -109,7 +109,7 @@ pipeline {
             steps {
                 script {
                     node {
-                        docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside {
+                        docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside("-v ${env.WORKSPACE}:/root/src") {
                             unstash 'scm-posttest'
                             sh 'ls'
                             sh 'printenv'
