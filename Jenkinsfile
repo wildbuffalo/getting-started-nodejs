@@ -25,7 +25,7 @@ pipeline {
             steps{
                 script {
                     node {
-                        deleteDir()
+                      //  deleteDir()
                         docker.image('node:10-alpine').inside('-v ${PWD}:/src/') {
                             sh 'printenv'
                             sh 'npm install'
