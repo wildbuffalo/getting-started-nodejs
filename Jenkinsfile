@@ -19,7 +19,7 @@ pipeline {
             agent any
             steps {
                 checkout scm
-                def PWD = pwd();
+                
              //   stash(name: 'ws', includes: '**')
             }
         }
@@ -27,6 +27,7 @@ pipeline {
             steps{
                 script {
                     node {
+                        def PWD = pwd();
                       //  deleteDir()
                         docker.image('node:10-alpine').inside('-v PWD:/src/') {
                             echo 'PWD'
