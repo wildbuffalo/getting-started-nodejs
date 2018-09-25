@@ -109,6 +109,7 @@ pipeline {
             steps {
                 script {
                     node {
+                        
                         docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside("-v ${env.WORKSPACE}:/root/src") {
                             unstash 'scm-posttest'
                             sh 'ls'
@@ -116,6 +117,7 @@ pipeline {
                             sh "sonar-scanner \
                                 -Dsonar.projectKey=tryout \
                                 -Dsonar.sources=${WORKSPACE} \
+                                -Dsonar.exclusions=node_modules/**, **/*.js,**/*.js.map, **/shared/mocks.**, **/*.spec.ts, apps/**/*.ts \
                                 -Dsonar.host.url=http://10.68.17.183:9000 \
                                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
                             
