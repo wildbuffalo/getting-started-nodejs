@@ -29,11 +29,10 @@ pipeline {
                     node {
                         def PWD = pwd();
                       //  deleteDir()
-                        docker.image('node:10-alpine').inside('-v PWD:/src/') {
+                        docker.image('node:10-alpine').inside('-v .:/src/') {
                             sh 'ls /src'
                          
                             sh 'pwd'
-                            sh 'PWD'
                             sh 'printenv'
                             sh 'npm install'
                         }
