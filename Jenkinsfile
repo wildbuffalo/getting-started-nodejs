@@ -62,6 +62,7 @@ pipeline {
                 script {
                     node {
                         deleteDir()
+                        def PWD = pwd();
                         docker.image('node:10-alpine').inside('-v PWD:/src/') {
                             sh 'printenv'
                             sh 'npm test'
