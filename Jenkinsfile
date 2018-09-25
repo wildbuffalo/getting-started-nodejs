@@ -28,11 +28,12 @@ pipeline {
                 
                 script {
                     node {
-                        unstash 'scm'
+                        
                     //    def PWD = pwd();
                       //  deleteDir()
                         docker.image('node:10-alpine').inside {
-                            sh 'ls /src'
+                            unstash 'scm'
+                            sh 'ls'
                          
                             sh 'pwd'
                             sh 'printenv'
