@@ -7,6 +7,7 @@ pipeline {
 
     options {
         skipDefaultCheckout()
+        ansiColor('xterm')
     }
 //    post{
     //       always {
