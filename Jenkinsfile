@@ -7,7 +7,7 @@ node {
 
     options {
         skipDefaultCheckout()
-        ansiColor('xterm')
+       // ansiColor('xterm')
     }
     def app
     def sonar
