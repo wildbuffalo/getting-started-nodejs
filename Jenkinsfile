@@ -41,7 +41,7 @@ pipeline {
         dockerImage = 'node:10-alpine'
     }
     agent any
-//    tools {nodejs "node" }
+    tools {nodejs "node" }
     stages {
         stage('Cloning Git') {
             steps {
