@@ -1,16 +1,16 @@
 node {
     environment {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
-
+        def app 
+        def sonar
     }
-//    agent none
+    agent none
 
     options {
         skipDefaultCheckout()
-       // ansiColor('xterm')
+        ansiColor('xterm')
     }
-    def app
-    def sonar
+
     stages {
         stage('Checkout') {
             agent any
