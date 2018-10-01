@@ -4,7 +4,7 @@ node {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-        checkout scm
+        git branch: 'jfrog', url: 'https://github.com/wildbuffalo/getting-started-nodejs.git'
     }
 
     stage('Build image') {
@@ -34,3 +34,47 @@ node {
         }
     }
 }
+//pipeline {
+//    environment {
+//        registry = “https://hub.docker.com”
+//        registryCredential = ‘docker-hub-feirenliu’
+//        dockerImage = ‘’
+//    }
+//    agent any
+//    tools {nodejs “node” }
+//    stages {
+//        stage(‘Cloning Git’) {
+//            steps {
+//                git branch: 'jfrog', url: 'https://github.com/wildbuffalo/getting-started-nodejs.git'
+//
+//            }
+//        }
+//        stage(‘Build’) {
+//            steps {
+//                sh ‘npm install’
+//                sh ‘npm run bowerInstall’
+//            }
+//        }
+//        stage(‘Test’) {
+//            steps {
+//                sh ‘npm test’
+//            }
+//        }
+//        stage(‘Building image’) {
+//            steps{
+//                script {
+//                    dockerImage = docker.build registry + “:$BUILD_NUMBER”
+//                }
+//            }
+//        }
+//        stage(‘Deploy Image’) {
+//            steps{
+//                script {
+//                    docker.withRegistry( ‘’, registryCredential ) {
+//                        dockerImage.push()
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
