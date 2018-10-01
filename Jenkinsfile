@@ -34,47 +34,58 @@
 //        }
 //    }
 //}
-pipeline {
-    environment {
-        registry = 'https://hub.docker.com'
-        registryCredential = 'docker-hub-feirenliu'
-        dockerImage = 'node:10-alpine'
-    }
-    agent any
-    tools {nodejs "node" }
-    stages {
-        stage('Cloning Git') {
-            steps {
-                git branch: 'jfrog', url: 'https://github.com/wildbuffalo/getting-started-nodejs.git'
+node {
+    checkout scm
 
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'npm install'
-                sh 'npm run bowerInstall'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
-        stage('Building image') {
-            steps{
-                script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                }
-            }
-        }
-        stage('Deploy Image') {
-            steps{
-                script {
-                    docker.withRegistry( registry , registryCredential ) {
-                        dockerImage.push()
-                    }
-                }
-            }
-        }
+    docker.withRegistry('https://registry.example.com', 'credentials-id') {
+
+        def customImage = docker.build("my-image:${env.BUILD_ID}")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
     }
 }
+//pipeline {
+//    environment {
+//        registry = 'https://hub.docker.com'
+//        registryCredential = 'docker-hub-feirenliu'
+//        dockerImage = 'node:10-alpine'
+//    }
+//    agent any
+////    tools {nodejs "node" }
+//    stages {
+//        stage('Cloning Git') {
+//            steps {
+//                git branch: 'jfrog', url: 'https://github.com/wildbuffalo/getting-started-nodejs.git'
+//
+//            }
+//        }
+//        stage('Build') {
+//            steps {
+//                sh 'npm install'
+//                sh 'npm run bowerInstall'
+//            }
+//        }
+//        stage('Test') {
+//            steps {
+//                sh 'npm test'
+//            }
+//        }
+//        stage('Building image') {
+//            steps{
+//                script {
+//                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+//                }
+//            }
+//        }
+//        stage('Deploy Image') {
+//            steps{
+//                script {
+//                    docker.withRegistry( registry , registryCredential ) {
+//                        dockerImage.push()
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
