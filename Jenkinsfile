@@ -39,7 +39,7 @@ node {
 
     withDockerRegistry(credentialsId: 'docker-hub-feirenliu', url: '') {
         //      def customImage = docker.build("node:${env.BUILD_ID}")
-        def customImage = docker.build("node:10-alpine")
+        def customImage = docker.build("feirenliu/node:10-alpine")
         /* Push the container to the custom Registry */
         customImage.push()
 
