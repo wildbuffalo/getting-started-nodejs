@@ -1,19 +1,15 @@
 node {
     def app
-     def sonar
-     
-    stage('Clone repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
+    def sonar
 
-        checkout scm
-    }
+
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-          
+
         app = docker.build('node:10-alpine')
-         sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
+        sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
     }
 
     stage('Test image') {
@@ -22,16 +18,16 @@ node {
 
         app.inside {
             sh 'echo "Tests passed"'
-             
+
         }
     }
-         stage('Static Analysis') {
+    stage('Static Analysis') {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
         app.inside {
             sh 'echo "Sonar"'
-                           sh "sonar-scanner \
+            sh "sonar-scanner \
                 -Dsonar.projectKey=graphql \
                 -Dsonar.sources=. \
                 -Dsonar.host.url=http://10.68.17.183:9000 \
@@ -50,6 +46,6 @@ node {
 //        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
 //            app.push("${env.BUILD_NUMBER}")
 //            app.push("latest")
-        }
     }
 }
+
