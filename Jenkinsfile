@@ -42,7 +42,7 @@ node {
         def customImage = docker.build("node:10-alpine")
         /* Push the container to the custom Registry */
         customImage.push()
-    
+
 
 
     }
