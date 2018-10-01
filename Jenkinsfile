@@ -36,38 +36,38 @@
 //}
 pipeline {
     environment {
-        registry = “https://hub.docker.com”
-        registryCredential = ‘docker-hub-feirenliu’
-        dockerImage = ‘node:10-alpine’
+        registry = 'https://hub.docker.com'
+        registryCredential = 'docker-hub-feirenliu'
+        dockerImage = 'node:10-alpine'
     }
     agent any
-//    tools {nodejs “node” }
+//    tools {nodejs "node" }
     stages {
-        stage(‘Cloning Git’) {
+        stage('Cloning Git') {
             steps {
                 git branch: 'jfrog', url: 'https://github.com/wildbuffalo/getting-started-nodejs.git'
 
             }
         }
-        stage(‘Build’) {
+        stage('Build') {
             steps {
-                sh ‘npm install’
-                sh ‘npm run bowerInstall’
+                sh 'npm install'
+                sh 'npm run bowerInstall'
             }
         }
-        stage(‘Test’) {
+        stage('Test') {
             steps {
-                sh ‘npm test’
+                sh 'npm test'
             }
         }
-        stage(‘Building image’) {
+        stage('Building image') {
             steps{
                 script {
-                    dockerImage = docker.build registry + “:$BUILD_NUMBER”
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
                 }
             }
         }
-        stage(‘Deploy Image’) {
+        stage('Deploy Image') {
             steps{
                 script {
                     docker.withRegistry( registry , registryCredential ) {
