@@ -1,50 +1,52 @@
-pipeline {
-     // git branch: 'develop', credentialsId: 'GitHub', url: 'https://github.com/wildbuffalo/dealworks-graphql-service.git'
-    parameters {
-        booleanParam(defaultValue: true, description: '', name: 'booleanExample')
-        string(defaultValue: "TEST", description: 'What environment?', name: 'stringExample')
-        text(defaultValue: "This is a multiline\n text", description: "Multiline Text", name: "textExample")
-        choice(choices: 'US-EAST-1\nUS-WEST-2', description: 'What AWS region?', name: 'choiceExample')
-        password(defaultValue: "Password", description: "Password Parameter", name: "passwordExample")
-        
-        string(defaultValue: "3.0.3.778", description: '', name: 'SONAR_SCANNER_VERSION')
-    }
-     agent none
-    stages {
-
-        stage('echo path') {
-            steps('echo') {
-                sh 'pwd'
-                sh 'printenv'
-                }
-            }
-        stage('Build_Test') {
-          agent { docker { image 'node:10-alpine' }}
-            steps('install'){
-                sh 'npm install'
-            
-                }
-            
-      
-            steps('Test'){
-                sh 'npm run test'
-            }
-
-      
-           }
+node {
+    def app
+     def sonar
      
-        stage('Static Analysis'){
-             agent { docker 'newtmitch/sonar-scanner:3.2.0-alpine' }
-            steps('Sonar'){
-              sh "sonar-scanner \
+    stage('Clone repository') {
+        /* Let's make sure we have the repository cloned to our workspace */
+
+        checkout scm
+    }
+
+    stage('Build image') {
+        /* This builds the actual image; synonymous to
+         * docker build on the command line */
+          
+        app = docker.build('node:10-alpine')
+         sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
+    }
+
+    stage('Test image') {
+        /* Ideally, we would run a test framework against our image.
+         * For this example, we're using a Volkswagen-type approach ;-) */
+
+        app.inside {
+            sh 'echo "Tests passed"'
+             
+        }
+    }
+         stage('Static Analysis') {
+        /* Ideally, we would run a test framework against our image.
+         * For this example, we're using a Volkswagen-type approach ;-) */
+
+        app.inside {
+            sh 'echo "Sonar"'
+                           sh "sonar-scanner \
                 -Dsonar.projectKey=graphql \
                 -Dsonar.sources=. \
                 -Dsonar.host.url=http://10.68.17.183:9000 \
                 -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
-            }
         }
-    
-   }
+    }
 
+    stage('Push image') {
+        /* Finally, we'll push the image with two tags:
+         * First, the incremental build number from Jenkins
+         * Second, the 'latest' tag.
+         * Pushing multiple tags is cheap, as all the layers are reused. */
+//        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+//            app.push("${env.BUILD_NUMBER}")
+//            app.push("latest")
+        }
+    }
 }
-
