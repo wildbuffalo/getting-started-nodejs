@@ -37,12 +37,14 @@
 node {
     checkout scm
 
-    docker.withRegistry('https://hub.docker.com', 'docker-hub-feirenliu') {
-
-  //      def customImage = docker.build("node:${env.BUILD_ID}")
+    withDockerRegistry(credentialsId: 'docker-hub-feirenliu', url: 'https://hub.docker.com') {
+        //      def customImage = docker.build("node:${env.BUILD_ID}")
         def customImage = docker.build("node:10-alpine")
         /* Push the container to the custom Registry */
         customImage.push()
+    
+
+
     }
 }
 //pipeline {
