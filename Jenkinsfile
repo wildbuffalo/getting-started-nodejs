@@ -37,7 +37,7 @@
 node {
     checkout scm
 
-    withDockerRegistry(credentialsId: 'docker-hub-feirenliu', url: '') {
+    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp.jfrog.io') {
         //      def customImage = docker.build("node:${env.BUILD_ID}")
         def customImage = docker.build("feirenliu/node:10-alpine")
         /* Push the container to the custom Registry */
@@ -47,6 +47,20 @@ node {
 
     }
 }
+
+//node {
+//    checkout scm
+//
+//    withDockerRegistry(credentialsId: 'docker-hub-feirenliu', url: '') {
+//        //      def customImage = docker.build("node:${env.BUILD_ID}")
+//        def customImage = docker.build("feirenliu/node:10-alpine")
+//        /* Push the container to the custom Registry */
+//        customImage.push()
+//
+//
+//
+//    }
+//}
 //pipeline {
 //    environment {
 //        registry = 'https://hub.docker.com'
