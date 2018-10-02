@@ -37,7 +37,7 @@
 node {
     checkout scm
 
-    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp.jfrog.io') {
+    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
         //      def customImage = docker.build("node:${env.BUILD_ID}")
         def customImage = docker.build("feirenliu/node:10-alpine")
         /* Push the container to the custom Registry */
