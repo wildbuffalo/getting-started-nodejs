@@ -11,11 +11,24 @@ pipeline {
 
 
                 def app = docker.build('node:10-alpine')
-                def sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
+                
 
             }
 
         }
+       stage('Build tools') {
+            /* This builds the actual image; synonymous to
+             * docker build on the command line */
+            agent  {
+
+
+                def sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
+                
+
+            }
+
+        }
+        
 //
 //        stage('Test image') {
 //            /* Ideally, we would run a test framework against our image.
