@@ -1,25 +1,32 @@
 pipeline {
-
     agent none
-
     stages {
-
-        stage('Build image') {
-            /* This builds the actual image; synonymous to
-             * docker build on the command line */
-            agent any {
-
-                node{
-                def app = docker.build('node:10-alpine')
-                
-
-                def sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
-                }
-
+        stage('Example Build') {
+            agent { docker 'maven:3-alpine' }
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
             }
-
         }
-        
+        stage('Example Test') {
+            agent { docker 'openjdk:8-jre' }
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
+            }
+        }
+        stage('Private Registry') {
+            docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                def customImage = docker.build("node:${env.BUILD_ID}")
+
+                /* Push the container to the custom Registry */
+                customImage.push()
+            }
+        }
+    }
+}
+
 //
 //        stage('Test image') {
 //            /* Ideally, we would run a test framework against our image.
@@ -56,6 +63,6 @@ pipeline {
 //            app.push("${env.BUILD_NUMBER}")
 //            app.push("latest")
 //        }
-    }
+}
 
 }
