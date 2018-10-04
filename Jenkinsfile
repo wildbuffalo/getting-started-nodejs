@@ -16,12 +16,15 @@ pipeline {
             }
         }
         stage('Private Registry') {
+            steps{
+                
             docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
                 def customImage = docker.build("node:${env.BUILD_ID}")
 
                 /* Push the container to the custom Registry */
                 customImage.push()
+            }
             }
         }
     }
