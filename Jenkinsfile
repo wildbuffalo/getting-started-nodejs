@@ -7,20 +7,11 @@ pipeline {
         stage('Build image') {
             /* This builds the actual image; synonymous to
              * docker build on the command line */
-            agent  {
+            agent any {
 
 
                 def app = docker.build('node:10-alpine')
                 
-
-            }
-
-        }
-       stage('Build tools') {
-            /* This builds the actual image; synonymous to
-             * docker build on the command line */
-            agent  {
-
 
                 def sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
                 
