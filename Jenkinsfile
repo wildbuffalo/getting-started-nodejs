@@ -16,20 +16,23 @@ pipeline {
             }
         }
         stage('Private Registry') {
-            steps{
-                
-            docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+            steps {
+                script {
+                    node {
 
-                def customImage = docker.build("node:${env.BUILD_ID}")
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                /* Push the container to the custom Registry */
-                customImage.push()
-            }
+                            def customImage = docker.build("node:${env.BUILD_ID}")
+
+                            /* Push the container to the custom Registry */
+                            customImage.push()
+                        }
+                    }
+                }
             }
         }
     }
 }
-
 //
 //        stage('Test image') {
 //            /* Ideally, we would run a test framework against our image.
