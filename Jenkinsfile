@@ -1,8 +1,7 @@
 node {
     environment {
         REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
-        def app 
-        def sonar
+   
     }
     agent none
 
@@ -27,8 +26,8 @@ node {
             agent  {
                 node{
                     
-            app = docker.build('node:10-alpine')
-            sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
+           def app = docker.build('node:10-alpine')
+           def sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
                 }
             }
             
