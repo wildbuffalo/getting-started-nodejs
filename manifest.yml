@@ -1,0 +1,9 @@
+---
+applications:
+- name: dealworks-tryout-app
+  memory: 1G
+  instances: 2
+  host: dealworks-tryout-app
+  docker:
+    image: training/webapp
+ 

@@ -1,17 +1,13 @@
 {
-  "name": "getting-started-nodejs",
-  "version": "0.0.1",
-  "engines": {
-    "node": "0.6.x"
-  },
-  "dependencies": {
-    "express": "3.x",
-    "nodeunit": "0.7.4",
-    "supertest": "0.4.0",
-    "mocha": "1.6.0"
-  },
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "start": "app.js"
-  }
+    "name": "docker_web_app",
+    "version": "1.0.0",
+    "description": "Node.js on Docker",
+    "author": "First Last <first.last@example.com>",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.16.1"
+    }
 }
