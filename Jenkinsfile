@@ -1,24 +1,8 @@
 node {
-    environment {
-        REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
-   
-    }
+
     agent none
 
-    options {
-        skipDefaultCheckout()
-        ansiColor('xterm')
-    }
-
     stages {
-        stage('Checkout') {
-            agent any
-            steps {
-                checkout scm
-                stash name:'scm', includes:'*'
-                //   stash(name: 'ws', includes: '**')
-            }
-        }
 
         stage('Build image') {
             /* This builds the actual image; synonymous to
