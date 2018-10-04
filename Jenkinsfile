@@ -9,12 +9,12 @@ pipeline {
              * docker build on the command line */
             agent any {
 
-
+                node{
                 def app = docker.build('node:10-alpine')
                 
 
                 def sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
-                
+                }
 
             }
 
