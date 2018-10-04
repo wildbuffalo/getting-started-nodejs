@@ -7,7 +7,13 @@ node {
         stage('Build image') {
             /* This builds the actual image; synonymous to
              * docker build on the command line */
-            echo "helo"
+         agent  {
+                node{
+                    
+           def app = docker.build('node:10-alpine')
+           def sonar = docke.build('newtmitch/sonar-scanner:3.2.0-alpine')
+                }
+            }
             
         }
 
