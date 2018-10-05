@@ -20,7 +20,7 @@ pipeline {
                 script {
                     node {
 
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io/tools', 'mrll-artifactory') {
 
                             docker.image('sonarqube_scanner').inside {
                                 sh 'ls'
