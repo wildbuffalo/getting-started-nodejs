@@ -15,6 +15,22 @@ pipeline {
                 sh 'java -version'
             }
         }
+        stage('Static Analysis') {
+            steps {
+                script {
+                    node {
+
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                            docker.image('sonarqube_scanner:latest').inside {
+                                sh 'ls'
+                                sh 'printenv'
+                            }
+                        }
+                    }
+                }
+            }
+        }
         stage('Private Registry') {
             steps {
                 script {
