@@ -42,7 +42,7 @@ pipeline {
                     }
                 }
             }
-        }
+        
 //        stage('Static Analysis') {
 //            steps {
 //                script {
