@@ -26,10 +26,10 @@ pipeline {
                                 sh 'ls'
                                 sh 'printenv'
                                 sh "sonar-scanner \
-                                -Dsonar.projectKey=graphql \
+                                -Dsonar.projectKey=dealworks_tryout \
                                 -Dsonar.sources=. \
-                                -Dsonar.host.url=http://10.68.17.183:9000 \
-                                -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
+                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
+                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
                             }
                         }
                     }
