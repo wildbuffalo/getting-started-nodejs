@@ -14,8 +14,8 @@ pipeline {
                     node {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            def dockerfile = 'Docker/Dockerfile'
-                            def node = docker.build("node:${env.BUILD_ID}", "-f ${dockerfile}")
+                            def dockerfile = 'Dockerfile'
+                            def node = docker.build("node:${env.BUILD_ID}", "-f ${dockerfile} .Docker/")
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
                             /* Push the container to the custom Registry */
