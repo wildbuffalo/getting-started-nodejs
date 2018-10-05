@@ -5,7 +5,7 @@ pipeline {
             agent { docker 'node:10-alpine' }
             steps {
                 echo 'Hello, Maven'
-                sh 'npn install'
+                sh 'npm install'
             }
         }
         stage('Build and Push') {
