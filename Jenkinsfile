@@ -22,7 +22,7 @@ pipeline {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            docker.image('sonarqube_scanner:latest').inside {
+                            docker.image('sonarqube_scanner').inside {
                                 sh 'ls'
                                 sh 'printenv'
                             }
@@ -31,22 +31,22 @@ pipeline {
                 }
             }
         }
-        stage('Private Registry') {
-            steps {
-                script {
-                    node {
-
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-                            def customImage = docker.build("node:${env.BUILD_ID}")
-
-                            /* Push the container to the custom Registry */
-                            customImage.push()
-                        }
-                    }
-                }
-            }
-        }
+//        stage('Private Registry') {
+//            steps {
+//                script {
+//                    node {
+//
+//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//
+//                            def customImage = docker.build("node:${env.BUILD_ID}")
+//
+//                            /* Push the container to the custom Registry */
+//                            customImage.push()
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
 }
 //
