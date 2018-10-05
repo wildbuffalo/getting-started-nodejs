@@ -2,17 +2,16 @@ pipeline {
     agent none
     stages {
         stage('Example Build') {
-            agent { docker 'maven:3-alpine' }
+            agent { docker 'node:10-alpine' }
             steps {
                 echo 'Hello, Maven'
-                sh 'mvn --version'
+                sh 'npn install'
             }
         }
         stage('Example Test') {
-            agent { docker 'openjdk:8-jre' }
+            agent { docker 'node:10-alpine' }
             steps {
-                echo 'Hello, JDK'
-                sh 'java -version'
+                sh 'npm test'
             }
         }
         stage('Static Analysis') {
@@ -36,22 +35,40 @@ pipeline {
                 }
             }
         }
-//        stage('Private Registry') {
-//            steps {
-//                script {
-//                    node {
-//
-//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//
-//                            def customImage = docker.build("node:${env.BUILD_ID}")
-//
-//                            /* Push the container to the custom Registry */
-//                            customImage.push()
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        stage('Push to Artifactory') {
+            steps {
+                script {
+                    node {
+
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                            def customImage = docker.build("node:${env.BUILD_ID}")
+
+                            /* Push the container to the custom Registry */
+                            customImage.push()
+                            customImage.push('latest')
+                        }
+                    }
+                }
+            }
+        }
+        stage('Push to PCF') {
+            steps {
+                script {
+                    node {
+
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                            docker.image('tools/pcf_cli').inside() {
+                                sh 'ls'
+                                sh 'printenv'
+                                sh "cf push "
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 //
