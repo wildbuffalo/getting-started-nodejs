@@ -8,67 +8,96 @@ pipeline {
                 sh 'npn install'
             }
         }
-        stage('Example Test') {
-            agent { docker 'node:10-alpine' }
-            steps {
-                sh 'npm test'
-            }
-        }
-        stage('Static Analysis') {
+        stage('Build and Push') {
             steps {
                 script {
                     node {
-
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            docker.image('tools/sonarqube_scanner').inside('-u root:root') {
-                                sh 'ls'
-                                sh 'printenv'
-                                sh "sonar-scanner \
-                                -Dsonar.projectKey=dealworks_tryout \
-                                -Dsonar.sources=. \
-                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
-                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        stage('Push to Artifactory') {
-            steps {
-                script {
-                    node {
-
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-                            def customImage = docker.build("node:${env.BUILD_ID}")
+                            def dockerfile = 'docker/Dockerfile'
+                            def node = docker.build("node:${env.BUILD_ID}", "-f ${dockerfile}")
+//                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
                             /* Push the container to the custom Registry */
-                            customImage.push()
-                            customImage.push('latest')
+                            node.inside {
+                                sh 'printenv'
+                            }
                         }
+
                     }
                 }
             }
         }
-        stage('Push to PCF') {
+        stage('Example Test') {
             steps {
                 script {
                     node {
 
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-                            docker.image('tools/pcf_cli').inside() {
-                                sh 'ls'
-                                sh 'printenv'
-                                sh "cf push "
+                            node.inside {
+                                    sh 'ls'
+                                h 'printenv'
                             }
                         }
+
                     }
                 }
             }
         }
+//        stage('Static Analysis') {
+//            steps {
+//                script {
+//                    node {
+//
+//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//
+//                            docker.image('tools/sonarqube_scanner').inside('-u root:root') {
+//                                sh 'ls'
+//                                sh 'printenv'
+//                                sh "sonar-scanner \
+//                                -Dsonar.projectKey=dealworks_tryout \
+//                                -Dsonar.sources=. \
+//                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
+//                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        stage('Push to Artifactory') {
+//            steps {
+//                script {
+//                    node {
+//
+//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//
+//                            def customImage = docker.build("node:${env.BUILD_ID}")
+//
+//                            /* Push the container to the custom Registry */
+//                            customImage.push()
+//                            customImage.push('latest')
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        stage('Push to PCF') {
+//            steps {
+//                script {
+//                    node {
+//
+//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//
+//                            docker.image('tools/pcf_cli').inside() {
+//                                sh 'ls'
+//                                sh 'printenv'
+//                                sh "cf blue-green-deploy dealworks-tryout-app -f .manifest.yml"
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
 }
 //
