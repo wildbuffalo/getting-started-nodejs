@@ -14,7 +14,7 @@ pipeline {
                     node {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            def dockerfile = 'docker/Dockerfile'
+                            def dockerfile = 'Docker/Dockerfile'
                             def node = docker.build("node:${env.BUILD_ID}", "-f ${dockerfile}")
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
@@ -42,7 +42,7 @@ pipeline {
                     }
                 }
             }
-        
+
 //        stage('Static Analysis') {
 //            steps {
 //                script {
