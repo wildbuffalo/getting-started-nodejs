@@ -22,7 +22,7 @@ pipeline {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            docker.image('tools/sonarqube_scanner').inside {
+                            docker.image('tools/sonarqube_scanner').withRun('-u jenkins:root') {
                                 sh 'ls'
                                 sh 'printenv'
                                 sh "sonar-scanner \
