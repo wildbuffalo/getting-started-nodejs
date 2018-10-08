@@ -1,13 +1,13 @@
 pipeline {
     agent none
     stages {
-        stage('Example Build') {
-            agent { docker 'node:10-alpine' }
-            steps {
-                echo 'Hello, Maven'
-                sh 'npm install'
-            }
-        }
+//        stage('Example Build') {
+//            agent { docker 'node:10-alpine' }
+//            steps {
+//                echo 'Hello, Maven'
+//                sh 'npm install'
+//            }
+//        }
         stage('Build and Push') {
             steps {
                 script {
@@ -22,6 +22,7 @@ pipeline {
                             node.inside {
                                 sh 'printenv'
                             }
+                            node.push()
                         }
 
                     }
@@ -32,16 +33,22 @@ pipeline {
             steps {
                 script {
                     node {
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                            def node = docker.withRun("node:${env.BUILD_ID}")
+//                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
+                            /* Push the container to the custom Registry */
                             node.inside {
-                                    sh 'ls'
-                                h 'printenv'
+                                sh 'printenv'
+                                sh 'npm test'
                             }
                         }
 
                     }
+
                 }
             }
+        }
 
 //        stage('Static Analysis') {
 //            steps {
