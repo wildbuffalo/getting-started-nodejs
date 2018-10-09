@@ -78,14 +78,14 @@ pipeline {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
                             def dockerfile = 'Dockerfile'
-                            def node = docker.build("node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
+                            docker_image = docker.build("node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
                             /* Push the container to the custom Registry */
-                            node.inside {
+                            docker_image.inside {
                                 sh 'printenv'
                             }
-                            node.push()
+                            docker_image.push()
                         }
 
                     
@@ -101,7 +101,7 @@ pipeline {
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
                             /* Push the container to the custom Registry */
-                            node.inside {
+                            docker_image.inside {
                                 sh 'printenv'
                                 sh 'ls'
                                 sh 'pwd'
