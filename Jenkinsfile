@@ -126,6 +126,7 @@ pipeline {
 
                             docker.image('tools/sonarqube_scanner').inside('-u root:root') {
                                 sh 'ls'
+                                sh 'pwd'
                                 sh 'printenv'
                                 sh "sonar-scanner \
                                 -Dsonar.projectKey=dealworks_tryout \
