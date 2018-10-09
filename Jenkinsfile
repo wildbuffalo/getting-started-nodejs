@@ -102,11 +102,11 @@ pipeline {
 
                             /* Push the container to the custom Registry */
                             docker_image.inside {
-                                sh 'cd /usr/src/app'
+                                sh 'cd /usr/src/app && npm test'
                                 sh 'printenv'
                                 sh 'ls'
                                 sh 'pwd'
-                                sh 'npm test'
+                                
                                 
                             }
                         
