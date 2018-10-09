@@ -102,6 +102,7 @@ pipeline {
 
                             /* Push the container to the custom Registry */
                             docker_image.inside {
+                                sh 'cd /root/src/app'
                                 sh 'printenv'
                                 sh 'ls'
                                 sh 'pwd'
