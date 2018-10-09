@@ -59,6 +59,7 @@ pipeline {
 //                sh 'npm install'
 //            }
 //        }
+        checkout scm
         stage('Build and Push') {
             steps {
                 script {
