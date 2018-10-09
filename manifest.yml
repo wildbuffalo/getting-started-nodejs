@@ -5,5 +5,5 @@ applications:
   instances: 2
   host: dealworks-tryout-app
   docker:
-    image: training/webapp
+    image: merrillcorp-dealworks.jfrog.io/node/master:latest
  
