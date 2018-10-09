@@ -74,7 +74,7 @@ pipeline {
         stage('Build and Push') {
             steps {
                 script {
-                    node {
+                  
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
                             def dockerfile = 'Dockerfile'
@@ -88,16 +88,16 @@ pipeline {
                             node.push()
                         }
 
-                    }
+                    
                 }
             }
         }
         stage('Example Test') {
             steps {
                 script {
-                    node {
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                            def node = docker.image("node/master:${env.BUILD_ID}")
+                 
+                      
+           
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
                             /* Push the container to the custom Registry */
@@ -108,9 +108,9 @@ pipeline {
                                 sh 'npm test'
                                 
                             }
-                        }
+                        
 
-                    }
+                    
 
                 }
             }
