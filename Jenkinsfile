@@ -78,7 +78,7 @@ pipeline {
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
                         def dockerfile = 'Dockerfile'
-                        docker_image = docker.build("node:${env.BUILD_ID}", "-f ${dockerfile} .")
+                        docker_image = docker.build("node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
                         /* Push the container to the custom Registry */
@@ -99,7 +99,7 @@ pipeline {
 
                     /* Push the container to the custom Registry */
                     docker_image.inside {
-                        sh 'cd /usr/src/app && npm test'
+//                        sh 'cd /usr/src/app && npm test'
                         sh 'printenv'
                         sh 'ls'
                         sh 'pwd'
@@ -135,19 +135,19 @@ pipeline {
             steps {
                 script {
 
-//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-//                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
+//                  def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
-                        /* Push the container to the custom Registry */
-                        docker_image.inside {
-                            sh 'printenv'
-                        }
-                        docker_image.push()
+                    /* Push the container to the custom Registry */
+                    docker_image.inside {
+                        sh 'printenv'
                     }
+                    docker_image.push()
+                }
 
 
-//                }
+                }
             }
         }
 //        stage('Push to PCF') {
