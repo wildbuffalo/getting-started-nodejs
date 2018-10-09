@@ -95,9 +95,6 @@ pipeline {
         stage('Example Test') {
             steps {
                 script {
-
-
-
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
                     /* Push the container to the custom Registry */
@@ -107,12 +104,7 @@ pipeline {
                         sh 'ls'
                         sh 'pwd'
 
-
                     }
-
-
-
-
                 }
             }
         }
@@ -143,7 +135,7 @@ pipeline {
             steps {
                 script {
 
-                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
 //                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
@@ -155,7 +147,7 @@ pipeline {
                     }
 
 
-                }
+//                }
             }
         }
 //        stage('Push to PCF') {
