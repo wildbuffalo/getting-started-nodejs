@@ -123,6 +123,7 @@ pipeline {
                                 sh "sonar-scanner \
                                 -Dsonar.projectKey=dealworks_tryout \
                                 -Dsonar.sources=. \
+                                -Dsonar.exclusions=test/**, node_modules/**\
                                 -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
                                 -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
                             }
