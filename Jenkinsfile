@@ -103,7 +103,10 @@ pipeline {
                             /* Push the container to the custom Registry */
                             node.inside {
                                 sh 'printenv'
+                                sh 'ls'
+                                sh 'pwd'
                                 sh 'npm test'
+                                
                             }
                         }
 
