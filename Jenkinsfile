@@ -51,6 +51,10 @@
 
 pipeline {
     agent none
+    options {
+        skipDefaultCheckout()
+        ansiColor('xterm')
+    }
     stages {
 //        stage('Example Build') {
 //            agent { docker 'node:10-alpine' }
@@ -59,7 +63,14 @@ pipeline {
 //                sh 'npm install'
 //            }
 //        }
-        checkout scm
+        stage('Checkout') {
+            agent any
+            steps {
+                checkout scm
+               // stash name:'scm', includes:'*'
+                //   stash(name: 'ws', includes: '**')
+            }
+        }
         stage('Build and Push') {
             steps {
                 script {
