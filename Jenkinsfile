@@ -140,13 +140,13 @@ pipeline {
 
 //                  def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
 
-                    /* Push the container to the custom Registry */
-                    docker_image.inside {
-                        sh 'printenv'
+                        /* Push the container to the custom Registry */
+                        docker_image.inside {
+                            sh 'printenv'
+                        }
+                        docker_image.push()
+                        docker_image.push('latest')
                     }
-                    docker_image.push()
-                    docker_image.push('latest')
-                }
 
 
                 }
@@ -164,11 +164,11 @@ pipeline {
                                 sh 'printenv'
                                 sh 'cf -v'
                                 withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
-                                    sh 'cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_Un -p PCF_PW -s devg'
+                                    sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
                                     sh "cf blue-green-deploy dealworks-tryout-app -f .manifest.yml"
                                 }
 
-                                
+
                             }
                         }
                     }
