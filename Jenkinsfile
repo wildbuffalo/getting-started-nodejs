@@ -162,6 +162,7 @@ pipeline {
                             docker.image('tools/pcf_cli').inside() {
                                 sh 'ls'
                                 sh 'printenv'
+                                sh 'cf -v'
                                 sh "cf blue-green-deploy dealworks-tryout-app -f .manifest.yml"
                             }
                         }
