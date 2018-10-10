@@ -163,7 +163,11 @@ pipeline {
                                 sh 'ls'
                                 sh 'printenv'
                                 sh 'cf -v'
-                                sh "cf blue-green-deploy dealworks-tryout-app -f .manifest.yml"
+                                withCredentials([usernamePassword(credentialsId: 'PCF')) {
+                                    sh "cf blue-green-deploy dealworks-tryout-app -s devg -f .manifest.yml"
+                                }
+
+                                
                             }
                         }
                     }
