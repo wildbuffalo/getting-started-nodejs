@@ -156,6 +156,7 @@ pipeline {
             steps {
                 script {
                     node {
+    withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
@@ -163,8 +164,7 @@ pipeline {
                                 sh 'ls'
                                 sh 'printenv'
                                 sh 'cf -v'
-                                withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
-                                    sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
+                                                                    sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
                                     sh "cf blue-green-deploy dealworks-tryout-app -f .manifest.yml"
                                 }
 
