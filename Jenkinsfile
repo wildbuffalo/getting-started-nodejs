@@ -53,7 +53,7 @@ pipeline {
     agent none
     environment {
         JFROG=credentials("mrll-artifactory")
-        CF_DOCKER_PASSWORD=$FOO_PSW
+        CF_DOCKER_PASSWORD=$JFROG_PSW
             }
     options {
         skipDefaultCheckout()
