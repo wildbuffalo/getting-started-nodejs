@@ -52,7 +52,7 @@
 pipeline {
     agent none
  //   environment {
- //       CF_DOCKER_PASSWORD=
+  //      CF_DOCKER_PASSWORD=
   //          }
     options {
         skipDefaultCheckout()
