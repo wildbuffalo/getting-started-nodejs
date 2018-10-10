@@ -152,23 +152,23 @@ pipeline {
                 }
             }
         }
-//        stage('Push to PCF') {
-//            steps {
-//                script {
-//                    node {
-//
-//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//
-//                            docker.image('tools/pcf_cli').inside() {
-//                                sh 'ls'
-//                                sh 'printenv'
-//                                sh "cf blue-green-deploy dealworks-tryout-app -f .manifest.yml"
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        stage('Push to PCF') {
+            steps {
+                script {
+                    node {
+
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                            docker.image('tools/pcf_cli').inside() {
+                                sh 'ls'
+                                sh 'printenv'
+                                sh "cf blue-green-deploy dealworks-tryout-app -f .manifest.yml"
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 //
