@@ -28,8 +28,7 @@ pipeline {
         skipDefaultCheckout()
         ansiColor('xterm')
     }
-    stages {
-        post {
+    post {
         /*
          * These steps will run at the end of the pipeline based on the condition.
          * Post conditions run in order regardless of their place in pipeline
@@ -56,6 +55,8 @@ pipeline {
                 echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
             }
         }
+    stages {
+        
         stage('Checkout') {
             agent any
             steps {
