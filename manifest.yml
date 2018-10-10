@@ -6,4 +6,4 @@ applications:
   host: dealworks-tryout-app
   docker:
     image: merrillcorp-dealworks.jfrog.io/node/master:latest
- 
+    username: svc-inf-jenkins
