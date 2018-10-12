@@ -31,7 +31,7 @@ pipeline {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            docker.image('tools/sonarqube_scanner').inside('-u jenkins:root') {
+                            docker.image('tools/sonarqube_scanner').inside('-u jenkins:jenkins') {
                                 sh 'ls'
                                 sh 'pwd'
                                 sh 'printenv'
