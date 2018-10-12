@@ -135,9 +135,9 @@ pipeline {
                         docker_image.inside {
                             sh 'printenv'
                         }
-                      //  docker_image.push()
-                       // docker_image.push('latest')
-                        docker_image.dockerPushStep()
+                        docker_image.push()
+                        docker_image.push('latest')
+                     
                     }
 
 
