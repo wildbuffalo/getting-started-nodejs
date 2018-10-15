@@ -22,7 +22,7 @@ node {
     // Step 2: Create an Artifactory Docker instance:
    // def rtDocker = Artifactory.docker server: server
 
-    def rtDocker = Artifactory.docker username: $JFROG_USR, password: $JFROG_PSW
+    def rtDocker = Artifactory.docker username: "$JFROG_USR", password: "$JFROG_PSW"
     // Step 3: Push the image to Artifactory.
     // Make sure that <artifactoryDockerRegistry> is configured to reference <targetRepo> Artifactory repository. In case it references a different repository, your build will fail with "Could not find manifest.json in Artifactory..." following the push.
    // DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest","$JFROG","https://merrillcorp.jfrog.io")
