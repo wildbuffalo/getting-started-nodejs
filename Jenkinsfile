@@ -34,9 +34,13 @@
 //        }
 //    }
 //}
+
 node {
     checkout scm
-
+    environment {
+        JFROG=credentials("mrll-artifactory")
+        //CF_DOCKER_PASSWORD="$JFROG_PSW"
+    }
 //    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
 //        //      def customImage = docker.build("node:${env.BUILD_ID}")
 //        def customImage = docker.build("feirenliu/node:10-alpine")
@@ -46,8 +50,9 @@ node {
 //
 //
 //    }
+  //  def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
     // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
-    def server = Artifactory.server 'JFROG'
+    def server = Artifactory.server 'mrll-artifactory'
 
     // Step 2: Create an Artifactory Docker instance:
     def rtDocker = Artifactory.docker server: server
