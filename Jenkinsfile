@@ -26,9 +26,10 @@ node {
     // Step 3: Push the image to Artifactory.
     // Make sure that <artifactoryDockerRegistry> is configured to reference <targetRepo> Artifactory repository. In case it references a different repository, your build will fail with "Could not find manifest.json in Artifactory..." following the push.
    // DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest","$JFROG","https://merrillcorp.jfrog.io")
-    
-    def buildInfo = rtDocker.pull "merrillcorp-dealworks.jfrog.io/hello-world:latest", 'dealworks'
-
+    rtDocker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory'){
+        
+    rtDocker.pull "merrillcorp-dealworks.jfrog.io/hello-world:latest"
+    }
     // Step 4: Publish the build-info to Artifactory:
     //server.publishBuildInfo buildInfo
 }
