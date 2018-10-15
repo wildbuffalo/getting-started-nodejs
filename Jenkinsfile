@@ -38,7 +38,7 @@
 node {
     checkout scm
     environment {
-        JFROG=credentials("mrll-artifactory")
+       // JFROG=credentials("mrll-artifactory")
         //CF_DOCKER_PASSWORD="$JFROG_PSW"
     }
 //    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
@@ -52,7 +52,7 @@ node {
 //    }
   //  def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
     // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
-    def server = Artifactory.server 'mrll-artifactory'
+    def server = Artifactory.server 'JFROG'
 
     // Step 2: Create an Artifactory Docker instance:
     def rtDocker = Artifactory.docker server: server
@@ -65,12 +65,12 @@ node {
  //   echo("$rtDocker")
     // Step 3: Push the image to Artifactory.
     // Make sure that <artifactoryDockerRegistry> is configured to reference <targetRepo> Artifactory repository. In case it references a different repository, your build will fail with "Could not find manifest.json in Artifactory..." following the push.
-    def buildInfo = rtDocker.pull 'merrillcorp-dealworks.jfrog.io/hello-world:latest', 'dealworks'
-    buildInfo.inside{
-        sh 'ls'
-    }
+   // def buildInfo = rtDocker.pull 'merrillcorp-dealworks.jfrog.io/hello-world:latest', 'dealworks'
+   // buildInfo.inside{
+    //    sh 'ls'
+   // }
     // Step 4: Publish the build-info to Artifactory:
-    server.publishBuildInfo buildInfo
+    //server.publishBuildInfo buildInfo
 }
 
 //node {
