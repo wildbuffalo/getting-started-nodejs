@@ -17,7 +17,7 @@ node {
 //    }
   //  def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
     // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
-    def server = Artifactory.server 'JFROG'
+    def server = Artifactory.server 'mrll-artifactory'
 
     // Step 2: Create an Artifactory Docker instance:
     def rtDocker = Artifactory.docker server: server
