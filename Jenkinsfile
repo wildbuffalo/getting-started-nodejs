@@ -1,7 +1,7 @@
 
 
 pipeline {
-    checkout scm
+    
     environment {
         JFROG = credentials("mrll-artifactory")
         //CF_DOCKER_PASSWORD="$JFROG_PSW"
@@ -13,8 +13,9 @@ pipeline {
 //
 //
 //    }
-
+    
     stages {
+  
         stage('Build and Push') {
             steps {
                 script {
