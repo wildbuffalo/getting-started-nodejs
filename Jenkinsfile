@@ -3,7 +3,7 @@
 pipeline {
     agent none
     environment {
-        JFROG = credentials("mrll-artifactory")
+        //JFROG = credentials("mrll-artifactory")
         //CF_DOCKER_PASSWORD="$JFROG_PSW"
     }
 //    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
