@@ -43,7 +43,7 @@ pipeline {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                             //  def rtDocker = Artifactory.docker username:"$JFROG_USR" , password:"$JFROG_PSW"
                             // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
-                            def server = Artifactory.newServer url: "https://merrillcorp-dealworks.jfrog.io", credentialsId: 'mrll-artifactory'
+                            def server = Artifactory.newServer url: "https://merrillcorp.jfrog.io/merrillcorp", credentialsId: 'mrll-artifactory'
                         //    def server = Artifactory.server 'JFROG'
 
                             // Step 2: Create an Artifactory Docker instance:
