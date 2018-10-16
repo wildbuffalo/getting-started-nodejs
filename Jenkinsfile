@@ -28,7 +28,7 @@ node {
    // DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest","$JFROG","https://merrillcorp.jfrog.io")
   //  docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory'){
    //     DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest")
-    rtDocker.push ("merrillcorp-dealworks.jfrog.io/node:latest", "dealworks")
+    rtDocker.pull ("merrillcorp-dealworks.jfrog.io/node:latest", "dealworks")
    
  //   }
     // Step 4: Publish the build-info to Artifactory:
