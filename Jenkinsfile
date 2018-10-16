@@ -41,13 +41,13 @@ pipeline {
                 steps{
                     script {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                            //  def rtDocker = Artifactory.docker username:$JFROG_USR , password:$JFROG_PSW
+                            //  def rtDocker = Artifactory.docker username:"$JFROG_USR" , password:"$JFROG_PSW"
                             // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
                             def server = Artifactory.server 'JFROG'
 
                             // Step 2: Create an Artifactory Docker instance:
                           //  def rtDocker = Artifactory.docker server: server
-                            def rtDocker = Artifactory.docker username:$JFROG_USR , password:$JFROG_PSW
+                            def rtDocker = Artifactory.docker username:"$JFROG_USR" , password:"$JFROG_PSW"
 //            def artDocker = Artifactory.docker("$JFROG_USR", "$JFROG_PSW")
                             def dockerInfo = rtDocker.push("node/master:${env.BUILD_ID}", "dealworks")
 //                            def dockerInfo = rtDocker.push("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "dealworks")
