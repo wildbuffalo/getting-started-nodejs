@@ -3,7 +3,7 @@
 node {
     checkout scm
     environment {
-       JFROG=credentials("mrll-artifactory")
+       //JFROG=credentials("mrll-artifactory")
         //CF_DOCKER_PASSWORD="$JFROG_PSW"
     }
 //    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
@@ -17,7 +17,7 @@ node {
 //    }
   //  def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
     // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
-    def server = Artifactory.server 'mrll-artifactory'
+    def server = Artifactory.server 'JFROG'
 
     // Step 2: Create an Artifactory Docker instance:
     def rtDocker = Artifactory.docker server: server
