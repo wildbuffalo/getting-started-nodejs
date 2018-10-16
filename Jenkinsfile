@@ -37,9 +37,7 @@ pipeline {
         }
 
         stage('Push') {
-            node{
-                steps{
-                    script {
+
                         //  def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
                         // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
                         def server = Artifactory.server 'JFROG'
@@ -65,9 +63,7 @@ pipeline {
                         //   }
                         // Step 4: Publish the build-info to Artifactory:
                         server.publishBuildInfo buildInfo
-                    }
-                }
-            }
+
 
 
         }
