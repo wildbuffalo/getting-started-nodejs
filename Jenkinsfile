@@ -49,7 +49,7 @@ pipeline {
                             def rtDocker = Artifactory.docker server: server
 
 //            def artDocker = Artifactory.docker("$JFROG_USR", "$JFROG_PSW")
-                            def dockerInfo = rtDocker.push("node/master:${env.BUILD_ID}", "dealworks")
+                            def dockerInfo = rtDocker.push("dealworks/node/master:${env.BUILD_ID}", "dealworks")
 //                            def dockerInfo = rtDocker.push("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "dealworks")
                             buildInfo.append(dockerInfo)
 
