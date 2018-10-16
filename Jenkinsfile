@@ -1,7 +1,7 @@
 
 
 pipeline {
-
+    agent none
     environment {
         JFROG = credentials("mrll-artifactory")
         //CF_DOCKER_PASSWORD="$JFROG_PSW"
