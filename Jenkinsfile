@@ -1,7 +1,7 @@
 
 
 pipeline {
-    
+
     environment {
         JFROG = credentials("mrll-artifactory")
         //CF_DOCKER_PASSWORD="$JFROG_PSW"
@@ -13,9 +13,9 @@ pipeline {
 //
 //
 //    }
-    
+
     stages {
-  
+
         stage('Build and Push') {
             steps {
                 script {
@@ -37,33 +37,36 @@ pipeline {
         }
 
         stage('Push') {
-            //  def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
-            // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
-            def server = Artifactory.server 'JFROG'
+            steps{
+                script {
+                    //  def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
+                    // Step 1: Obtain an Artifactiry instance, configured in Manage Jenkins --> Configure System:
+                    def server = Artifactory.server 'JFROG'
 
-            // Step 2: Create an Artifactory Docker instance:
-            def rtDocker = Artifactory.docker server: server
-            
+                    // Step 2: Create an Artifactory Docker instance:
+                    def rtDocker = Artifactory.docker server: server
+
 //            def artDocker = Artifactory.docker("$JFROG_USR", "$JFROG_PSW")
-            def dockerInfo = rtDocker.push("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "dealworks")
-            buildInfo.append(dockerInfo)
-            
-            
-            
+                    def dockerInfo = rtDocker.push("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "dealworks")
+                    buildInfo.append(dockerInfo)
+
 //            
 //            def dockerfile = 'Dockerfile'
 //            rtDocker.build("node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
-            // def rtDocker = Artifactory.docker username: "$JFROG_USR", password: "$JFROG_PSW"
-            // Step 3: Push the image to Artifactory.
-            // Make sure that <artifactoryDockerRegistry> is configured to reference <targetRepo> Artifactory repository. In case it references a different repository, your build will fail with "Could not find manifest.json in Artifactory..." following the push.
-            // DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest","$JFROG","https://merrillcorp.jfrog.io")
-            //  docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory'){
-            //     DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest")
+                    // def rtDocker = Artifactory.docker username: "$JFROG_USR", password: "$JFROG_PSW"
+                    // Step 3: Push the image to Artifactory.
+                    // Make sure that <artifactoryDockerRegistry> is configured to reference <targetRepo> Artifactory repository. In case it references a different repository, your build will fail with "Could not find manifest.json in Artifactory..." following the push.
+                    // DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest","$JFROG","https://merrillcorp.jfrog.io")
+                    //  docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory'){
+                    //     DockerPullStep("merrillcorp-dealworks.jfrog.io/hello-world:latest")
 //            rtDocker.push("merrillcorp-dealworks.jfrog.io/node:latest", "dealworks")
 
-            //   }
-            // Step 4: Publish the build-info to Artifactory:
-            server.publishBuildInfo buildInfo
+                    //   }
+                    // Step 4: Publish the build-info to Artifactory:
+                    server.publishBuildInfo buildInfo
+                }
+            }
+
         }
     }
 }
