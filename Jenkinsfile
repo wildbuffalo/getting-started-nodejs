@@ -50,7 +50,7 @@ pipeline {
                             def rtDocker = Artifactory.docker server: server
                           //  def rtDocker = Artifactory.docker username:"$JFROG_USR" , password:"$JFROG_PSW"
 //            def artDocker = Artifactory.docker("$JFROG_USR", "$JFROG_PSW")
-                            def dockerInfo = rtDocker.push("node/master:${env.BUILD_ID}", "dealworks")
+                            def dockerInfo = rtDocker.push("https://merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "dealworks")
 //                            def dockerInfo = rtDocker.push("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "dealworks")
                             buildInfo.append(dockerInfo)
 
