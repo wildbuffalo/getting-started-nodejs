@@ -46,10 +46,10 @@ pipeline {
                             def server = Artifactory.server 'JFROG'
 
                             // Step 2: Create an Artifactory Docker instance:
-                            def rtDocker = Artifactory.docker server: server
-
+                          //  def rtDocker = Artifactory.docker server: server
+                            def rtDocker = Artifactory.docker username:$JFROG_USN , password:$JFROG_PSW
 //            def artDocker = Artifactory.docker("$JFROG_USR", "$JFROG_PSW")
-                            def dockerInfo = rtDocker.push("dealworks/node/master:${env.BUILD_ID}", "dealworks")
+                            def dockerInfo = rtDocker.push("node/master:${env.BUILD_ID}", "dealworks")
 //                            def dockerInfo = rtDocker.push("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "dealworks")
                             buildInfo.append(dockerInfo)
 
