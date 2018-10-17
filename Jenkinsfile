@@ -5,7 +5,7 @@ pipeline {
   //  environment {
        // JFROG = credentials("mrll-artifactory")
        // CF_DOCKER_PASSWORD="$JFROG_PSW"
-        def LAST_COMMIT
+        
  //   }
 //    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
 ////        //      def customImage = docker.build("node:${env.BUILD_ID}")
@@ -22,7 +22,7 @@ pipeline {
                 script {
 
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                        
+                        def LAST_COMMIT
                         def dockerfile = 'Dockerfile'
                         docker_image = docker.build("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
                         
