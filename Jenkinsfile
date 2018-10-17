@@ -55,8 +55,10 @@ pipeline {
 
             steps{
                 script {
-                    docker_image.push('latest')
-                    docker_image.push()
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                        docker_image.push('latest')
+                        docker_image.push()
+                    }
                 }
             }
         }
