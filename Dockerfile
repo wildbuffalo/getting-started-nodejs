@@ -1,9 +1,12 @@
 FROM node:10-alpine
-WORKDIR /usr/src/app
 
 RUN apk update && \
     apk upgrade && \
     apk add git
+    
+WORKDIR /usr/src/app
+
+
     
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
