@@ -16,7 +16,6 @@ pipeline {
             agent any
             steps {
                 checkout scm
-                stash name:'scm', includes:'*'
                 //   stash(name: 'ws', includes: '**')
             }
         }
