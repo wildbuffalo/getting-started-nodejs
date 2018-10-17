@@ -17,53 +17,24 @@ pipeline {
             steps {
                 checkout scm
                 //   stash(name: 'ws', includes: '**')
-            }
+            }   
         }
 
-        stage('Deploy') {
-            agent {
-                withDockerRegistry([credentialsId:'mrll-artifactory', url:'https://merrillcorp-dealworks.jfrog.io'] )  {
-                    image 'tools/sonar_scanner:latest'
-                    // args '-v $WORKSPACE:/project'
-                    // reuseNode true
+
+    
+    stage('Static Analysis') {
+        steps {
+            script {
+                node {
+
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                        sh 'make sonar'
+                    }
                 }
-            }
-            steps {
-                sh 'ls'
-                sh 'pwd'
-                sh 'printenv'
-                sh "sonar-scanner \
-                                -Dsonar.projectKey=dealworks_tryout \
-                                -Dsonar.sources=. \
-                                -Dsonar.exclusions='test/**, node_modules/**' \
-                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
-                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
             }
         }
     }
-//    stage('Static Analysis') {
-//        steps {
-//            script {
-//                node {
-//
-//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//
-//                        docker.image('tools/sonar_scanner:latest').inside('-u jenkins:jenkins') {
-//                            sh 'ls'
-//                            sh 'pwd'
-//                            sh 'printenv'
-//                            sh "sonar-scanner \
-//                                -Dsonar.projectKey=dealworks_tryout \
-//                                -Dsonar.sources=. \
-//                                -Dsonar.exclusions='test/**, node_modules/**' \
-//                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
-//                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
+}
 
 }
