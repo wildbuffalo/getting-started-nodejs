@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deploy') {
             agent {
-                withDockerRegistry(credentialsId:'mrll-artifactory', url:'https://merrillcorp-dealworks.jfrog.io' )  {
+                withDockerRegistry([credentialsId:'mrll-artifactory', url:'https://merrillcorp-dealworks.jfrog.io'] )  {
                     image 'tools/sonar_scanner:latest'
                     // args '-v $WORKSPACE:/project'
                     // reuseNode true
