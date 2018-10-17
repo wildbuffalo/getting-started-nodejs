@@ -24,7 +24,7 @@ pipeline {
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                         def LAST_COMMIT
                         def dockerfile = 'Dockerfile'
-                        docker_image = docker.build("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
+                        docker_image = docker.build("node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
                         
                         /* Push the container to the custom Registry */
                         docker_image.inside {
