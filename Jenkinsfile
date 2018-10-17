@@ -2,10 +2,11 @@
 
 pipeline {
     agent none
-  //  environment {
-        //JFROG = credentials("mrll-artifactory")
-        //CF_DOCKER_PASSWORD="$JFROG_PSW"
- //   }
+    environment {
+       // JFROG = credentials("mrll-artifactory")
+       // CF_DOCKER_PASSWORD="$JFROG_PSW"
+        def LAST_COMMIT
+    }
 //    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
 ////        //      def customImage = docker.build("node:${env.BUILD_ID}")
 //        def customImage = docker.build("feirenliu/node:10-alpine")
@@ -21,12 +22,14 @@ pipeline {
                 script {
 
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
+                        
                         def dockerfile = 'Dockerfile'
                         docker_image = docker.build("merrillcorp-dealworks.jfrog.io/node/master:${env.BUILD_ID}", "-f ${dockerfile} .")
-
+                        
                         /* Push the container to the custom Registry */
                         docker_image.inside {
+                            LAST_COMMIT = sh 'git rev-parse --short HEAD'
+                            echo LAST_COMMIT
                             sh 'printenv'
                         }
                     }
