@@ -18,8 +18,8 @@ pipeline {
                 checkout scm
                 script {
                 
-                    //shortCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
+                    gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+                    //shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 
                 }
                
@@ -35,7 +35,7 @@ pipeline {
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
                         def dockerfile = 'Dockerfile'
-                        docker_image = docker.build("node/master:${shortCommit}", "-f ${dockerfile} .")
+                        docker_image = docker.build("node/master:${gitCommit}", "-f ${dockerfile} .")
 
                         /* Push the container to the custom Registry */
                         docker_image.inside {
