@@ -30,3 +30,4 @@ FROM nginx:alpine
 EXPOSE 80
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/ /var/www/
+CMD [ "npm", "start" ]
