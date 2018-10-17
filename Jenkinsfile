@@ -2,20 +2,24 @@
 
 pipeline {
     agent none
-  //  environment {
-       // JFROG = credentials("mrll-artifactory")
-       // CF_DOCKER_PASSWORD="$JFROG_PSW"
-        
- //   }
-//    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
-////        //      def customImage = docker.build("node:${env.BUILD_ID}")
-//        def customImage = docker.build("feirenliu/node:10-alpine")
-////        /* Push the container to the custom Registry */
-//
-//
-//    }
-
+    //environment {
+     //   JFROG=credentials("mrll-artifactory")
+     //   CF_DOCKER_PASSWORD="$JFROG_PSW"
+   // }
+    options {
+        skipDefaultCheckout()
+        ansiColor('xterm')
+    }
     stages {
+
+        stage('Checkout') {
+            agent any
+            steps {
+                checkout scm
+                // stash name:'scm', includes:'*'
+                //   stash(name: 'ws', includes: '**')
+            }
+        }
 
         stage('Build and Push') {
             steps {
