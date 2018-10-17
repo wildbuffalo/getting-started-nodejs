@@ -2,11 +2,11 @@
 
 pipeline {
     agent none
-    environment {
+  //  environment {
        // JFROG = credentials("mrll-artifactory")
        // CF_DOCKER_PASSWORD="$JFROG_PSW"
         def LAST_COMMIT
-    }
+ //   }
 //    withDockerRegistry(credentialsId: 'mrll-artifactory', url: 'https://merrillcorp-dealworks.jfrog.io') {
 ////        //      def customImage = docker.build("node:${env.BUILD_ID}")
 //        def customImage = docker.build("feirenliu/node:10-alpine")
