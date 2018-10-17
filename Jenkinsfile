@@ -16,8 +16,8 @@ pipeline {
             agent any
             steps {
                 checkout scm
-
-                shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
+                shortCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+               // shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
                 // stash name:'scm', includes:'*'
                 //   stash(name: 'ws', includes: '**')
             }
