@@ -18,7 +18,7 @@ pipeline {
                 script {
                 node{
                  //   sh 'docker system prune --all --force --volumes'
-                    sh 'docker rmi $(docker images -q -f dangling=true)'
+                    sh "docker rmi $(docker images -q -f dangling=true)"
                 }
                 }
                 deleteDir()
