@@ -15,7 +15,10 @@ pipeline {
          */
             always {
                 echo "I AM ALWAYS first"
-                sh 'docker system prune --all --force --volumes'
+                node{
+                 //   sh 'docker system prune --all --force --volumes'
+                    sh 'docker rmi $(docker images -q -f dangling=true)'
+                }
                 deleteDir()
                 
             }
