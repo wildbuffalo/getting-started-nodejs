@@ -15,7 +15,8 @@ pipeline {
          */
             always {
                 echo "I AM ALWAYS first"
-                node{
+                script {
+                //node{
                  //   sh 'docker system prune --all --force --volumes'
                     sh 'docker rmi $(docker images -q -f dangling=true)'
                 }
