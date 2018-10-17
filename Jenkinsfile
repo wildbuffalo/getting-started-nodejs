@@ -107,7 +107,7 @@ pipeline {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            docker.image('tools/sonarqube_scanner').inside('-u root:root') {
+                            docker.image('tools/sonarqube_scanner').inside() {
                                 sh 'ls'
                                 sh 'pwd'
                                 sh 'printenv'
@@ -151,7 +151,7 @@ pipeline {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
-                            docker.image('tools/pcf_cli').inside('-u root:root') {
+                            docker.image('tools/pcf_cli').inside() {
                                 sh 'ls'
                                 sh 'printenv'
                                 sh 'cf -v'
