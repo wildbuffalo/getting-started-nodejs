@@ -1,8 +1,4 @@
 FROM node:10-alpine
-
-RUN apk update && \
-    apk upgrade && \
-    apk add git
     
 WORKDIR /usr/src/app
 
