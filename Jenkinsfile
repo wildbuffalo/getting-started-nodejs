@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
 
     options {
         skipDefaultCheckout()
@@ -21,6 +21,7 @@ pipeline {
                    // sh 'docker rmi $(docker images -q -f dangling=true)'
                 }
                 }
+                cleanWs()
                 deleteDir()
                 
             }
