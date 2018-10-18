@@ -17,12 +17,12 @@ pipeline {
             echo "I AM ALWAYS first"
             
 
-                sh 'docker system prune --all --force --volumes'
+            sh 'docker system prune --all --force --volumes'
                 // sh 'docker rmi $(docker images -q -f dangling=true)'
 
             
             cleanWs()
-            deleteDir()
+            //deleteDir()
 
         }
         changed {
@@ -65,13 +65,13 @@ pipeline {
                 }
             }
         }
-        stage('Clean Up') {
-            steps {
-                script {
-                    sh 'docker system prune --all --force --volumes'
-                }
-            }
-        }
+//        stage('Clean Up') {
+  //          steps {
+    //            script {
+      //              sh 'docker system prune --all --force --volumes'
+        //        }
+          //  }
+        //}
     }
 
 }
