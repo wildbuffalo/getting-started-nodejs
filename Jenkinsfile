@@ -13,58 +13,65 @@ pipeline {
          * 2. changed - run if something changed from last run
          * 3. aborted, success, unstable or failure - depending on status
          */
-            always {
-                echo "I AM ALWAYS first"
-                script {
-                
-                    sh 'docker system prune --all --force --volumes'
-                   // sh 'docker rmi $(docker images -q -f dangling=true)'
-                
-                }
-                cleanWs()
-                deleteDir()
-                
-            }
-            changed {
-                echo "CHANGED is run second"
-            }
-            aborted {
-              echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED are exclusive of each other"
-            }
-            success {
-                echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
-            }
-            unstable {
-              echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
-            }
-            failure {
-                echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
-            }
+        always {
+            echo "I AM ALWAYS first"
+            
+
+                sh 'docker system prune --all --force --volumes'
+                // sh 'docker rmi $(docker images -q -f dangling=true)'
+
+            
+            cleanWs()
+            deleteDir()
+
         }
+        changed {
+            echo "CHANGED is run second"
+        }
+        aborted {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED are exclusive of each other"
+        }
+        success {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+        }
+        unstable {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+        }
+        failure {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+        }
+    }
     stages {
         stage('Checkout') {
-            agent any
+            //  agent any
             steps {
                 checkout scm
                 //   stash(name: 'ws', includes: '**')
-            }   
+            }
         }
 
 
-    
-    stage('Static Analysis') {
-        steps {
-            script {
-                node {
 
-                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+        stage('Static Analysis') {
+            steps {
+                script {
+                    node {
 
-                        sh 'make sonar'
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                            sh 'make sonar'
+                        }
                     }
                 }
             }
         }
+        stage('Clean Up') {
+            steps {
+                script {
+                    sh 'docker system prune --all --force --volumes'
+                }
+            }
+        }
     }
-}
 
 }
