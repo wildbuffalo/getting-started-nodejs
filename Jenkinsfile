@@ -57,7 +57,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    node {
+                    
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                             def dockerfile = 'Dockerfile'
                             docker_image = docker.build("node/master:${gitCommit}", "-f ${dockerfile} .")
@@ -65,7 +65,7 @@ pipeline {
                             docker_image.inside {
                                 sh 'printenv'
 
-                            }
+                            
                         }
                     }
                 }
