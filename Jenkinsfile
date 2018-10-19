@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    environment {
+       JFROG=credentials("mrll-artifactory")
+       CF_DOCKER_PASSWORD="$JFROG_PSW"
+     }
     options {
         skipDefaultCheckout()
         ansiColor('xterm')
