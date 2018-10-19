@@ -91,7 +91,7 @@ pipeline {
         stage('Static Analysis') {
             steps {
                 script {
-                    node {
+              //      node {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
@@ -106,7 +106,7 @@ pipeline {
                                 -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
                                 -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
                             }
-                        }
+                 //       }
                     }
                 }
             }
@@ -136,7 +136,7 @@ pipeline {
         stage('Push to PCF') {
             steps {
                 script {
-                    node {
+                  //  node {
 
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
@@ -151,7 +151,7 @@ pipeline {
                                 }
 
                             }
-                        }
+                 //       }
                     }
                 }
             }
