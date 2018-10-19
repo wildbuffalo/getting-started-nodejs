@@ -64,6 +64,7 @@ pipeline {
                             /* Push the container to the custom Registry */
                             docker_image.inside {
                                 sh 'printenv'
+                                sh 'ls'
 
                             
                         }
@@ -120,6 +121,7 @@ pipeline {
 
                         /* Push the container to the custom Registry */
                         docker_image.inside {
+                            sh 'ls'
                             sh 'printenv'
                         }
                         docker_image.push()
