@@ -1,14 +1,14 @@
 'use strict';
 require("appdynamics").profile({
-    controllerHostName: process.env.host-name,
-    controllerPort: process.env.port,
+    controllerHostName: 'merrill.saas.appdynamics.com',
+    controllerPort: 443,
     controllerSslEnabled: true,
-    accountName: process.env.account-name,
-    accountAccessKey: process.env.account-access-key,
-    applicationName: process.env.application-name,
+    accountName: 'Merrill',
+    accountAccessKey: '02de081213da',
+    applicationName: 'Javelin-Dev',
     tierName: "dealworks-tryout-app",
     reuseNode: true,
-    reuseNodePrefix: "dealworks-tryout-app",
+    reuseNodePrefix: 'dealworks-tryout-app',
     libagent: true,
     logging: {
         logfiles: [{
