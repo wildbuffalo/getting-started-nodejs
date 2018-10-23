@@ -9,7 +9,6 @@
         "test": "mocha"
     },
     "dependencies": {
-        "express": "^4.16.1",
-        "appdynamics": "*"
+        "express": "^4.16.1"
     }
 }
