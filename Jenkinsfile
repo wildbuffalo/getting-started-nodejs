@@ -28,6 +28,9 @@ pipeline {
             //deleteDir()
 
         }
+        
+        
+        // intergrating with assyst for change control 
         changed {
             echo "CHANGED is run second"
         }
