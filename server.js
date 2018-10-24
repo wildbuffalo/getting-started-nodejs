@@ -19,16 +19,21 @@
 // });
 require("appdynamics").profile({
     controllerHostName: 'merrill.saas.appdynamics.com',
-    controllerPort: 443, 
-    
-    // If SSL, be sure to enable the next line
+    controllerPort: 443,
     controllerSslEnabled: true,
-    accountName: 'merrill',
+    accountName: 'Merrill',
     accountAccessKey: '02de081213da',
     applicationName: 'Javelin-Dev',
-    tierName: 'dealworks-tryout-app',
-    nodeName: 'process' // The controller will automatically append the node name with a unique number
-   });
+    tierName: "dealworks-tryout-app",
+    reuseNode: true,
+    reuseNodePrefix: 'dealworks-tryout-app',
+    libagent: true,
+    logging: {
+        logfiles: [{
+            'outputType': 'console'
+        }]
+    }
+});
 
 const express = require('express');
 
