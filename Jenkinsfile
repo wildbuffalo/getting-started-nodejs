@@ -30,7 +30,7 @@ pipeline {
         }
 
 
-        // intergrating with assyst for change control 
+        // intergrating with assyst for change control
         changed {
             echo "CHANGED is run second"
         }
@@ -116,28 +116,28 @@ pipeline {
 //                }
 //            }
 //        }
-        stage('Push to Artifactory') {
-            steps {
-                script {
-
-                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-//                  def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
-
-                        /* Push the container to the custom Registry */
-                        docker_image.inside {
-                            sh 'ls'
-                            sh 'printenv'
-                        }
-                        docker_image.push()
-                        docker_image.push('latest')
-
-                    }
-
-
-                }
-            }
-        }
+//        stage('Push to Artifactory') {
+//            steps {
+//                script {
+//
+//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//
+////                  def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
+//
+//                        /* Push the container to the custom Registry */
+//                        docker_image.inside {
+//                            sh 'ls'
+//                            sh 'printenv'
+//                        }
+//                        docker_image.push()
+//                        docker_image.push('latest')
+//
+//                    }
+//
+//
+//                }
+//            }
+//        }
         stage('Push to PCF') {
             steps {
                 script {
