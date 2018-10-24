@@ -5,7 +5,7 @@ require("appdynamics").profile({
     accountName: 'Merrill',
     accountAccessKey: '02de081213da',
     applicationName: 'Javelin-Dev',
-    tierName: "dealworks-tryout-app",
+    tierName: "dealworks-tryout-app-new",
     reuseNode: true,
     reuseNodePrefix: 'dealworks-tryout-app',
     libagent: true,
