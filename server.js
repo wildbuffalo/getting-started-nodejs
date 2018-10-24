@@ -1,21 +1,35 @@
 'use strict';
+
+// require("appdynamics").profile({
+//     controllerHostName: 'merrill.saas.appdynamics.com',
+//     controllerPort: 443,
+//     controllerSslEnabled: true,
+//     accountName: 'Merrill',
+//     accountAccessKey: '02de081213da',
+//     applicationName: 'Javelin-Dev',
+//     tierName: "dealworks-tryout-app",
+//     reuseNode: true,
+//     reuseNodePrefix: 'dealworks-tryout-app',
+//     libagent: true,
+//     logging: {
+//         logfiles: [{
+//             'outputType': 'console'
+//         }]
+//     }
+// });
 require("appdynamics").profile({
-    controllerHostName: 'merrill.saas.appdynamics.com',
-    controllerPort: 443,
-    controllerSslEnabled: true,
-    accountName: 'Merrill',
-    accountAccessKey: '02de081213da',
-    applicationName: 'Javelin-Dev',
-    tierName: "dealworks-tryout-app",
-    reuseNode: true,
-    reuseNodePrefix: 'dealworks-tryout-app',
-    libagent: true,
-    logging: {
-        logfiles: [{
-            'outputType': 'console'
-        }]
-    }
+ controllerHostName: 'merrill.saas.appdynamics.com',
+ controllerPort: 443, 
+ 
+ // If SSL, be sure to enable the next line
+ controllerSslEnabled: true,
+ accountName: 'merrill',
+ accountAccessKey: '02de081213da',
+ applicationName: 'dealworks-tryout',
+ tierName: 'dealworks-tryout',
+ nodeName: 'process' // The controller will automatically append the node name with a unique number
 });
+
 const express = require('express');
 
 // Constants
