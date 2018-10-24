@@ -17,6 +17,8 @@
 //         }]
 //     }
 // });
+
+const express = require('express');
 require("appdynamics").profile({
  controllerHostName: 'merrill.saas.appdynamics.com',
  controllerPort: 443, 
@@ -29,8 +31,6 @@ require("appdynamics").profile({
  tierName: 'dealworks-tryout-app',
  nodeName: 'process' // The controller will automatically append the node name with a unique number
 });
-const express = require('express');
-
 
 // Constants
 const PORT = 8080;
