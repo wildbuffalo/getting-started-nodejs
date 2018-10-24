@@ -17,20 +17,21 @@
 //         }]
 //     }
 // });
+require("appdynamics").profile({
+    controllerHostName: 'merrill.saas.appdynamics.com',
+    controllerPort: 443, 
+    
+    // If SSL, be sure to enable the next line
+    controllerSslEnabled: true,
+    accountName: 'merrill',
+    accountAccessKey: '02de081213da',
+    applicationName: 'Javelin-Dev',
+    tierName: 'dealworks-tryout-app',
+    nodeName: 'process' // The controller will automatically append the node name with a unique number
+   });
 
 const express = require('express');
-require("appdynamics").profile({
- controllerHostName: 'merrill.saas.appdynamics.com',
- controllerPort: 443, 
- 
- // If SSL, be sure to enable the next line
- controllerSslEnabled: true,
- accountName: 'merrill',
- accountAccessKey: '02de081213da',
- applicationName: 'Javelin-Dev',
- tierName: 'dealworks-tryout-app',
- nodeName: 'process' // The controller will automatically append the node name with a unique number
-});
+
 
 // Constants
 const PORT = 8080;
