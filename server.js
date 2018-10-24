@@ -1,3 +1,21 @@
+require("appdynamics").profile({
+    controllerHostName: 'merrill.saas.appdynamics.com',
+    controllerPort: 443,
+    controllerSslEnabled: true,
+    accountName: 'Merrill',
+    accountAccessKey: '02de081213da',
+    applicationName: 'Javelin-Dev',
+    tierName: "dealworks-tryout-app",
+    reuseNode: true,
+    reuseNodePrefix: 'dealworks-tryout-app',
+    libagent: true,
+    logging: {
+        logfiles: [{
+            'outputType': 'console'
+        }]
+    }
+});
+
 'use strict';
 
 // require("appdynamics").profile({
@@ -17,23 +35,6 @@
 //         }]
 //     }
 // });
-require("appdynamics").profile({
-    controllerHostName: 'merrill.saas.appdynamics.com',
-    controllerPort: 443,
-    controllerSslEnabled: true,
-    accountName: 'Merrill',
-    accountAccessKey: '02de081213da',
-    applicationName: 'Javelin-Dev',
-    tierName: "dealworks-tryout-app",
-    reuseNode: true,
-    reuseNodePrefix: 'dealworks-tryout-app',
-    libagent: true,
-    logging: {
-        logfiles: [{
-            'outputType': 'console'
-        }]
-    }
-});
 
 const express = require('express');
 
