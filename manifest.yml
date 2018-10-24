@@ -4,10 +4,10 @@ applications:
   memory: 1G
   instances: 2
   host: dealworks-tryout-app
-#   docker:
-#     image: merrillcorp-dealworks.jfrog.io/node/master:latest
-#     username: svc-inf-jenkins
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+   docker:
+     image: merrillcorp-dealworks.jfrog.io/node/master:latest
+     username: svc-inf-jenkins
+ # buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
 #  buildpack: nodejs_buildpack_1625
   services:
     - appdynamics
