@@ -10,5 +10,6 @@
     },
     "dependencies": {
         "express": "^4.16.1"
+        "appdynamics": "4.4.3"
     }
 }
