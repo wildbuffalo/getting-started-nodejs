@@ -27,7 +27,7 @@ require("appdynamics").profile({
  controllerSslEnabled: true,
  accountName: 'merrill',
  accountAccessKey: '02de081213da',
- applicationName: 'dealworks-tryout-app',
+ applicationName: 'Javelin-Dev',
  tierName: 'dealworks-tryout-app',
  nodeName: 'process' // The controller will automatically append the node name with a unique number
 });
