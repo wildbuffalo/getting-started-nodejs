@@ -7,7 +7,10 @@ applications:
 #   docker:
 #     image: merrillcorp-dealworks.jfrog.io/node/master:latest
 #     username: svc-inf-jenkins
-  buildpack: nodejs_buildpack_1625
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+#  buildpack: nodejs_buildpack_1625
+  services:
+    - appdynamics
   env:
     APPDYNAMICS_CONTROLLER_HOST_NAME: merrill.saas.appdynamics.com 
     APPDYNAMICS_CONTROLLER_PORT: 443 
