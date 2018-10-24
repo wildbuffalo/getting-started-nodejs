@@ -8,3 +8,12 @@ applications:
 #     image: merrillcorp-dealworks.jfrog.io/node/master:latest
 #     username: svc-inf-jenkins
   buildpack: nodejs_buildpack_1625
+  env:
+    APPDYNAMICS_CONTROLLER_HOST_NAME: merrill.saas.appdynamics.com 
+    APPDYNAMICS_CONTROLLER_PORT: 443 
+    APPDYNAMICS_CONTROLLER_SSL_ENABLED: true 
+    APPDYNAMICS_AGENT_ACCOUNT_NAME: Merrill 
+    APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY: 02de081213da 
+    APPDYNAMICS_AGENT_APPLICATION_NAME: Javelin-Dev
+    APPDYNAMICS_AGENT_TIER_NAME: dealworks-tryout-app
+
