@@ -151,7 +151,7 @@ pipeline {
                             sh 'cf -v'
                             withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
                                 sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
-                                sh "cf set-env -e APPDYNAMICS_CONTROLLER_HOST_NAME='merrill.saas.appdynamics.com' \
+                                sh "cf set-env dealworks-tryout-app APPDYNAMICS_CONTROLLER_HOST_NAME='merrill.saas.appdynamics.com' \
                                     APPDYNAMICS_CONTROLLER_PORT=443 \
                                     APPDYNAMICS_CONTROLLER_SSL_ENABLED=true \
                                     APPDYNAMICS_AGENT_ACCOUNT_NAME=Merrill \
