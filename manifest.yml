@@ -9,8 +9,8 @@ applications:
 #      username: svc-inf-jenkins
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
 #  buildpack: nodejs_buildpack_1625
-#   services:
-#     - appdynamics
+  services:
+    - appdynamics
 #   env:
 #     APPDYNAMICS_CONTROLLER_HOST_NAME: merrill.saas.appdynamics.com 
 #     APPDYNAMICS_CONTROLLER_PORT: 443 
