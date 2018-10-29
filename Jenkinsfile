@@ -60,62 +60,62 @@ pipeline {
                 }
             }
         }
-        stage('Build') {
-            steps {
-                script {
-
-                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                        def dockerfile = 'Dockerfile'
-                        docker_image = docker.build("node/master:${gitCommit}", "-f ${dockerfile} .")
-                        /* Push the container to the custom Registry */
-                        docker_image.inside {
-                            sh 'printenv'
-                            sh 'ls'
-
-                        }
-                    }
-                }
-            }
-        }
-        stage('Test') {
-            steps {
-                script {
-//                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
-
-                    docker_image.inside {
-//                        sh 'cd /usr/src/app && npm test'
-                        sh 'printenv'
-                        sh 'ls'
-                        sh 'pwd'
-
-                    }
-                }
-            }
-        }
-
-        stage('Static Analysis') {
-            steps {
-                script {
-                    //      node {
-
-                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-                        docker.image('tools/sonar_scanner').inside() {
-                            sh 'ls'
-                            sh 'pwd'
-                            sh 'printenv'
-                            sh "sonar-scanner \
-                                -Dsonar.projectKey=dealworks_tryout \
-                                -Dsonar.sources=. \
-                                -Dsonar.exclusions='test/**, node_modules/**' \
-                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
-                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-                        }
-                        //       }
-                    }
-                }
-            }
-        }
+//        stage('Build') {
+//            steps {
+//                script {
+//
+//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//                        def dockerfile = 'Dockerfile'
+//                        docker_image = docker.build("node/master:${gitCommit}", "-f ${dockerfile} .")
+//                        /* Push the container to the custom Registry */
+//                        docker_image.inside {
+//                            sh 'printenv'
+//                            sh 'ls'
+//
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        stage('Test') {
+//            steps {
+//                script {
+////                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
+//
+//                    docker_image.inside {
+////                        sh 'cd /usr/src/app && npm test'
+//                        sh 'printenv'
+//                        sh 'ls'
+//                        sh 'pwd'
+//
+//                    }
+//                }
+//            }
+//        }
+//
+//        stage('Static Analysis') {
+//            steps {
+//                script {
+//                    //      node {
+//
+//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//
+//                        docker.image('tools/sonar_scanner').inside() {
+//                            sh 'ls'
+//                            sh 'pwd'
+//                            sh 'printenv'
+//                            sh "sonar-scanner \
+//                                -Dsonar.projectKey=dealworks_tryout \
+//                                -Dsonar.sources=. \
+//                                -Dsonar.exclusions='test/**, node_modules/**' \
+//                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
+//                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
+//                        }
+//                        //       }
+//                    }
+//                }
+//            }
+//        }
         stage('Push to Artifactory') {
             steps {
                 script {
@@ -124,7 +124,7 @@ pipeline {
 
                       docker.image('tools:latest').inside() {
                           sh 'jfrog --version'
-                          sh "jfrog npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src --user $JFROG_USR --password $JFROG_PSW --build-name dealworks-app --build-number ${gitCommit}"
+                          sh "jfrog npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ --user $JFROG_USR --password $JFROG_PSW --build-number ${gitCommit} dealworks-app"
                           sh 'ls'
                           sh 'printenv'
                         }
