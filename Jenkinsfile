@@ -124,7 +124,7 @@ pipeline {
 
                       docker.image('tools:latest').inside() {
                           sh 'jfrog --version'
-                          sh "jfrog npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ --user $JFROG_USR --password $JFROG_PSW --build-number ${gitCommit} dealworks-app"
+                          sh "jfrog rt npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ --user $JFROG_USR --password $JFROG_PSW --build-number ${gitCommit} dealworks-app"
                           sh 'ls'
                           sh 'printenv'
                         }
