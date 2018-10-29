@@ -124,7 +124,19 @@ pipeline {
 
                       docker.image('tools:latest').inside() {
                           sh 'jfrog --version'
-                          sh "jfrog rt npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ --user $JFROG_USR --password $JFROG_PSW --build-number ${gitCommit} --build-name dealworks-app"
+                          sh "jfrog rt config --user=$JFROG_USR \
+                                     --password=$JFROG_PSW \
+                                     --url=https://merrillcorp.jfrog.io/merrillcorp \
+                                     --interactive=false rt_admin"
+                          sh "jfrog rt npmp \
+                                --server-id=rt_admin \
+                                --build-number ${gitCommit} \
+                                --build-name dealworks-app"
+//                          sh "jfrog rt npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ \
+//                                --user $JFROG_USR \
+//                                --password $JFROG_PSW \
+//                                --build-number ${gitCommit} \
+//                                --build-name dealworks-app"
                           sh 'ls'
                           sh 'printenv'
                         }
