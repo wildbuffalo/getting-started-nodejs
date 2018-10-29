@@ -128,7 +128,7 @@ pipeline {
                                      --password=$JFROG_PSW \
                                      --url=https://merrillcorp.jfrog.io/merrillcorp \
                                      --interactive=false rt_admin"
-                          sh "jfrog rt npmi npm-virtual --build-name=dealworks-app --build-number=${gitCommit}"
+                          sh "jfrog rt npmp npm-virtual --build-name=dealworks-app --build-number=${gitCommit}"
 //                          sh "jfrog rt npmp \
 //                                --server-id=rt_admin \
 //                                --build-number ${gitCommit} \
