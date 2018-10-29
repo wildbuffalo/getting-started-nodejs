@@ -130,7 +130,8 @@ pipeline {
                                      --interactive=false rt_admin"
                           sh "jfrog rt npmp \
                                 --server-id=rt_admin \
-                                --build-number ${gitCommit} \
+                             //   --build-number ${gitCommit} \
+                                --build-number 1 \
                                 --build-name dealworks-app"
 //                          sh "jfrog rt npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ \
 //                                --user $JFROG_USR \
