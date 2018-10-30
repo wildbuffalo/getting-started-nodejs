@@ -3,6 +3,7 @@ pipeline {
     environment {
         JFROG=credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD="$JFROG_PSW"
+        PCF=credentials("svc-inf-jenkins")
     }
     options {
         skipDefaultCheckout()
@@ -116,36 +117,55 @@ pipeline {
 //                }
 //            }
 //        }
-        stage('Push to Artifactory') {
-            steps {
-                script {
-
-                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-                      docker.image('tools:latest').inside() {
-                          sh 'jfrog --version'
-                          sh "jfrog rt config --user=$JFROG_USR \
-                                     --password=$JFROG_PSW \
-                                     --url=https://merrillcorp.jfrog.io/merrillcorp \
-                                     --interactive=false rt_admin"
-                          sh "jfrog rt npmp npm-virtual --build-name=dealworks-app --build-number=${gitCommit}"
-//                          sh "jfrog rt npmp \
-//                                --server-id=rt_admin \
-//                                --build-number ${gitCommit} \
-//                                --build-name dealworks-app"
-//                          sh "jfrog rt npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ \
-//                                --user $JFROG_USR \
-//                                --password $JFROG_PSW \
-//                                --build-number ${gitCommit} \
-//                                --build-name dealworks-app"
-                          sh 'ls'
-                          sh 'printenv'
+//        stage('Push to Artifactory') {
+//            steps {
+//                script {
+//
+//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//
+//                        docker.image('tools:latest').inside() {
+//                            sh 'jfrog --version'
+//                            sh "jfrog rt config --user=$JFROG_USR \
+//                                     --password=$JFROG_PSW \
+//                                     --url=https://merrillcorp.jfrog.io/merrillcorp \
+//                                     --interactive=false rt_admin"
+//                            sh "jfrog rt npmp npm-virtual --build-name=dealworks-app --build-number=${gitCommit}"
+////                          sh "jfrog rt npmp \
+////                                --server-id=rt_admin \
+////                                --build-number ${gitCommit} \
+////                                --build-name dealworks-app"
+////                          sh "jfrog rt npmp --url https://merrillcorp.jfrog.io/merrillcorp/api/npm/dealworks-src/ \
+////                                --user $JFROG_USR \
+////                                --password $JFROG_PSW \
+////                                --build-number ${gitCommit} \
+////                                --build-name dealworks-app"
+//                            sh 'ls'
+//                            sh 'printenv'
+//                        }
+//
+//                    }
+//                }
+//            }
+//        }
+                stage('Push to PCF') {
+                    steps {
+                        script {
+                            docker.image('mysql:5').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"') { c ->
+                                docker.image('mysql:5').inside("--link ${c.id}:db") {
+                                    /* Wait until mysql service is up */
+                                    sh 'while ! mysqladmin ping -hdb --silent; do sleep 1; done'
+                                }
+                                docker.image('centos:7').inside("--link ${c.id}:db") {
+                                    /*
+                 * Run some tests which require MySQL, and assume that it is
+                 * available on the host name `db`
+                 */
+                                    sh 'make check'
+                                }
+                            }
                         }
-
                     }
                 }
-            }
-        }
 //        stage('Push to PCF') {
 //            steps {
 //                script {
