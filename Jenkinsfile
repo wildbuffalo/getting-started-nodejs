@@ -147,49 +147,33 @@ pipeline {
 //                }
 //            }
 //        }
-                stage('Push to PCF') {
-                    steps {
-                        script {
-                            docker.image('mysql:5').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"') { c ->
-                                docker.image('mysql:5').inside("--link ${c.id}:db") {
-                                    /* Wait until mysql service is up */
-                                    sh 'while ! mysqladmin ping -hdb --silent; do sleep 1; done'
-                                }
-                                docker.image('centos:7').inside("--link ${c.id}:db") {
-                                    /*
-                 * Run some tests which require MySQL, and assume that it is
-                 * available on the host name `db`
-                 */
-                                    sh 'make check'
-                                }
-                            }
-                        }
-                    }
-                }
-//        stage('Push to PCF') {
-//            steps {
-//                script {
-//                    //  node {
-//
-//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//
-//                        docker.image('tools/pcf_cli:latest').inside() {
-//                            sh 'ls'
-//                            sh 'printenv'
-//                            sh 'cf -v'
-//                            withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
-//                                sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
-//
-//                                sh "cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml"
-//
-//                            }
-//
-//                        }
-//                        //       }
-//                    }
-//                }
-//            }
-//        }
+
+       stage('Push to PCF') {
+           steps {
+               script {
+                   //  node {
+
+                   docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                       def dockerfile = 'pcf.Dockerfile'
+                       docker_pcf_src = docker.build("docker_pcf_src", "-f ${dockerfile} ./Docker")
+                       docker_pcf_src.inside() {
+                           sh 'cd /home/jenkins/src'
+                           sh 'ls'
+                           sh 'printenv'
+                           sh 'cf -v'
+                           withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
+                               sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
+
+                               sh "cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml"
+
+                           }
+
+                       }
+                       //       }
+                   }
+               }
+           }
+       }
     }
 }
 
