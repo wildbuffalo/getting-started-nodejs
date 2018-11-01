@@ -157,7 +157,6 @@ pipeline {
                        def dockerfile = './Docker/pcf.Dockerfile'
                        docker_pcf_src = docker.build("docker_pcf_src", "-f ${dockerfile} .")
                        docker_pcf_src.inside() {
-                            dir("/home/jenkins/src") {
                                 // sh 'cd /home/jenkins/src'
                                 sh 'ls'
                                 sh 'pwd'
@@ -171,7 +170,7 @@ pipeline {
                                     sh "cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml"
 
                                 }
-                            }
+                            
 
 
                        }
