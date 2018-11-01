@@ -154,8 +154,8 @@ pipeline {
                    //  node {
 
                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                       def dockerfile = 'pcf.Dockerfile'
-                       docker_pcf_src = docker.build("docker_pcf_src", "-f ${dockerfile} ./Docker")
+                       def dockerfile = './Docker/pcf.Dockerfile'
+                       docker_pcf_src = docker.build("docker_pcf_src", "-f ${dockerfile} .")
                        docker_pcf_src.inside() {
                            sh 'cd /home/jenkins/src'
                            sh 'ls'
