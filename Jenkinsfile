@@ -157,16 +157,20 @@ pipeline {
                        def dockerfile = './Docker/pcf.Dockerfile'
                        docker_pcf_src = docker.build("docker_pcf_src", "-f ${dockerfile} .")
                        docker_pcf_src.inside() {
-                           sh 'cd /home/jenkins/src'
-                           sh 'ls'
-                           sh 'printenv'
-                           sh 'cf -v'
-                           withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
-                               sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
+                            dir("/home/jenkins/src") {
+                                // sh 'cd /home/jenkins/src'
+                                sh 'ls'
+                                sh 'pwd'
+                                sh 'printenv'
+                                sh 'cf -v'
+                                withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
+                                    sh "cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg"
 
-                               sh "cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml"
+                                    sh "cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml"
 
-                           }
+                                }
+                            }
+
 
                        }
                        //       }
