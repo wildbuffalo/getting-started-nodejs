@@ -156,7 +156,7 @@ pipeline {
                                     sh "cd /home/jenkins/src &&\
                                         ls &&\
                                         cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_UN -p $PCF_PW -s devg &&\
-                                        cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml"
+                                        cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml --delete-old-apps"
 
                                 }
                        }
