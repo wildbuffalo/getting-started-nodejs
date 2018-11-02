@@ -72,7 +72,7 @@ pipeline {
                        docker_image.inside {
                            sh 'printenv'
                            sh 'ls'
-                           sh 'npm install'
+                           sh 'npm ci'
 
                        }
                    }
