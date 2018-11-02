@@ -131,7 +131,9 @@ pipeline {
             //     }
             // }
             stage('Static Analysis') {
-                def scannerHome = tool 'sonar-scanner'
+                steps{
+                    script {
+                def scannerHome = tool 'sonar-scanner';
                 withSonarQubeEnv {
                                 sh "${scannerHome}/bin/sonar-scanner \
                                -Dsonar.projectKey=dealworks_tryout \
@@ -139,6 +141,8 @@ pipeline {
                                -Dsonar.exclusions='test/**, node_modules/**' \
                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
+                }
+                }
                 }
             }
             
