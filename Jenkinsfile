@@ -28,7 +28,7 @@ pipeline {
 
     }
 
-        }
+        
 
 
         // intergrating with assyst for change control
@@ -47,7 +47,7 @@ pipeline {
         failure {
             echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
         }
-        cleanup{
+        cleanup {
                 cleanWs()
                 dir("${env.WORKSPACE}@tmp") {
                 cleanWs()
