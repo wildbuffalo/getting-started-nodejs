@@ -40,19 +40,18 @@ pipeline {
             echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
         }
         cleanup {
-            cleanWs()
+            cleanWs() // clean the current workspace 
+            // clean the @tmp workspace 
             dir("${env.WORKSPACE}@tmp") {
                 cleanWs()
             }
             script {
-//                node('master') {
-//                    // do useful build things first
-//                    cleanWs() // clean up workspace on slave
-//                }
                  node ('master') {
+                // clean the master @libs workspace 
                  dir("${env.WORKSPACE}@libs") {
                      cleanWs()
                  }
+                 // clean the master @script workspace 
                  dir("${env.WORKSPACE}@script") {
                      cleanWs()
                  }
@@ -108,29 +107,41 @@ pipeline {
                 }
             }
 
+            // stage('Static Analysis') {
+            //     steps {
+            //         script {
+            //             //      node {
+
+            //             docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+            //                 docker.image('tools/sonar_scanner').inside() {
+            //                     sh 'ls'
+            //                     sh 'pwd'
+            //                     sh 'printenv'
+            //                     sh "sonar-scanner \
+            //                    -Dsonar.projectKey=dealworks_tryout \
+            //                    -Dsonar.sources=. \
+            //                    -Dsonar.exclusions='test/**, node_modules/**' \
+            //                    -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
+            //                    -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
+            //                 }
+            //                 //       }
+            //             }
+            //         }
+            //     }
+            // }
             stage('Static Analysis') {
-                steps {
-                    script {
-                        //      node {
-
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-                            docker.image('tools/sonar_scanner').inside() {
-                                sh 'ls'
-                                sh 'pwd'
-                                sh 'printenv'
-                                sh "sonar-scanner \
+                def scannerHome = tool 'sonar-scanner'
+                withSonarQubeEnv {
+                                sh "${scannerHome}/bin/sonar-scanner \
                                -Dsonar.projectKey=dealworks_tryout \
                                -Dsonar.sources=. \
                                -Dsonar.exclusions='test/**, node_modules/**' \
                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-                            }
-                            //       }
-                        }
-                    }
                 }
             }
+            
             stage('Push to Artifactory') {
                 steps {
                     script {
