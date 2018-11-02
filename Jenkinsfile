@@ -25,8 +25,8 @@ pipeline {
             // sh 'docker rmi $(docker images -q -f dangling=true)'
 
 
-            cleanWs()
-            deleteDir()
+
+    }
 
         }
 
@@ -46,6 +46,23 @@ pipeline {
         }
         failure {
             echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+        }
+        cleanup{
+                cleanWs()
+                dir("${env.WORKSPACE}@tmp") {
+                cleanWs()
+                }
+                node ('slave') {
+                // do useful build things first
+                cleanWs() // clean up workspace on slave
+                }
+                // node ('master') {
+                // dir("${env.WORKSPACE}@libs") {
+                //     deleteDir()
+                // }
+                // dir("${env.WORKSPACE}@script") {
+                // deleteDir()
+                // }
         }
     }
     stages {
