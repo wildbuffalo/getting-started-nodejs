@@ -45,17 +45,17 @@ pipeline {
                 cleanWs()
             }
             script {
-                node('slave') {
-                    // do useful build things first
-                    cleanWs() // clean up workspace on slave
-                }
-                // node ('master') {
-                // dir("${env.WORKSPACE}@libs") {
-                //     deleteDir()
-                // }
-                // dir("${env.WORKSPACE}@script") {
-                // deleteDir()
-                // }
+//                node('master') {
+//                    // do useful build things first
+//                    cleanWs() // clean up workspace on slave
+//                }
+                 node ('master') {
+                 dir("${env.WORKSPACE}@libs") {
+                     cleanWs()
+                 }
+                 dir("${env.WORKSPACE}@script") {
+                     cleanWs()
+                 }
             }
 
         }
