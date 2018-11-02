@@ -124,13 +124,15 @@ pipeline {
             script {
 
                 docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-                    docker_image.inside {
-                        sh 'ls'
+                       def dockerfile = './Docker/scratch.Dockerfile'
+                       scratch_image = docker.build("node/master:${gitCommit}", "-f ${dockerfile} .")
+                    scratch_image.inside {
+                        sh 'cd /usr/src/app &&\
+                            ls'
                         sh 'printenv'
                     }
-                    docker_image.push()
-                    docker_image.push('latest')
+                    scratch_image.push()
+                    scratch_image.push('latest')
 
                 }
 
