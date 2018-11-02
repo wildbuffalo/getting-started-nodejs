@@ -57,7 +57,7 @@ pipeline {
                      cleanWs()
                  }
             }
-
+            }
         }
     }
         stages {
