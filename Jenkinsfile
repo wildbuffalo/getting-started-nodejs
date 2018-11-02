@@ -63,7 +63,7 @@ pipeline {
                 // dir("${env.WORKSPACE}@script") {
                 // deleteDir()
                 // }
-        }
+      
     }
     stages {
 
