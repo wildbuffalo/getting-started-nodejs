@@ -107,44 +107,44 @@ pipeline {
                 }
             }
 
-            // stage('Static Analysis') {
-            //     steps {
-            //         script {
-            //             //      node {
-
-            //             docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-
-            //                 docker.image('tools/sonar_scanner').inside() {
-            //                     sh 'ls'
-            //                     sh 'pwd'
-            //                     sh 'printenv'
-            //                     sh "sonar-scanner \
-            //                    -Dsonar.projectKey=dealworks_tryout \
-            //                    -Dsonar.sources=. \
-            //                    -Dsonar.exclusions='test/**, node_modules/**' \
-            //                    -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
-            //                    -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-            //                 }
-            //                 //       }
-            //             }
-            //         }
-            //     }
-            // }
             stage('Static Analysis') {
-                steps{
+                steps {
                     script {
-                def scannerHome = tool 'sonar-scanner';
-                withSonarQubeEnv {
-                                sh "${scannerHome}/bin/sonar-scanner \
+                        //      node {
+
+                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                            docker.image('tools/sonar_scanner').inside() {
+                                sh 'ls'
+                                sh 'pwd'
+                                sh 'printenv'
+                                sh "sonar-scanner \
                                -Dsonar.projectKey=dealworks_tryout \
                                -Dsonar.sources=. \
                                -Dsonar.exclusions='test/**, node_modules/**' \
                                -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
                                -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-                }
-                }
+                            }
+                            //       }
+                        }
+                    }
                 }
             }
+            // stage('Static Analysis') {
+            //     steps{
+            //         script {
+            //     def scannerHome = tool 'sonar-scanner';
+            //     withSonarQubeEnv {
+            //                     sh "${scannerHome}/bin/sonar-scanner \
+            //                    -Dsonar.projectKey=dealworks_tryout \
+            //                    -Dsonar.sources=. \
+            //                    -Dsonar.exclusions='test/**, node_modules/**' \
+            //                    -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
+            //                    -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
+            //     }
+            //     }
+            //     }
+            // }
             
             stage('Push to Artifactory') {
                 steps {
