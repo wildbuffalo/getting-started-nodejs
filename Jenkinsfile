@@ -73,7 +73,7 @@ pipeline {
                            sh 'printenv'
                            sh 'ls'
                            sh 'npm -v'
-                           sh 'npm ci'
+                           sh 'npm install'
 
                        }
                    }
