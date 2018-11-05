@@ -68,7 +68,10 @@ pipeline {
                 checkout scm
                 script {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    repoName = sh(returnStdout: true, script: "basename 'git rev-parse --show-toplevel'")
+                    repoName = sh (
+                            script: "basename 'git rev-parse --show-toplevel'",
+                            returnStdout: true
+                            ).trim()
                     //shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 
                 }
