@@ -84,7 +84,7 @@ pipeline {
                         docker_image.inside {
                             sh 'printenv'
                             sh 'ls'
-                            sh "echo ${repo_name}"
+                            echo "abcde : ${repo_name}"
                             sh 'npm -v'
                             sh 'npm install'
 
