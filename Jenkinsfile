@@ -67,6 +67,7 @@ pipeline {
                 checkout scm
                 script {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+                    repo_name = sh(returnStdout: true, script: 'git rev-parse --show-toplevel')
                     //shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 
                 }
@@ -83,6 +84,7 @@ pipeline {
                         docker_image.inside {
                             sh 'printenv'
                             sh 'ls'
+                            echo "$repo_name"
                             sh 'npm -v'
                             sh 'npm install'
 
