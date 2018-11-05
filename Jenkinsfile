@@ -4,7 +4,7 @@ pipeline {
         JFROG=credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD="$JFROG_PSW"
         PCF=credentials("svc-inf-jenkins")
-//        repoName=
+        repoName="getting-started-nodejs"
     }
     options {
         skipDefaultCheckout()
@@ -68,10 +68,10 @@ pipeline {
                 checkout scm
                 script {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    repoName = sh (
-                            script: "basename 'git rev-parse --show-toplevel'",
-                            returnStdout: true
-                            )
+              //      repoName = sh (
+               //             script: "basename 'git rev-parse --show-toplevel'",
+               //             returnStdout: true
+               //             )
                     //shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 
                 }
