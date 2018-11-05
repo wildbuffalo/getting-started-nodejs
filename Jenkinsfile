@@ -68,10 +68,10 @@ pipeline {
                 checkout scm
                 script {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-              //      repoName = sh (
-               //             script: "basename 'git rev-parse --show-toplevel'",
-               //             returnStdout: true
-               //             )
+                    //      repoName = sh (
+                    //             script: "basename 'git rev-parse --show-toplevel'",
+                    //             returnStdout: true
+                    //             )
                     //shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 
                 }
@@ -83,7 +83,7 @@ pipeline {
 
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                         def dockerfile = './Docker/Dockerfile'
-                        docker_image = docker.build("$repoName/master:${gitCommit}", "-f ${dockerfile} .")
+                        docker_image = docker.build("$repoName/$BRANCH_NAME:${gitCommit}", "-f ${dockerfile} .")
                         /* Push the container to the custom Registry */
                         docker_image.inside {
                             sh 'printenv'
@@ -97,108 +97,108 @@ pipeline {
                 }
             }
         }
-//        stage('Test') {
-//            steps {
-//                script {
-////                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
-//
-//                    docker_image.inside {
-////                        sh 'cd /usr/src/app && npm test'
-//                        sh 'printenv'
-//                        sh 'ls'
-//                        sh 'pwd'
-//
-//                    }
-//                }
-//            }
-//        }
-//
-//        stage('Static Analysis') {
-//            steps {
-//                script {
-//                    //      node {
-//
-//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//
-//                        docker.image('tools/sonar_scanner').inside() {
-//                            sh 'ls'
-//                            sh 'pwd'
-//                            sh 'printenv'
-//                            sh "sonar-scanner \
-//                               -Dsonar.projectKey=$repoName \
-//                               -Dsonar.sources=. \
-//                               -Dsonar.exclusions='test/**, node_modules/**' \
-//                               -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
-//                               -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-//                        }
-//                        //       }
-//                    }
-//                }
-//            }
-//        }
-//        // stage('Static Analysis') {
-//        //     steps{
-//        //         script {
-//        //     def scannerHome = tool 'sonar-scanner';
-//        //     withSonarQubeEnv {
-//        //                     sh "${scannerHome}/bin/sonar-scanner \
-//        //                    -Dsonar.projectKey=$repoName \
-//        //                    -Dsonar.sources=. \
-//        //                    -Dsonar.exclusions='test/**, node_modules/**' \
-//        //                    -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
-//        //                    -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
-//        //     }
-//        //     }
-//        //     }
-//        // }
-//
-//        stage('Push to Artifactory') {
-//            steps {
-//                script {
-//
-//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//
-//                        docker_image.inside {
-//                            sh 'ls'
-//                            sh 'printenv'
-//                        }
-//                        docker_image.push()
-//                        docker_image.push('latest')
-//
-//                    }
-//
-//
-//                }
-//            }
-//        }
-//
-//        stage('Push to PCF') {
-//            steps {
-//                script {
-//                    //  node {
-//
-//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//                        def dockerfile = './Docker/pcf.Dockerfile'
-//                        docker_pcf_src = docker.build("docker_pcf_src", "-f ${dockerfile} .")
-//                        docker_pcf_src.inside() {
-//                            // sh 'cd /home/jenkins/src'
-//                            sh 'ls'
-//                            sh 'pwd'
-//                            sh 'printenv'
-//                            sh 'cf -v'
-////                            withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
-//                            sh "cd /home/jenkins/src &&\
-//                                        ls &&\
-//                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
-//                                        cf blue-green-deploy $repoName -f ./manifest.yml --delete-old-apps"
-//
-////                            }
-//                        }
-//                        //       }
-//                    }
-//                }
-//            }
-//        }
+        stage('Test') {
+            steps {
+                script {
+//                        def node = docker.build("node:${env.BUILD_ID}","./Docker/Dockerfile")
+
+                    docker_image.inside {
+//                        sh 'cd /usr/src/app && npm test'
+                        sh 'printenv'
+                        sh 'ls'
+                        sh 'pwd'
+
+                    }
+                }
+            }
+        }
+
+        stage('Static Analysis') {
+            steps {
+                script {
+                    //      node {
+
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                        docker.image('tools/sonar_scanner').inside() {
+                            sh 'ls'
+                            sh 'pwd'
+                            sh 'printenv'
+                            sh "sonar-scanner \
+                               -Dsonar.projectKey=$repoName \
+                               -Dsonar.sources=. \
+                               -Dsonar.exclusions='test/**, node_modules/**' \
+                               -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
+                               -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
+                        }
+                        //       }
+                    }
+                }
+            }
+        }
+        // stage('Static Analysis') {
+        //     steps{
+        //         script {
+        //     def scannerHome = tool 'sonar-scanner';
+        //     withSonarQubeEnv {
+        //                     sh "${scannerHome}/bin/sonar-scanner \
+        //                    -Dsonar.projectKey=$repoName \
+        //                    -Dsonar.sources=. \
+        //                    -Dsonar.exclusions='test/**, node_modules/**' \
+        //                    -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com \
+        //                    -Dsonar.login=c9b66ea7ea641c404bde3abf67747f46f458b623"
+        //     }
+        //     }
+        //     }
+        // }
+
+        stage('Push to Artifactory') {
+            steps {
+                script {
+
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                        docker_image.inside {
+                            sh 'ls'
+                            sh 'printenv'
+                        }
+                        docker_image.push()
+                        docker_image.push('latest')
+
+                    }
+
+
+                }
+            }
+        }
+
+        stage('Push to PCF') {
+            steps {
+                script {
+                    //  node {
+
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                        def dockerfile = './Docker/pcf.Dockerfile'
+                        docker_pcf_src = docker.build("docker_pcf_src", "-f ${dockerfile} .")
+                        docker_pcf_src.inside() {
+                            // sh 'cd /home/jenkins/src'
+                            sh 'ls'
+                            sh 'pwd'
+                            sh 'printenv'
+                            sh 'cf -v'
+//                            withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
+                            sh "cd /home/jenkins/src &&\
+                                        ls &&\
+                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
+                                        cf blue-green-deploy $repoName -f ./manifest.yml --delete-old-apps"
+
+//                            }
+                        }
+                        //       }
+                    }
+                }
+            }
+        }
     }
 }
 
