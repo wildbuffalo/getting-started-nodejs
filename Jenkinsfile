@@ -4,7 +4,7 @@ pipeline {
         JFROG=credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD="$JFROG_PSW"
         PCF=credentials("svc-inf-jenkins")
-//        repo_name=
+//        repoName=
     }
     options {
         skipDefaultCheckout()
@@ -69,9 +69,9 @@ pipeline {
                 script {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     repoName = sh (
-                            script: basename 'git rev-parse --show-toplevel',
+                            script: "basename 'git rev-parse --show-toplevel'",
                             returnStdout: true
-                            ).trim()
+                            )
                     //shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 
                 }
