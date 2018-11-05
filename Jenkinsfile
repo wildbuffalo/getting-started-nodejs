@@ -84,7 +84,7 @@ pipeline {
                         docker_image.inside {
                             sh 'printenv'
                             sh 'ls'
-                            echo "$repo_name"
+                            sh "echo ${repo_name}"
                             sh 'npm -v'
                             sh 'npm install'
 
@@ -183,7 +183,7 @@ pipeline {
                             sh 'printenv'
                             sh 'cf -v'
 //                            withCredentials([usernamePassword(credentialsId: 'PCF', passwordVariable: 'PCF_PW', usernameVariable: 'PCF_UN')]) {
-                                sh "cd /home/jenkins/src &&\
+                            sh "cd /home/jenkins/src &&\
                                         ls &&\
                                         cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
                                         cf blue-green-deploy dealworks-tryout-app -f ./manifest.yml --delete-old-apps"
