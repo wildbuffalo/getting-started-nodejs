@@ -196,8 +196,8 @@ pipeline {
 //                }
 //            }
 //        }
-//    }
-//}
+    }
+}
 
 
 //        stage('Push to Artifactory') {
