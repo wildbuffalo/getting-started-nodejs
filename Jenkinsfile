@@ -1,16 +1,21 @@
 node {
-    checkout scm
-    docker.image('mysql:5').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"') { c ->
-        docker.image('mysql:5').inside("--link ${c.id}:db") {
+    checkout scm 
+    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+
+                        
+    docker.image('node:10-alpine').withRun() { c ->
+        docker.image('tools/sonar_scanner').inside("--link ${c.id}:node") {
             /* Wait until mysql service is up */
-            sh 'while ! mysqladmin ping -hdb --silent; do sleep 1; done'
+            sh 'node -v'
+            sh 'sonar-scanner -v'
         }
-        docker.image('centos:7').inside("--link ${c.id}:db") {
+        docker.image('tools:latest').inside("--link ${c.id}:node") {
             /*
              * Run some tests which require MySQL, and assume that it is
              * available on the host name `db`
              */
-            sh 'make check'
-        }
+            sh 'mcf -v'
+                
+        }}}
     }
 }
