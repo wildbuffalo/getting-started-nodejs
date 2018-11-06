@@ -3,8 +3,8 @@ node {
     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
                         
-    docker.image('node:10-alpine').withRun() { c ->
-        docker.image('tools/sonar_scanner').inside("--link ${c.id}:node") {
+    docker.image('tools/sonar_scanner').withRun() { c ->
+        docker.image('node:10-alpine').inside("--link ${c.id}:node") {
             /* Wait until mysql service is up */
             sh 'node -v'
             sh 'sonar-scanner -v'
