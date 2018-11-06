@@ -3,7 +3,7 @@ node {
     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 
                         
-    docker.image(mysql:5).withRun() { c ->
+    docker.image('mysql:5').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"') { c ->
         docker.image('node:10-alpine').inside("--link ${c.id}:node") {
             /* Wait until mysql service is up */
             sh 'node -v'
