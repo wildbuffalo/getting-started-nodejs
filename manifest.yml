@@ -7,7 +7,7 @@ applications:
 #   docker:
 #      image: merrillcorp-dealworks.jfrog.io/node/master:latest
 #      username: svc-inf-jenkins
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
 #  buildpack: nodejs_buildpack_1625
   services:
     - appdynamics
