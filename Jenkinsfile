@@ -1,228 +1,112 @@
+
+
+
 pipeline {
+    agent any
+
     environment {
-        REL_VERSION = "${BRANCH_NAME.contains('release-') ? BRANCH_NAME.drop(BRANCH_NAME.lastIndexOf('-')+1) + '.' + BUILD_NUMBER : ""}"
-
+        JFROG=credentials("mrll-artifactory")
+        CF_DOCKER_PASSWORD="$JFROG_PSW"
+        PCF=credentials("svc-inf-jenkins")
+//        repoName="dealworks-app"
     }
-    agent none
-
     options {
+        disableConcurrentBuilds()
         skipDefaultCheckout()
         ansiColor('xterm')
     }
-//    post{
-    //       always {
-    //           echo 'One way or another, I have finished'
-    //           deleteDir() /* clean up our workspace */
-    //       }
-    // }//Post: notifications; hipchat, slack, send email etc.
+    parameters {
+//        string(name: 'REPO', defaultValue: 'dealworks-app')
+        string(name: 'SRC_PATH', defaultValue: 'mrll-npm/@mrll/dealworks-app/-/@mrll/dealworks-app-1.0.294.tgz')
+
+        // booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'Space', choices: ['devg', 'stageg', 'prod'], description: 'PCF spaces')
+        choice(name: 'Manifest', choices: ['manifest-dev', 'manifest-stage', 'manifest-prod'], description: 'PCF manifest file')
+
+        // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+
+    }
+    post {
+        /*
+         * These steps will run at the end of the pipeline based on the condition.
+         * Post conditions run in order regardless of their place in pipeline
+         * 1. always - always run
+         * 2. changed - run if something changed from last run
+         * 3. aborted, success, unstable or failure - depending on status
+         */
+        always {
+            echo "I AM ALWAYS first"
+            sh 'docker system prune --all --force --volumes'
+            // sh 'docker rmi $(docker images -q -f dangling=true)'
+        }
+
+        // intergrating with assyst for change control
+        changed {
+            echo "CHANGED is run second"
+        }
+        aborted {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED are exclusive of each other"
+        }
+        success {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+        }
+        unstable {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+        }
+        failure {
+            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+        }
+        cleanup {
+            cleanWs() // clean the current workspace
+            // clean the @tmp workspace
+            dir("${env.WORKSPACE}@tmp") {
+                cleanWs()
+            }
+            script {
+                node ('master') {
+                    // clean the master @libs workspace
+                    dir("${env.WORKSPACE}@libs") {
+                        cleanWs()
+                    }
+                    // clean the master @script workspace
+                    dir("${env.WORKSPACE}@script") {
+                        cleanWs()
+                    }
+                }
+            }
+        }
+    }
     stages {
+
         stage('Checkout') {
-            agent any
+
+
+            //  agent any
             steps {
                 checkout scm
-                stash name:'scm', includes:'*'
-                //   stash(name: 'ws', includes: '**')
+                script{
+                    getrepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`" ).trim()
+//getrepo = sh "basename `git rev-parse --show-toplevel`"
+                }
+
+                echo "$getrepo"
+
             }
         }
-        stage('Build') {
-            steps{
-
-                script {
-                    node {
-
-                        //    def PWD = pwd();
-                        //  deleteDir()
-                        docker.image('node:10-alpine').inside {
-                            unstash 'scm'
-                            sh 'ls'
-
-                            sh 'pwd'
-                            sh 'printenv'
-                            sh 'npm install'
-                            stash name:'scm-installed', includes:'*'
-                        }
-                    }
-                }
-            }
-
-//            agent {
-//                docker {
-//                    image 'node:10-alpine'
-//                    args '-v $PWD:/src'
-//
-//                }
-//            }
-//            steps {
-////                unstash 'ws'
-//                sh 'npm install'
-////                stash name: 'war', includes: 'module/**/*'
-//            }
-////            post {
-////                success {
-////                    sh 'printenv'
-////                    archive '**/*.zip'
-////                }
-////            }
-        }
-        stage('Test') {
-            steps{
-
-                script {
-                    node {
-
-                        docker.image('node:10-alpine').inside {
-                            unstash 'scm-installed'
-                            sh 'ls'
-                            sh 'printenv'
-                            sh 'npm test'
-                            stash name:'scm-posttest', includes:'*'
-                        }
-                    }
-                }
-            }
-//            agent {
-//                docker {
-//                    image 'node:10-alpine'
-//                    arg
-//
-//                }
-//            }
-//            steps {
-////                unstash 'ws'
-////                unstash 'war'
-//                sh 'npm test'
-//            }
-            post {
-                success {
-                    echo 'success'
-
-                    //                 junit '**/surefire-reports/**/*.xml'
-                    //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
-                }
-                unstable {
-                    echo 'unstable'
-                    //                 junit '**/surefire-reports/**/*.xml'
-                    //                 findbugs pattern: 'target/**/findbugsXml.xml', unstableNewAll: '0' //unstableTotalAll: '0'
-                }
-            }
-        }
-        stage('Static Analysis') {
+        stage('Push to PCF') {
             steps {
                 script {
-                    node {
-                        
-                        docker.image('newtmitch/sonar-scanner:3.2.0-alpine').inside("-v ${env.WORKSPACE}:/root/src") {
-                            unstash 'scm-posttest'
-                            sh 'ls'
-                            sh 'printenv'
-                            sh "sonar-scanner \
-                                -Dsonar.projectKey=tryout \
-                                -Dsonar.sources=. \
-                                -Dsonar.exclusions='node_modules/**, **/*.js,**/*.js.map, **/shared/mocks.**, **/*.spec.ts, apps/**/*.ts' \
-                                -Dsonar.host.url=http://10.68.17.183:9000 \
-                                -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
-                            
-                            
-                        }
-//                        //    withDockerContainer(args: '-v $(PWD):/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine')
-//                        withDockerContainer(args: '-v ${PWD}:/root/src', image: 'newtmitch/sonar-scanner:3.2.0-alpine') {
-//                            // unstash 'scm-posttest'
-//                            sh "printenv"
-//                            sh "ls"
-//                            sh "ls /root/src"
-//                            sh "sonar-scanner \
-//                                -Dsonar.projectKey=tryout \
-//                                -Dsonar.sources=. \
-//                                -Dsonar.host.url=http://10.68.17.183:9000 \
-//                                -Dsonar.login=72d9aeef37d1eed4261b522b1055a2b9543e228a"
-//
-//
-//                        }
+                    //  node {
+                echo "push"
+
+                        //       }
                     }
                 }
             }
         }
-//        stage('Test More') {
-//            agent none
-//            when {
-//                anyOf {
-//                    branch "master"
-//                    branch "release-*"
-//                }
-//            }
-//            steps {
-//                parallel(
-//                        'Frontend' : {
-//                            script {
-//                                node {
-//                                    unstash 'ws'
-//                                    sh 'echo hello'
-//                                    //sh 'gulp test'
-//                                    //                      sh './frontEndTests.sh'
-//                                }
-//                            }
-//                        },
-//                        'Performance' : {
-//                            script {
-//                                node {
-//                                    docker.image('maven:3-alpine').inside('-v $HOME/.m2:/root/.m2') {
-//                                        unstash 'ws'
-//                                        unstash 'war'
-//                                        sh './mvnw -B gatling:execute'
-//                                    }
-//                                }
-//                            }
-//                        })
-//            }
-//        }
-//        stage('Deploy to Staging') {
-//            agent any
-//            environment {
-//                STAGING_AUTH = credentials('staging')
-//            }
-//            when {
-//                anyOf {
-//                    branch "master"
-//                    branch "release-*"
-//                }
-//            }
-//            steps {
-//                unstash 'war'
-//                sh './deploy.sh staging -v $REL_VERSION -u $STAGING_AUTH_USR -p $STAGING_AUTH_PSW'
-//            }
-//            //Post: Send notifications; hipchat, slack, send email etc.
-//        }
-//        stage('Archive') {
-//            agent any
-//            when {
-//                not {
-//                    anyOf {
-//                        branch "master"
-//                        branch "release-*"
-//                    }
-//                }
-//            }
-//            steps {
-//                unstash 'war'
-//                archiveArtifacts artifacts: 'target/**/*.war', fingerprint: true, allowEmptyArchive: true
-//            }
-//        }
-//        stage('Deploy to production') {
-//            agent any
-//            environment {
-//                PROD_AUTH = credentials('production')
-//            }
-//            when {
-//                branch "release-*"
-//            }
-//            steps {
-//                timeout(15) {
-//                    input message: 'Deploy to production?', ok: 'Fire zee missiles!'
-//                    unstash 'war'
-//                    sh './deploy.sh production -v $REL_VERSION -u $PROD_AUTH_USR -p $PROD_AUTH_PSW'
-//                }
-//            }
-//        }
     }
 
-}
+
+
+
