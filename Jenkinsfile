@@ -69,9 +69,6 @@ pipeline {
 
         stage('Checkout') {
 
-            options {
-                timeout(time: 20, unit: 'SECONDS') 
-            }
             //  agent any
             steps {
                 checkout scm
@@ -85,6 +82,10 @@ pipeline {
             }
         }
         stage('Push to PCF') {
+            
+            options {
+                timeout(time: 20, unit: 'SECONDS') 
+            }
             steps {
                 script {
                     //  node {
