@@ -83,10 +83,9 @@ pipeline {
         }
         stage('Push to PCF') {
             
-            options {
-                timeout(time: 20, unit: 'SECONDS') 
-            }
+
             steps {
+                sleep(time:5,unit:"SECONDS")
                 script {
                     //  node {
                 echo "push"
