@@ -15,18 +15,6 @@ pipeline {
         skipDefaultCheckout()
         ansiColor('xterm')
     }
-    parameters {
-//        string(name: 'REPO', defaultValue: 'dealworks-app')
-        string(name: 'SRC_PATH', defaultValue: 'mrll-npm/@mrll/dealworks-app/-/@mrll/dealworks-app-1.0.294.tgz')
-
-        // booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-
-        choice(name: 'Space', choices: ['devg', 'stageg', 'prod'], description: 'PCF spaces')
-        choice(name: 'Manifest', choices: ['manifest-dev', 'manifest-stage', 'manifest-prod'], description: 'PCF manifest file')
-
-        // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-
-    }
     post {
         /*
          * These steps will run at the end of the pipeline based on the condition.
@@ -89,7 +77,7 @@ pipeline {
                     getrepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`" ).trim()
 //getrepo = sh "basename `git rev-parse --show-toplevel`"
                 }
-
+                sleep(time:5,unit:"SECONDS")
                 echo "$getrepo"
 
             }
