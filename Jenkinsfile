@@ -69,7 +69,9 @@ pipeline {
 
         stage('Checkout') {
 
-
+            options {
+                timeout(time: 5, unit: 'SECONDS') 
+            }
             //  agent any
             steps {
                 checkout scm
@@ -77,7 +79,7 @@ pipeline {
                     getrepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`" ).trim()
 //getrepo = sh "basename `git rev-parse --show-toplevel`"
                 }
-                sleep(time:5,unit:"SECONDS")
+          
                 echo "$getrepo"
 
             }
