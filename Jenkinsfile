@@ -17,7 +17,7 @@ pipeline {
          * 3. aborted, success, unstable or failure - depending on status
          */
         always {
-            echo "I AM ALWAYS first"
+            notification currentBuild.result
             //sh 'docker system prune --all --force --volumes'
         }
 
