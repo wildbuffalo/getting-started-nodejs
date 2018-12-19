@@ -65,7 +65,7 @@ pipeline {
 //                        PR_build()
 //
 //                    }
-                    echo 'hiiii'
+
                     notification 'STARTED'
                 }
 
