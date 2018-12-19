@@ -1,11 +1,12 @@
+#!groovy
 //library 'ds1_marketing_jenkins_library@master' _
-//@Library('ds1_marketing_jenkins_library@master') _
+@Library('ds1_marketing_jenkins_library@master') _
 
 pipeline {
-//    agent any
-    libraries {
-        lib('wildbuffalo/ds1_marketing_jenkins_library@master')
-    }
+    agent any
+//    libraries {
+//        lib('wildbuffalo/ds1_marketing_jenkins_library@master')
+//    }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds() 
