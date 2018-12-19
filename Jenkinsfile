@@ -17,7 +17,8 @@ pipeline {
          * 3. aborted, success, unstable or failure - depending on status
          */
         always {
-            notification currentBuild.result
+            notification 'STARTED'
+//            notification currentBuild.result
             //sh 'docker system prune --all --force --volumes'
         }
 
