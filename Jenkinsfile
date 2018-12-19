@@ -1,11 +1,11 @@
 //library 'ds1_marketing_jenkins_library@master' _
-@Library('ds1_marketing_jenkins_library@master') _
+//@Library('ds1_marketing_jenkins_library@master') _
 
 pipeline {
     agent any
-//    libraries {
-//        lib('ds1_marketing_jenkins_library@master')
-//    }
+    libraries {
+        lib('wildbuffalo/ds1_marketing_jenkins_library@master')
+    }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds() 
@@ -19,11 +19,11 @@ pipeline {
          * 2. changed - run if something changed from last run
          * 3. aborted, success, unstable or failure - depending on status
          */
-        always {
-            notification 'STARTED'
-//            notification currentBuild.result
-            //sh 'docker system prune --all --force --volumes'
-        }
+//        always {
+//            notification 'STARTED'
+////            notification currentBuild.result
+//            //sh 'docker system prune --all --force --volumes'
+//        }
 
         // intergrating with assyst for change control
         cleanup {
@@ -76,6 +76,7 @@ pipeline {
 //                    }
 //                }
                 echo 'hiiii'
+                notification 'STARTED'
             }
         }
     }
