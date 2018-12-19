@@ -66,7 +66,7 @@ pipeline {
 //
 //                    }
 
-                    notification 'STARTED'
+                    notification currentBuild.result
                 }
 
             }
