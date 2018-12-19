@@ -1,8 +1,10 @@
+library 'ds1_marketing_jenkins_library@master'
+
 pipeline {
     agent any
-    libraries {
-        lib('ds1_marketing_jenkins_library@master')
-    }
+//    libraries {
+//        lib('ds1_marketing_jenkins_library@master')
+//    }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds() 
