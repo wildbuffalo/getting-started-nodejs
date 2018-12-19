@@ -2,7 +2,7 @@
 //@Library('ds1_marketing_jenkins_library@master') _
 
 pipeline {
-    agent any
+//    agent any
     libraries {
         lib('wildbuffalo/ds1_marketing_jenkins_library@master')
     }
@@ -53,16 +53,6 @@ pipeline {
             //  agent any
             steps {
                 checkout scm
-                script {
-
-                    gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-//                    getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`" ).trim()
-                    tokens = "${env.JOB_NAME}".tokenize('/')
-                    org = tokens[tokens.size()-3]
-                    repo = tokens[tokens.size()-2]
-                    branch = tokens[tokens.size()-1]
-                    echo("$org, $repo, $branch")
-                }
             }
         }
         stage('Build') {
