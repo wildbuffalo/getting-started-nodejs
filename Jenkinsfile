@@ -58,16 +58,17 @@ pipeline {
         }
         stage('Build') {
             steps{
-//                script{
+                script{
 //                    if (!isPRMergeBuild()) {
 //                        Build()
 //                    } else {
 //                        PR_build()
 //
 //                    }
-//                }
-                echo 'hiiii'
-                notification 'STARTED'
+                    echo 'hiiii'
+                    notification 'STARTED'
+                }
+
             }
         }
     }
