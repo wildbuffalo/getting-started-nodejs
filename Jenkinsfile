@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    libraries {
+        lib('ds1_marketing_jenkins_library@master')
+    }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds() 
@@ -60,14 +63,15 @@ pipeline {
         }
         stage('Build') {
             steps{
-                script{
-                    if (!isPRMergeBuild()) {
-                        Build()
-                    } else {
-                        PR_build()
-
-                    }
-                }
+//                script{
+//                    if (!isPRMergeBuild()) {
+//                        Build()
+//                    } else {
+//                        PR_build()
+//
+//                    }
+//                }
+                echo 'hiiii'
             }
         }
     }
