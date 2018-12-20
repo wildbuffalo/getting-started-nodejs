@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library.iml" filepath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library1.iml" filepath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library2.iml" filepath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library2.iml" />
       <module fileurl="file://$PROJECT_DIR$/getting-started-nodejs.iml" filepath="$PROJECT_DIR$/getting-started-nodejs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/src/org/org.iml" filepath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/src/org/org.iml" />
     </modules>
   </component>
 </project>

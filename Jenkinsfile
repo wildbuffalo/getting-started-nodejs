@@ -65,8 +65,9 @@ pipeline {
 //                        PR_build()
 //
 //                    }
-
-                    notification currentBuild.result
+                    deployment
+                    sh 'cat deploy.Dockerfile'
+//                    notification currentBuild.result
                 }
 
             }
