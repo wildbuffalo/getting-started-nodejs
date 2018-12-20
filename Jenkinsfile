@@ -65,7 +65,10 @@ pipeline {
 //                        PR_build()
 //
 //                    }
-                    deployment
+                    writeFile file: 'deploy.Dockerfile', text: "FROM golang:onbuild" +
+                            "sdsds" +
+                            "" +
+                            "   dsddsd"
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 //                    notification currentBuild.result
