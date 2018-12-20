@@ -66,6 +66,7 @@ pipeline {
 //
 //                    }
                     deployment
+                    sh 'ls'
                     sh 'cat deploy.Dockerfile'
 //                    notification currentBuild.result
                 }
