@@ -65,7 +65,7 @@ pipeline {
 //                        PR_build()
 //
 //                    }
-                    writeFile file: 'deploy.Dockerfile', text: "FROM golang:onbuild" +
+                    writeFile file: 'deploy.Dockerfile', text: "FROM golang:onbuild\n" +
                             "sdsds" +
                             "" +
                             "   dsddsd"
