@@ -54,7 +54,7 @@ pipeline {
 //                            "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n  " +
 //                            "COPY --from=source /usr/src/app/ /home/jenkins/src/"
                     sh "$WORKSPACE"
-                    sh "$ENV.WORKSPACE"
+                    sh "$env.WORKSPACE"
                     deployment("$WORKSPACE","$getRepo", "$BRANCH_NAME", 'ds')
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
