@@ -55,7 +55,7 @@ pipeline {
 //                            "COPY --from=source /usr/src/app/ /home/jenkins/src/"
                     sh "$WORKSPACE"
                     sh "$ENV.WORKSPACE"
-                    deployment("$ENV.WORKSPACE","$getRepo", "$BRANCH_NAME", 'ds')
+                    deployment("$WORKSPACE","$getRepo", "$BRANCH_NAME", 'ds')
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 //                    notification currentBuild.result
