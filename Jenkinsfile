@@ -56,7 +56,7 @@ pipeline {
                     sh "echo $WORKSPACE"
                     sh "echo $env.WORKSPACE"
                     sh 'ls'
-                    deployment("$WORKSPACE","$getRepo","$BRANCH_NAME", 'ds')
+                    deployment("$getRepo","$BRANCH_NAME", 'ds')
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 //                    notification currentBuild.result
