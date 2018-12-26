@@ -53,9 +53,9 @@ pipeline {
 //                    writeFile file: 'deploy.Dockerfile', text: "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$version as source\n" +
 //                            "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n  " +
 //                            "COPY --from=source /usr/src/app/ /home/jenkins/src/"
-                    sh "$WORKSPACE"
-//                    sh "$env.WORKSPACE"
-                    deployment("$WORKSPACE","$getRepo", "$BRANCH_NAME", 'ds')
+                    sh "echo $WORKSPACE"
+                    sh "echo $env.WORKSPACE"
+//                    deployment("$WORKSPACE","$getRepo", "$BRANCH_NAME", 'ds')
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 //                    notification currentBuild.result
