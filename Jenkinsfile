@@ -42,6 +42,7 @@ pipeline {
                 script {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+                    sh 'printenv'
                 }
             }
 
