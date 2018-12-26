@@ -20,7 +20,7 @@ pipeline {
                 cleanWs()
             }
             script {
-                node ('master') {
+                node('master') {
                     // clean the master @libs workspace
                     dir("${env.WORKSPACE}@libs") {
                         cleanWs()
@@ -41,18 +41,18 @@ pipeline {
                 checkout scm
                 script {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`" ).trim()
+                    getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                 }
             }
 
         }
         stage('Build') {
-            steps{
-                script{
+            steps {
+                script {
 //                    writeFile file: 'deploy.Dockerfile', text: "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$version as source\n" +
 //                            "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n  " +
 //                            "COPY --from=source /usr/src/app/ /home/jenkins/src/"
-                    deployment('1' , 'ad','ds')
+                    deployment('.', $getRepo, $BRANCH_NAME, 'ds')
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 //                    notification currentBuild.result
