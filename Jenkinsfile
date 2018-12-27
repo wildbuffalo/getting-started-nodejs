@@ -79,7 +79,7 @@ def test(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    echo("$ABC")
+    echo("$version")
     sh("echo $env.WORKSPACE")
 
 }
@@ -89,7 +89,7 @@ def post_notification(body){
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-            echo("$ABC")
+            echo("$pipline_stage")
             sh("echo $env.WORKSPACE")
 
 }
