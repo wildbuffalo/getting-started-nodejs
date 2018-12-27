@@ -7,6 +7,7 @@ pipeline {
         JFROG=credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD="$JFROG_PSW"
         PCF=credentials("svc-inf-jenkins")
+        ABC="123"
     }
     options {
         skipDefaultCheckout()
@@ -77,7 +78,7 @@ def test(body) {
     body.delegate = config
     body()
     echo("$env.WORKSPACE")
-    echo("$PCF_USR")
+    echo("$ABC")
 
 }
 def post_notification(){
