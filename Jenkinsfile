@@ -20,7 +20,7 @@ pipeline {
                 cleanWs()
             }
             script {
-                post_cleanup_master()
+                post_notification()
             }
         }
     }
@@ -80,7 +80,7 @@ def post_cleanup_master(body) {
 def post_notification(){
     post{
         always{
-            echo('ssssssss')
+            echo("$env.WORKSPACE")
         }
     }
 }
