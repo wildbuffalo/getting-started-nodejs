@@ -11,8 +11,20 @@ pipeline {
         disableConcurrentBuilds()
         //   ansiColor('xterm')
     }
-    post_clean()
-    post_notification()
+    post {
+        cleanup {
+            // clean the current workspace
+            cleanWs()
+            // clean the @tmp workspace
+            dir("${env.WORKSPACE}@tmp") {
+                cleanWs()
+            }
+            script {
+                post_cleanup_master()
+            }
+        }
+    }
+
     stages {
 
         stage('Checkout') {
@@ -47,34 +59,23 @@ pipeline {
         }
     }
 }
-def post_clean(body) {
+def post_cleanup_master(body) {
     // evaluate the body block, and collect configuration into the object
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    post {
-        cleanup {
-            // clean the current workspace
+    node('master') {
+        // clean the master @libs workspace
+        dir("${env.WORKSPACE}@libs") {
             cleanWs()
-            // clean the @tmp workspace
-            dir("${env.WORKSPACE}@tmp") {
-                cleanWs()
-            }
-            script {
-                node('master') {
-                    // clean the master @libs workspace
-                    dir("${env.WORKSPACE}@libs") {
-                        cleanWs()
-                    }
-                    // clean the master @script workspace
-                    dir("${env.WORKSPACE}@script") {
-                        cleanWs()
-                    }
-                }
-            }
+        }
+        // clean the master @script workspace
+        dir("${env.WORKSPACE}@script") {
+            cleanWs()
         }
     }
+
 }
 def post_notification(){
     post{
