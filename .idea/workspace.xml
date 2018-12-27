@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/devops/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/devops/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/devops/tools.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -215,7 +217,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545946291755" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545946656074" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -331,7 +333,7 @@
       <workItem from="1545836157325" duration="597000" />
       <workItem from="1545837029327" duration="1433000" />
       <workItem from="1545839791829" duration="56000" />
-      <workItem from="1545844940507" duration="4532000" />
+      <workItem from="1545844940507" duration="4964000" />
     </task>
     <task id="LOCAL-00001" summary="update jenkins">
       <created>1545344408032</created>
@@ -379,7 +381,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16843000" />
+    <option name="totallyTimeSpent" value="17275000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
