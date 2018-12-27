@@ -3,9 +3,11 @@
 
 pipeline {
     agent any
-//    libraries {
-//        lib('wildbuffalo/ds1_marketing_jenkins_library@master')
-//    }
+    environment {
+        JFROG=credentials("mrll-artifactory")
+        CF_DOCKER_PASSWORD="$JFROG_PSW"
+        PCF=credentials("svc-inf-jenkins")
+    }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
@@ -19,8 +21,15 @@ pipeline {
             dir("${env.WORKSPACE}@tmp") {
                 cleanWs()
             }
-            script {
-                post_notification()
+            node('master') {
+                // clean the master @libs workspace
+                dir("${env.WORKSPACE}@libs") {
+                    cleanWs()
+                }
+                // clean the master @script workspace
+                dir("${env.WORKSPACE}@script") {
+                    cleanWs()
+                }
             }
         }
     }
@@ -35,6 +44,7 @@ pipeline {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
+                    test()
                 }
             }
 
@@ -48,6 +58,7 @@ pipeline {
                     sh "echo $WORKSPACE"
                     sh "echo $env.WORKSPACE"
                     sh 'ls'
+
                     deployment("$getRepo","$BRANCH_NAME", 'ds')
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
@@ -59,22 +70,14 @@ pipeline {
         }
     }
 }
-def post_cleanup_master(body) {
+def test(body) {
     // evaluate the body block, and collect configuration into the object
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    node('master') {
-        // clean the master @libs workspace
-        dir("${env.WORKSPACE}@libs") {
-            cleanWs()
-        }
-        // clean the master @script workspace
-        dir("${env.WORKSPACE}@script") {
-            cleanWs()
-        }
-    }
+    echo("$env.WORKSPACE")
+    echo("$PCF_USR")
 
 }
 def post_notification(){
