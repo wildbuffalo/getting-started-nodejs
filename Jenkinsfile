@@ -46,8 +46,8 @@ pipeline {
                     getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
                     test{
-                        work_space = env.WORKSPACE
-                        ABCD= ABC
+                        work_space = ${env.WORKSPACE}
+                        ABCD= $ABC
                     }
 
                 }
