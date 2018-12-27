@@ -1,5 +1,5 @@
 //library 'ds1_marketing_jenkins_library@master' _
-@Library('ds1_marketing_jenkins_library@master') _
+//@Library('ds1_marketing_jenkins_library@master') _
 
 pipeline {
     agent any
@@ -7,7 +7,7 @@ pipeline {
         JFROG=credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD="$JFROG_PSW"
         PCF=credentials("svc-inf-jenkins")
-        ABC="123"
+        version="latest"
     }
     options {
         skipDefaultCheckout()
@@ -45,6 +45,7 @@ pipeline {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
+                    pipline_stage ="123"
                     post_notification{}
 
                 }
@@ -61,7 +62,7 @@ pipeline {
                     sh "echo $env.WORKSPACE"
                     sh 'ls'
 
-                    deployment("$getRepo","$BRANCH_NAME", 'ds')
+                    deployment()
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 
@@ -91,4 +92,52 @@ def post_notification(body){
             echo("$ABC")
             sh("echo $env.WORKSPACE")
 
+}
+def deployment() {
+    // evaluate the body block, and collect configuration into the object
+//    def config = [:]
+//    body.resolveStrategy = Closure.DELEGATE_FIRST
+//    body.delegate = config
+//    body()
+//    getDockerfile(config.repoName,config.stage,config.version)
+//    runDockerfile(config.repoName,config.stage)
+    getDockerfile()
+    runDockerfile()
+
+}
+//call("pp" ,'fff','hhh')
+def getDockerfile() {
+//        filePath, repoName,stage,version ->
+//        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$repoName/$stage/$version as source\n" +
+//                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
+//                "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
+    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/$repoName/$pipline_stage/$version as source\n" +
+            "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
+            "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
+}
+
+def runDockerfile(){
+    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+        def dockerfile = "./deploy.Dockerfile"
+        docker_pcf_src = docker.build("docker_pcf_src", "--pull -f ${dockerfile} .")
+        docker_pcf_src.inside() {
+            if (stage == 'master' ) {
+                sh "cd /home/jenkins/src &&\
+                                        ls &&\
+                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
+                                        pwd"
+//                                        cf zero-downtime-push $repoName-prod -f ./devops/manifest-prod.yml"
+            }else if (stage == 'stage' ){
+                sh "cd /home/jenkins/src &&\
+                                        ls &&\
+                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s stageg &&\
+                                        cf zero-downtime-push $repoName-stage -f ./devops/manifest-stage.yml"
+            }else {
+                sh "cd /home/jenkins/src &&\
+                                        ls &&\
+                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
+                                        cf zero-downtime-push $repoName -f ./devops/manifest-dev.yml"
+            }
+        }
+    }
 }
