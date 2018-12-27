@@ -77,8 +77,8 @@ def test(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    echo("333333 $env.WORKSPACE")
-    echo("333333 $ABC")
+    echo("333333 ${env.WORKSPACE}")
+    echo("333333 ${ABC}")
 
 }
 def post_notification(){
