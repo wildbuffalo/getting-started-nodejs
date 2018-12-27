@@ -12,26 +12,7 @@ pipeline {
         //   ansiColor('xterm')
     }
     post {
-        cleanup {
-            // clean the current workspace
-            cleanWs()
-            // clean the @tmp workspace
-            dir("${env.WORKSPACE}@tmp") {
-                cleanWs()
-            }
-            script {
-                node('master') {
-                    // clean the master @libs workspace
-                    dir("${env.WORKSPACE}@libs") {
-                        cleanWs()
-                    }
-                    // clean the master @script workspace
-                    dir("${env.WORKSPACE}@script") {
-                        cleanWs()
-                    }
-                }
-            }
-        }
+        post_clean()
     }
     stages {
 
