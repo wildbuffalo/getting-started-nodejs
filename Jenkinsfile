@@ -12,7 +12,9 @@ pipeline {
         //   ansiColor('xterm')
     }
     post {
-        post_clean()
+        script {
+            post_clean()
+        }
     }
     stages {
 
