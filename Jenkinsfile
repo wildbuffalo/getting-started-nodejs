@@ -59,6 +59,7 @@ pipeline {
                     deployment("$getRepo","$BRANCH_NAME", 'ds')
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
+
 //                    notification currentBuild.result
                 }
 
