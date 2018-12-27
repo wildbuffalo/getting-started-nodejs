@@ -45,7 +45,7 @@ pipeline {
                     gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
-                    test()
+                    test(env.WORKSPACE,ABC)
                 }
             }
 
@@ -77,8 +77,8 @@ def test(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    echo("333333 ${env.WORKSPACE}")
-    echo("333333 ${ABC}")
+    echo("333333 ${config.WORKSPACE}")
+    echo("333333 ${config.ABC}")
 
 }
 def post_notification(){
