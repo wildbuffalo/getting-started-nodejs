@@ -48,3 +48,30 @@ pipeline {
         }
     }
 }
+def post_clean(body) {
+    // evaluate the body block, and collect configuration into the object
+    def config = [:]
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate = config
+    body()
+    cleanup {
+        // clean the current workspace
+        cleanWs()
+        // clean the @tmp workspace
+        dir("${env.WORKSPACE}@tmp") {
+            cleanWs()
+        }
+        script {
+            node('master') {
+                // clean the master @libs workspace
+                dir("${env.WORKSPACE}@libs") {
+                    cleanWs()
+                }
+                // clean the master @script workspace
+                dir("${env.WORKSPACE}@script") {
+                    cleanWs()
+                }
+            }
+        }
+    }
+}
