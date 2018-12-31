@@ -109,10 +109,10 @@ def deployment() {
 //call("pp" ,'fff','hhh')
 def getDockerfile() {
 //        filePath, getRepo,stage,version ->
-//        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage/$version as source\n" +
+//        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
 //                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
 //                "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
-    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/ds1-graphql-service/develop/latest as source\n" +
+    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/ds1-graphql-service/develop:latest as source\n" +
             "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
             "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
 }
