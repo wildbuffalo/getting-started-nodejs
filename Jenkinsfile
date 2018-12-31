@@ -132,12 +132,12 @@ def runDockerfile(){
                 sh "cd /home/jenkins/src &&\
                                         ls &&\
                                         cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s stageg &&\
-                                        cf zero-downtime-push $repoName-stage -f ./devops/manifest-stage.yml"
+                                        cf zero-downtime-push $getRepo-stage -f ./devops/manifest-stage.yml"
             }else {
                 sh "cd /home/jenkins/src &&\
                                         ls &&\
                                         cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
-                                        cf zero-downtime-push $repoName -f ./devops/manifest-dev.yml"
+                                        cf zero-downtime-push $getRepo -f ./devops/manifest-dev.yml"
             }
         }
     }
