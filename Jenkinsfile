@@ -36,7 +36,6 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout') {
             //  agent any
             steps {
@@ -46,7 +45,7 @@ pipeline {
                     getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
                     pipline_stage ="123"
-                    post_notification{}
+
 
                 }
             }
@@ -61,7 +60,7 @@ pipeline {
                     sh "echo $WORKSPACE"
                     sh "echo $env.WORKSPACE"
                     sh 'ls'
-
+                    post_notification{}
                     deployment()
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
