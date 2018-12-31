@@ -100,19 +100,19 @@ def deployment() {
 //    body.resolveStrategy = Closure.DELEGATE_FIRST
 //    body.delegate = config
 //    body()
-//    getDockerfile(config.repoName,config.stage,config.version)
-//    runDockerfile(config.repoName,config.stage)
+//    getDockerfile(config.getRepo,config.stage,config.version)
+//    runDockerfile(config.getRepo,config.stage)
     getDockerfile()
     runDockerfile()
 
 }
 //call("pp" ,'fff','hhh')
 def getDockerfile() {
-//        filePath, repoName,stage,version ->
-//        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$repoName/$stage/$version as source\n" +
+//        filePath, getRepo,stage,version ->
+//        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage/$version as source\n" +
 //                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
 //                "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
-    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/$repoName/$pipline_stage/$version as source\n" +
+    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/$getRepo/$pipline_stage/$version as source\n" +
             "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
             "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
 }
@@ -127,7 +127,7 @@ def runDockerfile(){
                                         ls &&\
                                         cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
                                         pwd"
-//                                        cf zero-downtime-push $repoName-prod -f ./devops/manifest-prod.yml"
+//                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
             }else if (stage == 'stage' ){
                 sh "cd /home/jenkins/src &&\
                                         ls &&\
