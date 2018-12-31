@@ -112,7 +112,7 @@ def getDockerfile() {
 //        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage/$version as source\n" +
 //                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
 //                "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
-    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/$getRepo/$pipline_stage/$version as source\n" +
+    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/ds1-graphql-service/develop/latest as source\n" +
             "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
             "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
 }
@@ -137,7 +137,8 @@ def runDockerfile(){
                 sh "cd /home/jenkins/src &&\
                                         ls &&\
                                         cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
-                                        cf zero-downtime-push $getRepo -f ./devops/manifest-dev.yml"
+                                        pwd"
+//                                        cf zero-downtime-push $getRepo -f ./devops/manifest-dev.yml"
             }
         }
     }
