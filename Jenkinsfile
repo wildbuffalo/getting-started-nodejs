@@ -122,23 +122,28 @@ def runDockerfile(){
         def dockerfile = "./deploy.Dockerfile"
         docker_pcf_src = docker.build("docker_pcf_src", "--pull -f ${dockerfile} .")
         docker_pcf_src.inside() {
-            if (stage == 'master' ) {
-                sh "cd /home/jenkins/src &&\
+            sh "cd /home/jenkins/src &&\
                                         ls &&\
                                         cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
                                         pwd"
-//                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
-            }else if (stage == 'stage' ){
-                sh "cd /home/jenkins/src &&\
-                                        ls &&\
-                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s stageg &&\
-                                        cf zero-downtime-push $getRepo-stage -f ./devops/manifest-stage.yml"
-            }else {
-                sh "cd /home/jenkins/src &&\
-                                        ls &&\
-                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
-                                        pwd"
-//                                        cf zero-downtime-push $getRepo -f ./devops/manifest-dev.yml"
+////                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
+//            if (stage == 'master' ) {
+//                sh "cd /home/jenkins/src &&\
+//                                        ls &&\
+//                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
+//                                        pwd"
+////                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
+//            }else if (stage == 'stage' ){
+//                sh "cd /home/jenkins/src &&\
+//                                        ls &&\
+//                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s stageg &&\
+//                                        cf zero-downtime-push $getRepo-stage -f ./devops/manifest-stage.yml"
+//            }else {
+//                sh "cd /home/jenkins/src &&\
+//                                        ls &&\
+//                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
+//                                        pwd"
+////                                        cf zero-downtime-push $getRepo -f ./devops/manifest-dev.yml"
             }
         }
     }
