@@ -8,8 +8,7 @@ pipeline {
         CF_DOCKER_PASSWORD="$JFROG_PSW"
         PCF=credentials("svc-inf-jenkins")
         version="latest"
-        gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-        getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+
     }
     options {
         skipDefaultCheckout()
@@ -43,8 +42,8 @@ pipeline {
             steps {
                 checkout scm
                 script {
-//                    gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-//                    getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+                    gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+                    getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
                     pipline_stage ="123"
 
