@@ -144,7 +144,7 @@ def runDockerfile(){
 //                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
 //                                        pwd"
 ////                                        cf zero-downtime-push $getRepo -f ./devops/manifest-dev.yml"
-            }
+//            }
         }
     }
 }
