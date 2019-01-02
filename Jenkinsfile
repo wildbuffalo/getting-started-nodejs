@@ -15,6 +15,11 @@ pipeline {
         disableConcurrentBuilds()
         //   ansiColor('xterm')
     }
+    parameters{
+        string(name: 'repo', defaultValue: 'latest', description: 'repository name')
+        choice(name: 'stage', choices: ['develop ', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
+        string(name: 'version', defaultValue: 'latest', description: 'pick your version from the artifactory')
+    }
     post {
         cleanup {
             // clean the current workspace
@@ -37,21 +42,21 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            //  agent any
-            steps {
-                checkout scm
-                script {
-                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
-                    sh 'printenv'
-                    pipline_stage ="123"
-
-
-                }
-            }
-
-        }
+//        stage('Checkout') {
+//            //  agent any
+//            steps {
+//                checkout scm
+//                script {
+//                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+//                    env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+//                    sh 'printenv'
+//
+//
+//
+//                }
+//            }
+//
+//        }
         stage('Build') {
             steps {
                 script {
@@ -62,11 +67,12 @@ pipeline {
                     sh "echo $env.WORKSPACE"
                     sh "echo $pipline_stage"
                     sh 'ls'
+                    getRepo = params.repo
+                    stage = params.stage
+                    version = params.version
                     post_notification{}
                     deployment()
-//                        repo = $getRepo
-//                        dev_stage = $stage
-//                        repo_version = $version
+
 //                    }
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
@@ -116,7 +122,7 @@ def getDockerfile() {
 //        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
 //                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
 //                "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
-    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/ds1-graphql-service/develop:latest as source\n" +
+    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
             "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
             "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
 }
@@ -132,14 +138,14 @@ def runDockerfile(){
 //                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
 //                                        pwd"
 //                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
-                if (BRANCH_NAME == 'master' ) {
+                if (stage == 'master' ) {
 //                sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
 //                                        pwd"
                     sh"echo ls"
 
-                }else if (BRANCH_NAME == 'stage' ){
+                }else if (stage == 'stage' ){
 //                sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s stageg &&\
