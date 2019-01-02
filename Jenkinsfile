@@ -111,7 +111,7 @@ def deployment(body) {
 
 }
 //call("pp" ,'fff','hhh')
-def getDockerfile() {
+def getDockerfile(def repo, def stage, def version) {
 //        filePath, getRepo,stage,version ->
 //        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
 //                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
@@ -121,7 +121,7 @@ def getDockerfile() {
             "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
 }
 
-def runDockerfile(){
+def runDockerfile(getRepo,stage){
     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
         def dockerfile = "./deploy.Dockerfile"
         docker_pcf_src = docker.build("docker_pcf_src", "--pull -f ${dockerfile} .")
