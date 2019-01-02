@@ -63,7 +63,11 @@ pipeline {
                     sh "echo $pipline_stage"
                     sh 'ls'
                     post_notification{}
-                    deployment{getRepo: "$getRepo", stage:"$stage", version: "$version"}
+                    deployment{
+                        getRepo = $getRepo
+                        stage = $stage
+                        version = $version
+                    }
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 
