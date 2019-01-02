@@ -64,9 +64,9 @@ pipeline {
                     sh 'ls'
                     post_notification{}
                     deployment{
-                        getRepo = $getRepo
-                        stage = $stage
-                        version = $version
+                        repo = $getRepo
+                        dev_stage = $stage
+                        repo_version = $version
                     }
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
@@ -104,8 +104,8 @@ def deployment(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    getDockerfile(config.getRepo,config.stage,config.version)
-    runDockerfile(config.getRepo,config.stage)
+    getDockerfile(config.repo,config.dev_stage,config.repo_version)
+    runDockerfile(config.repo,config.dev_stage)
 //    getDockerfile()
 //    runDockerfile()
 
