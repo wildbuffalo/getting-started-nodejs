@@ -42,8 +42,8 @@ pipeline {
             steps {
                 checkout scm
                 script {
-                    gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+                    env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
                     pipline_stage ="123"
 
