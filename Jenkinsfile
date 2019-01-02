@@ -16,7 +16,7 @@ pipeline {
         //   ansiColor('xterm')
     }
     parameters{
-        string(name: 'repo', defaultValue: 'latest', description: 'repository name')
+        string(name: 'repo', defaultValue: '', description: 'repository name')
         choice(name: 'stage', choices: ['develop ', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
         string(name: 'version', defaultValue: 'latest', description: 'pick your version from the artifactory')
     }
@@ -65,7 +65,7 @@ pipeline {
 //                            "COPY --from=source /usr/src/app/ /home/jenkins/src/"
                     sh "echo $WORKSPACE"
                     sh "echo $env.WORKSPACE"
-                    sh "echo $pipline_stage"
+
                     sh 'ls'
                     getRepo = params.repo
                     stage = params.stage
