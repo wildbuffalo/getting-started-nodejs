@@ -132,7 +132,7 @@ def runDockerfile(){
                                         ls &&\
                                         cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
                                         pwd"
-//                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
+
             }else if (stage == 'stage' ){
                 sh "cd /home/jenkins/src &&\
                                         ls &&\
@@ -143,7 +143,7 @@ def runDockerfile(){
                                         ls &&\
                                         cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
                                         pwd"
-//                                        cf zero-downtime-push $getRepo -f ./devops/manifest-dev.yml"
+
             }
         }
     }
