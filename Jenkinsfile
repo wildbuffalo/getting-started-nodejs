@@ -4,10 +4,10 @@
 pipeline {
     agent any
     environment {
-        JFROG=credentials("mrll-artifactory")
-        CF_DOCKER_PASSWORD="$JFROG_PSW"
-        PCF=credentials("svc-inf-jenkins")
-        version="latest"
+        JFROG = credentials("mrll-artifactory")
+        CF_DOCKER_PASSWORD = "$JFROG_PSW"
+        PCF = credentials("svc-inf-jenkins")
+//        version = "latest"
 
     }
     options {
@@ -15,7 +15,7 @@ pipeline {
         disableConcurrentBuilds()
         //   ansiColor('xterm')
     }
-    parameters{
+    parameters {
         string(name: 'repo', defaultValue: '', description: 'repository name')
         choice(name: 'stage', choices: ['develop ', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
         string(name: 'version', defaultValue: 'latest', description: 'pick your version from the artifactory')
@@ -70,7 +70,7 @@ pipeline {
                     getRepo = params.repo
                     stage = params.stage
                     version = params.version
-                    post_notification{}
+                    post_notification {}
                     deployment()
 
 //                    }
@@ -84,6 +84,7 @@ pipeline {
         }
     }
 }
+
 def test(body) {
     // evaluate the body block, and collect configuration into the object
     def config = [:]
@@ -94,16 +95,17 @@ def test(body) {
     sh("echo $env.WORKSPACE")
 
 }
-def post_notification(body){
+
+def post_notification(body) {
     // evaluate the body block, and collect configuration into the object
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-
-            sh("echo $env.WORKSPACE")
+    sh("echo $env.WORKSPACE")
 
 }
+
 def deployment() {
     // evaluate the body block, and collect configuration into the object
 //    def config = [:]
@@ -122,41 +124,41 @@ def getDockerfile() {
 //        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
 //                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
 //                "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
-    writeFile file: 'deploy.Dockerfile', text:"FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
+    writeFile file: 'deploy.Dockerfile', text: "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
             "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
             "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
 }
 
-def runDockerfile(){
+def runDockerfile() {
     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
         def dockerfile = "./deploy.Dockerfile"
         docker_pcf_src = docker.build("docker_pcf_src", "--pull -f ${dockerfile} .")
         docker_pcf_src.inside() {
 
-                //            sh "cd /home/jenkins/src &&\
+            //            sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
 //                                        pwd"
 //                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
-                if (stage == 'master' ) {
+            if (stage == 'master') {
 //                sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
 //                                        pwd"
-                    sh"echo ls"
+                sh "echo ls"
 
-                }else if (stage == 'stage' ){
+            } else if (stage == 'stage') {
 //                sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s stageg &&\
 //                                        cf zero-downtime-push $getRepo-stage -f ./devops/manifest-stage.yml"
-                }else {
+            } else {
 //                sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devg &&\
 //                                        pwd"
 
-                }
+            }
 
 
         }
