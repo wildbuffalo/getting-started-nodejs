@@ -63,7 +63,7 @@ pipeline {
                     sh "echo $pipline_stage"
                     sh 'ls'
                     post_notification{}
-                    deployment()
+                    deployment{getRepo: "$getRepo", stage:"$stage", version: "$version"}
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 
@@ -94,16 +94,16 @@ def post_notification(body){
             sh("echo $env.WORKSPACE")
 
 }
-def deployment() {
+def deployment(body) {
     // evaluate the body block, and collect configuration into the object
-//    def config = [:]
-//    body.resolveStrategy = Closure.DELEGATE_FIRST
-//    body.delegate = config
-//    body()
-//    getDockerfile(config.getRepo,config.stage,config.version)
-//    runDockerfile(config.getRepo,config.stage)
-    getDockerfile()
-    runDockerfile()
+    def config = [:]
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate = config
+    body()
+    getDockerfile(config.getRepo,config.stage,config.version)
+    runDockerfile(config.getRepo,config.stage)
+//    getDockerfile()
+//    runDockerfile()
 
 }
 //call("pp" ,'fff','hhh')
