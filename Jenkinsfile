@@ -122,7 +122,7 @@ def runDockerfile(){
         def dockerfile = "./deploy.Dockerfile"
         docker_pcf_src = docker.build("docker_pcf_src", "--pull -f ${dockerfile} .")
         docker_pcf_src.inside() {
-            script {
+
                 //            sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
@@ -147,7 +147,7 @@ def runDockerfile(){
 //                                        pwd"
 
                 }
-            }
+
 
         }
     }
