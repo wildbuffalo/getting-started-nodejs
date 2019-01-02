@@ -100,7 +100,7 @@ def post_notification(body){
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-            echo("$pipline_stage")
+
             sh("echo $env.WORKSPACE")
 
 }
