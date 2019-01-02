@@ -63,11 +63,11 @@ pipeline {
                     sh "echo $pipline_stage"
                     sh 'ls'
                     post_notification{}
-                    deployment{
-                        repo = $getRepo
-                        dev_stage = $stage
-                        repo_version = $version
-                    }
+                    deployment()
+//                        repo = $getRepo
+//                        dev_stage = $stage
+//                        repo_version = $version
+//                    }
                     sh 'ls'
                     sh 'cat deploy.Dockerfile'
 
@@ -98,20 +98,20 @@ def post_notification(body){
             sh("echo $env.WORKSPACE")
 
 }
-def deployment(body) {
+def deployment() {
     // evaluate the body block, and collect configuration into the object
-    def config = [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = config
-    body()
-    getDockerfile(config.repo,config.dev_stage,config.repo_version)
-    runDockerfile(config.repo,config.dev_stage)
-//    getDockerfile()
-//    runDockerfile()
+//    def config = [:]
+//    body.resolveStrategy = Closure.DELEGATE_FIRST
+//    body.delegate = config
+//    body()
+//    getDockerfile(config.repo,config.dev_stage,config.repo_version)
+//    runDockerfile(config.repo,config.dev_stage)
+    getDockerfile()
+    runDockerfile()
 
 }
 //call("pp" ,'fff','hhh')
-def getDockerfile(def repo, def stage, def version) {
+def getDockerfile() {
 //        filePath, getRepo,stage,version ->
 //        new File(".",'deploy.Dockerfile') << "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$stage:$version as source\n" +
 //                "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n" +
@@ -121,7 +121,7 @@ def getDockerfile(def repo, def stage, def version) {
             "COPY --from=source /usr/src/app/ /home/jenkins/src/\n"
 }
 
-def runDockerfile(getRepo,stage){
+def runDockerfile(){
     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
         def dockerfile = "./deploy.Dockerfile"
         docker_pcf_src = docker.build("docker_pcf_src", "--pull -f ${dockerfile} .")
@@ -132,14 +132,14 @@ def runDockerfile(getRepo,stage){
 //                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
 //                                        pwd"
 //                                        cf zero-downtime-push $getRepo-prod -f ./devops/manifest-prod.yml"
-                if (stage == 'master' ) {
+                if (BRANCH_NAME == 'master' ) {
 //                sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.prodg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW &&\
 //                                        pwd"
                     sh"echo ls"
 
-                }else if (stage == 'stage' ){
+                }else if (BRANCH_NAME == 'stage' ){
 //                sh "cd /home/jenkins/src &&\
 //                                        ls &&\
 //                                        cf login -a https://api.sys.us2.devg.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s stageg &&\
