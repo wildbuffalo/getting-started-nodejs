@@ -64,12 +64,15 @@ pipeline {
 
                     sh 'printenv'
                     sh 'ls'
-
+//                    getRepo = params.repo
+//                    stage = params.stage
+//                    version = params.version
                     post_notification {}
+//                    deployment( params.repo, params.stage, params.version)
                     deployment{
-                        getRepo = $params.repo
-                        stage = $params.stage
-                        version = $params.version
+                        getRepo = params.repo
+                        stage = params.stage
+                        version = params.version
                     }
 
 //                    }
