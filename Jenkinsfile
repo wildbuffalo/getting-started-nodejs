@@ -1,13 +1,6 @@
 @Library('ds1_marketing_jenkins_library@master') _
 pipeline {
     agent any
-    environment {
-        JFROG = credentials("mrll-artifactory")
-        CF_DOCKER_PASSWORD = "$JFROG_PSW"
-        PCF = credentials("svc-inf-jenkins")
-//        version = "latest"
-
-    }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
@@ -17,6 +10,15 @@ pipeline {
         string(name: 'REPO', description: 'repository name')
         choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
         string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
+    }
+    environment {
+        JFROG = credentials("mrll-artifactory")
+        CF_DOCKER_PASSWORD = "$JFROG_PSW"
+        PCF = credentials("svc-inf-jenkins")
+        REPO = params.REPO
+        STAGE = params.STAGE
+        VERSION = params.VERSION
+
     }
     post {
         cleanup {
@@ -67,9 +69,9 @@ pipeline {
 //                    getRepo = params.repo
 //                    stage = params.stage
 //                    version = params.version
-                    test( params.REPO, params.STAGE, params.VERSION)
+//                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
-//                    deployment( params.repo, params.stage, params.version)
+                    deployment( REPO, STAGE, VERSION)
 //                    deployment{
 //                        getRepo = params.REPO
 //                        stage = params.STAGE
