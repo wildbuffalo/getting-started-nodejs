@@ -4,9 +4,6 @@ pipeline {
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("svc-inf-jenkins")
-//        REPO = "$params.REPO"
-//        STAGE = "$params.STAGE"
-//        VERSION = "$params.VERSION"
         REPO = "adhfbjha"
         STAGE = "bvb"
         VERSION = "fff"
