@@ -4,9 +4,7 @@ pipeline {
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("svc-inf-jenkins")
-        REPO = "adhfbjha"
-        STAGE = "bvb"
-        VERSION = "fff"
+
 
     }
     agent any
@@ -64,7 +62,9 @@ pipeline {
 //                    writeFile file: 'deploy.Dockerfile', text: "FROM merrillcorp-dealworks.jfrog.io/$getRepo/$version as source\n" +
 //                            "FROM merrillcorp-dealworks.jfrog.io/tools:latest\n  " +
 //                            "COPY --from=source /usr/src/app/ /home/jenkins/src/"
-
+                    REPO = "adhfbjha"
+                    STAGE = "bvb"
+                    VERSION = "fff"
                     sh 'printenv'
                     sh 'ls'
 //                    getRepo = params.repo
