@@ -74,7 +74,7 @@ pipeline {
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
-                    deployment( env.REPO, env.STAGE, env.VERSION)
+                    deployment( "$env.REPO", "$env.STAGE", "$env.VERSION")
 //                    deployment()
 //                    deployment{
 //                        getRepo = params.REPO
