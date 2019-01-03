@@ -70,15 +70,15 @@ pipeline {
                     test( params.REPO, params.STAGE, params.VERSION)
 //                    post_notification {}
 //                    deployment( params.repo, params.stage, params.version)
-                    deployment{
-                        getRepo = params.REPO
-                        stage = params.STAGE
-                        version = params.VERSION
-                    }
+//                    deployment{
+//                        getRepo = params.REPO
+//                        stage = params.STAGE
+//                        version = params.VERSION
+//                    }
 
 //                    }
                     sh 'ls'
-                    sh 'cat deploy.Dockerfile'
+//                    sh 'cat deploy.Dockerfile'
 
 //                    notification currentBuild.result
                 }
