@@ -14,7 +14,7 @@ pipeline {
         //   ansiColor('xterm')
     }
     parameters {
-        string(name: 'repo', defaultValue: '', description: 'repository name')
+        string(name: 'repo', description: 'repository name')
         choice(name: 'stage', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
         string(name: 'version', defaultValue: 'latest', description: 'pick your version from the artifactory')
     }
