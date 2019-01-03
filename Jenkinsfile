@@ -1,4 +1,4 @@
-@Library('ds1_marketing_jenkins_library@master') _
+//@Library('ds1_marketing_jenkins_library@master') _
 pipeline {
     environment {
         JFROG = credentials("mrll-artifactory")
@@ -70,7 +70,7 @@ pipeline {
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
-                    notification "STARTED"
+//                    notification "STARTED"
 //                    deployment( "$env.REPO", "$env.STAGE", "$env.VERSION")
 
 //                    deployment()
