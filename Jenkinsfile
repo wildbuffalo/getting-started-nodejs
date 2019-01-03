@@ -1,5 +1,5 @@
-//library 'ds1_marketing_jenkins_library@master' _
-@Library('ds1_marketing_jenkins_library@master') _
+library 'ds1_marketing_jenkins_library@master' _
+//@Library('ds1_marketing_jenkins_library@master') _
 
 pipeline {
     agent any
