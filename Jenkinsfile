@@ -75,7 +75,7 @@ pipeline {
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
                     notification "STARTED"
-                    deployment( "$env.REPO", "$env.STAGE", "$env.VERSION")
+//                    deployment( "$env.REPO", "$env.STAGE", "$env.VERSION")
 
 //                    deployment()
 //                    deployment{
