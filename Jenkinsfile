@@ -15,9 +15,9 @@ pipeline {
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("svc-inf-jenkins")
-        REPO = "$params.REPO"
-        STAGE = "$params.STAGE"
-        VERSION = "$params.VERSION"
+        repo = "$params.REPO"
+        stage = "$params.STAGE"
+        version = "$params.VERSION"
 
     }
     post {
@@ -71,7 +71,7 @@ pipeline {
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
-                    deployment( REPO, STAGE, VERSION)
+                    deployment( repo, stage, version)
 //                    deployment{
 //                        getRepo = params.REPO
 //                        stage = params.STAGE
