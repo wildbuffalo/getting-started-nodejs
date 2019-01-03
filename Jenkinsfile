@@ -69,7 +69,7 @@ pipeline {
 
                     sh 'printenv'
                     sh 'ls'
-//                    getRepo = params.repo
+                    abc = "dddd"
 //                    stage = params.stage
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
