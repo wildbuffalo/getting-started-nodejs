@@ -67,9 +67,9 @@ pipeline {
 
                     post_notification {}
                     deployment{
-                        getRepo = params.repo
-                        stage = params.stage
-                        version = params.version
+                        getRepo = $params.repo
+                        stage = $params.stage
+                        version = $params.version
                     }
 
 //                    }
