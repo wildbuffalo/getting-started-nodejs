@@ -1,16 +1,5 @@
 @Library('ds1_marketing_jenkins_library@master') _
 pipeline {
-    agent any
-    options {
-        skipDefaultCheckout()
-        disableConcurrentBuilds()
-        //   ansiColor('xterm')
-    }
-//    parameters {
-//        string(name: 'REPO', description: 'repository name')
-//        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
-//        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
-//    }
     environment {
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
@@ -23,6 +12,18 @@ pipeline {
         VERSION = "fff"
 
     }
+    agent any
+    options {
+        skipDefaultCheckout()
+        disableConcurrentBuilds()
+        //   ansiColor('xterm')
+    }
+//    parameters {
+//        string(name: 'REPO', description: 'repository name')
+//        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
+//        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
+//    }
+
     post {
         cleanup {
             // clean the current workspace
