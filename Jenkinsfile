@@ -1,24 +1,28 @@
-//@Library('ds1_marketing_jenkins_library@master') _
+@Library('ds1_marketing_jenkins_library@master') _
 pipeline {
-    environment {
-        JFROG = credentials("mrll-artifactory")
-        CF_DOCKER_PASSWORD = "$JFROG_PSW"
-        PCF = credentials("svc-inf-jenkins")
-
-
-    }
     agent any
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
         //   ansiColor('xterm')
     }
-//    parameters {
-//        string(name: 'REPO', description: 'repository name')
-//        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
-//        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
-//    }
+    parameters {
+        string(name: 'REPO', description: 'repository name')
+        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
+        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
+    }
+    environment {
+        JFROG = credentials("mrll-artifactory")
+        CF_DOCKER_PASSWORD = "$JFROG_PSW"
+        PCF = credentials("svc-inf-jenkins")
+        REPO = "$params.REPO"
+        STAGE = "$params.STAGE"
+        VERSION = "$params.VERSION"
+//        REPO = "12"
+//        STAGE = "123"
+//        VERSION = "fff"
 
+    }
     post {
         cleanup {
             // clean the current workspace
@@ -70,9 +74,7 @@ pipeline {
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
-//                    notification "STARTED"
-//                    deployment( "$env.REPO", "$env.STAGE", "$env.VERSION")
-
+                    deployment( REPO, STAGE, VERSION)
 //                    deployment()
 //                    deployment{
 //                        getRepo = params.REPO
