@@ -14,9 +14,9 @@ pipeline {
         //   ansiColor('xterm')
     }
     parameters {
-        string(name: 'repo', description: 'repository name')
-        choice(name: 'stage', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
-        string(name: 'version', defaultValue: 'latest', description: 'pick your version from the artifactory')
+        string(name: 'REPO', description: 'repository name')
+        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
+        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
     }
     post {
         cleanup {
@@ -67,12 +67,13 @@ pipeline {
 //                    getRepo = params.repo
 //                    stage = params.stage
 //                    version = params.version
-                    post_notification {}
+                    test( params.REPO, params.STAGE, params.VERSION)
+//                    post_notification {}
 //                    deployment( params.repo, params.stage, params.version)
                     deployment{
-                        getRepo = params.repo
-                        stage = params.stage
-                        version = params.version
+                        getRepo = params.REPO
+                        stage = params.STAGE
+                        version = params.VERSION
                     }
 
 //                    }
@@ -87,16 +88,16 @@ pipeline {
     }
 }
 
-def test(body) {
-    // evaluate the body block, and collect configuration into the object
-    def config = [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = config
-    body()
-    echo("$version")
-    sh("echo $env.WORKSPACE")
-
-}
+//def test(body) {
+//    // evaluate the body block, and collect configuration into the object
+//    def config = [:]
+//    body.resolveStrategy = Closure.DELEGATE_FIRST
+//    body.delegate = config
+//    body()
+//    echo("$version")
+//    sh("echo $env.WORKSPACE")
+//
+//}
 
 def post_notification(body) {
     // evaluate the body block, and collect configuration into the object
