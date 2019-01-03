@@ -74,8 +74,8 @@ pipeline {
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
-                    deployment( REPO, STAGE, VERSION)
-//                    deployment()
+//                    deployment( REPO, STAGE, VERSION)
+                    deployment()
 //                    deployment{
 //                        getRepo = params.REPO
 //                        stage = params.STAGE
