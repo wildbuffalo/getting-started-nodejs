@@ -66,13 +66,12 @@ pipeline {
 
                     sh 'printenv'
                     sh 'ls'
-                    abc = "dddd"
 //                    stage = params.stage
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
 //                    deployment( REPO, STAGE, VERSION)
-                    deployment(abc)
+                    deployment()
 //                    deployment{
 //                        getRepo = params.REPO
 //                        stage = params.STAGE
