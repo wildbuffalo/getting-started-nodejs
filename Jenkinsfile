@@ -1,4 +1,4 @@
-@Library('ds1_marketing_jenkins_library@master') _
+@Library('ds1-marketing-jenkins-library@master') _
 pipeline {
     agent any
     options {
