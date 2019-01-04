@@ -21,6 +21,11 @@ pipeline {
 //
 //    }
     post {
+        always{
+            script {
+                post_clean()
+            }
+        }
 //        cleanup {
 //            // clean the current workspace
 //            cleanWs()
@@ -39,7 +44,7 @@ pipeline {
 //                }
 //            }
 //        }
-        post_clean()
+
     }
 
     stages {
