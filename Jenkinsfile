@@ -18,9 +18,6 @@ pipeline {
         REPO = "$params.REPO"
         STAGE = "$params.STAGE"
         VERSION = "$params.VERSION"
-//        REPO = "12"
-//        STAGE = "123"
-//        VERSION = "fff"
 
     }
     post {
