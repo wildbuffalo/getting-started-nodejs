@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="job-dsl-gradle-example:test" external.linked.project.path="$MODULE_DIR$/../../../job-dsl-gradle-example" external.root.project.path="$MODULE_DIR$/../../../job-dsl-gradle-example" external.system.id="GRADLE" external.system.module.group="" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output-test url="file://$MODULE_DIR$/../../../job-dsl-gradle-example/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../job-dsl-gradle-example/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../job-dsl-gradle-example/src/test/groovy" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.11" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="job-dsl-gradle-example_main" />
+</module>

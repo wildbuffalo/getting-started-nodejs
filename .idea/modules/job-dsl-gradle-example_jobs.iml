@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="job-dsl-gradle-example:jobs" external.linked.project.path="$MODULE_DIR$/../../../job-dsl-gradle-example" external.root.project.path="$MODULE_DIR$/../../../job-dsl-gradle-example" external.system.id="GRADLE" external.system.module.group="" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../job-dsl-gradle-example/out/jobs/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../job-dsl-gradle-example/src/jobs">
+      <sourceFolder url="file://$MODULE_DIR$/../../../job-dsl-gradle-example/src/jobs" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="job-dsl-gradle-example_main" scope="RUNTIME" />
+    <orderEntry type="library" name="groovy-2.5.1" level="application" />
+  </component>
+</module>
