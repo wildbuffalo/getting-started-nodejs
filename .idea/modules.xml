@@ -3,9 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../dealworks-app/dealworks-app.iml" filepath="$PROJECT_DIR$/../dealworks-app/dealworks-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dev-job-dsl-gradle-example.iml" filepath="$PROJECT_DIR$/.idea/modules/dev-job-dsl-gradle-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library1.iml" filepath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library2.iml" filepath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/ds1_marketing_jenkins_library2.iml" />
       <module fileurl="file://$PROJECT_DIR$/getting-started-nodejs.iml" filepath="$PROJECT_DIR$/getting-started-nodejs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/job-dsl-gradle-example.iml" filepath="$PROJECT_DIR$/../job-dsl-gradle-example/src/job-dsl-gradle-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/job-dsl-gradle-example_jobs.iml" filepath="$PROJECT_DIR$/.idea/modules/job-dsl-gradle-example_jobs.iml" group="job-dsl-gradle-example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/job-dsl-gradle-example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/job-dsl-gradle-example_main.iml" group="job-dsl-gradle-example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/job-dsl-gradle-example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/job-dsl-gradle-example_test.iml" group="job-dsl-gradle-example" />
     </modules>
   </component>
 </project>

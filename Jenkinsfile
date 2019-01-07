@@ -21,30 +21,20 @@ pipeline {
 //
 //    }
     post {
-        always{
-            script {
-                post_clean()
+        cleanup {
+            cleanWs()
+            dir("${env.WORKSPACE}@tmp") {
+                cleanWs()
+            }
+            node('master') {
+                dir("${env.WORKSPACE}@libs") {
+                    cleanWs()
+                }
+                dir("${env.WORKSPACE}@script") {
+                    cleanWs()
+                }
             }
         }
-//        cleanup {
-//            // clean the current workspace
-//            cleanWs()
-//            // clean the @tmp workspace
-//            dir("${env.WORKSPACE}@tmp") {
-//                cleanWs()
-//            }
-//            node('master') {
-//                // clean the master @libs workspace
-//                dir("${env.WORKSPACE}@libs") {
-//                    cleanWs()
-//                }
-//                // clean the master @script workspace
-//                dir("${env.WORKSPACE}@script") {
-//                    cleanWs()
-//                }
-//            }
-//        }
-
     }
 
     stages {
@@ -56,12 +46,8 @@ pipeline {
 //                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
 //                    env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
 //                    sh 'printenv'
-//
-//
-//
 //                }
 //            }
-//
 //        }
         stage('Build') {
             steps {
@@ -82,25 +68,4 @@ pipeline {
             }
         }
     }
-}
-
-//def test(body) {
-//    // evaluate the body block, and collect configuration into the object
-//    def config = [:]
-//    body.resolveStrategy = Closure.DELEGATE_FIRST
-//    body.delegate = config
-//    body()
-//    echo("$version")
-//    sh("echo $env.WORKSPACE")
-//
-//}
-
-def post_notification(body) {
-    // evaluate the body block, and collect configuration into the object
-    def config = [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = config
-    body()
-    sh("echo $env.WORKSPACE")
-
 }
