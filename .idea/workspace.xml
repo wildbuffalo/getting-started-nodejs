@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/.gradle/" />
@@ -82,7 +83,7 @@
         <counts>
           <entry key="Jenkinsfile" value="1026" />
           <entry key="gradle" value="1" />
-          <entry key="groovy" value="1399" />
+          <entry key="groovy" value="1410" />
           <entry key="kts" value="47" />
           <entry key="md" value="4" />
           <entry key="txt" value="14" />
@@ -90,7 +91,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="2426" />
+          <entry key="Groovy" value="2437" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="14" />
@@ -100,20 +101,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-76">
+              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="514">
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -629,7 +630,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547067318136" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547068703476" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -814,14 +815,7 @@
       <workItem from="1546274866429" duration="384000" />
       <workItem from="1546277658425" duration="368000" />
       <workItem from="1546278793041" duration="35115000" />
-      <workItem from="1546640157086" duration="37552000" />
-    </task>
-    <task id="LOCAL-00100" summary="update jenkins">
-      <created>1546974867515</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1546974867515</updated>
+      <workItem from="1546640157086" duration="38458000" />
     </task>
     <task id="LOCAL-00101" summary="update jenkins">
       <created>1546976816985</created>
@@ -1159,11 +1153,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547066621747</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="update jenkins">
+      <created>1547067367520</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1547067367520</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90694000" />
+    <option name="totallyTimeSpent" value="91600000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1176,6 +1177,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1338" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27323273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1404,17 +1406,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy">
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="514">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="-76">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
         </state>
       </provider>
     </entry>
