@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/QA-jobs.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/.gradle/" />
@@ -65,7 +63,7 @@
           <entry key="gdsl" value="1" />
           <entry key="gitignore" value="3" />
           <entry key="gradle" value="3" />
-          <entry key="groovy" value="17" />
+          <entry key="groovy" value="18" />
           <entry key="kts" value="1" />
           <entry key="md" value="1" />
         </counts>
@@ -73,7 +71,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="3" />
-          <entry key="Groovy" value="26" />
+          <entry key="Groovy" value="27" />
           <entry key="Kotlin" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -114,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="987">
               <caret line="47" column="61" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="61" />
             </state>
           </provider>
@@ -150,17 +148,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
+            <state relative-caret-position="756">
               <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/QA-jobs.groovy">
+        <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example3Jobs.groovy">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -665,7 +668,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547057975014" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547058073745" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -850,28 +853,7 @@
       <workItem from="1546274866429" duration="384000" />
       <workItem from="1546277658425" duration="368000" />
       <workItem from="1546278793041" duration="35115000" />
-      <workItem from="1546640157086" duration="30522000" />
-    </task>
-    <task id="LOCAL-00079" summary="update jenkins">
-      <created>1546630933581</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1546630933581</updated>
-    </task>
-    <task id="LOCAL-00080" summary="update jenkins">
-      <created>1546898073217</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1546898073218</updated>
-    </task>
-    <task id="LOCAL-00081" summary="update jenkins">
-      <created>1546898839055</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1546898839055</updated>
+      <workItem from="1546640157086" duration="30775000" />
     </task>
     <task id="LOCAL-00082" summary="update jenkins">
       <created>1546899950821</created>
@@ -1195,11 +1177,32 @@
       <option name="project" value="LOCAL" />
       <updated>1547052120609</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="update jenkins">
+      <created>1547057824903</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1547057824904</updated>
+    </task>
+    <task id="LOCAL-00129" summary="update jenkins">
+      <created>1547057915794</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1547057915794</updated>
+    </task>
+    <task id="LOCAL-00130" summary="update jenkins">
+      <created>1547057980344</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1547057980344</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83664000" />
+    <option name="totallyTimeSpent" value="83917000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1388,13 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
@@ -1402,19 +1398,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="987">
           <caret line="47" column="61" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/QA-jobs.groovy">
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="756">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example3Jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
