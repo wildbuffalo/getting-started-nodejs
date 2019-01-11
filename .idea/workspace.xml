@@ -7,8 +7,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/guards/buyer-bid.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/guards/buyer-nda.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/add-company/add-company.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/add-company/add-company.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/add-company/add-company.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/add-company/add-company.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_mat-radio.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids/buyer-bids.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids/buyer-bids.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids/buyer-bids.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids/buyer-bids.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-guard/buyer.guard.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-guard/buyer.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/guards/buyer-bid.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-guard/buyer.guard.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-guard/buyer.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/guards/buyer-nda.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyer/add-buyer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyer/add-buyer.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyer/add-buyer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyer/add-buyer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-activities/buyer-activities.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-activities/buyer-activities.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-activities/buyer-activities.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-activities/buyer-activities.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-form/buyer-form.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-form/buyer-form.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-form/buyer-form.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-form/buyer-form.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/dealworks-buyer.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/dealworks-buyer.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.effects.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.effects.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.effects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.effects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.facade.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.facade.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.facade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.facade.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.reducer.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.reducer.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/dealworks-data-access-buyer.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/dealworks-data-access-buyer.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-models/src/lib/company.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-models/src/lib/company.interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/buyer/buyer.mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/buyer/buyer.mutations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/company/company.fragments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/company/company.fragments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/company/company.mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/company/company.mutations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/company/company.queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/company/company.queries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_material-overrides.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_material-overrides.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example5Jobs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/utils_jobs.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/.gradle/" />
@@ -59,12 +115,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="2" />
-          <entry key="Jenkinsfile" value="5" />
+          <entry key="Jenkinsfile" value="6" />
           <entry key="conf" value="2" />
           <entry key="gdsl" value="1" />
           <entry key="gitignore" value="3" />
           <entry key="gradle" value="3" />
-          <entry key="groovy" value="28" />
+          <entry key="groovy" value="32" />
           <entry key="kts" value="1" />
           <entry key="md" value="1" />
         </counts>
@@ -72,7 +128,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="3" />
-          <entry key="Groovy" value="37" />
+          <entry key="Groovy" value="42" />
           <entry key="Kotlin" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -83,7 +139,7 @@
         <counts>
           <entry key="Jenkinsfile" value="1026" />
           <entry key="gradle" value="1" />
-          <entry key="groovy" value="1576" />
+          <entry key="groovy" value="1591" />
           <entry key="kts" value="47" />
           <entry key="md" value="4" />
           <entry key="txt" value="14" />
@@ -91,7 +147,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="2603" />
+          <entry key="Groovy" value="2618" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="14" />
@@ -101,20 +157,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+            <state relative-caret-position="126">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/utils_jobs.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="1386">
+              <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -122,8 +187,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="40" selection-start-line="40" selection-end-line="51" selection-end-column="11" />
+            <state relative-caret-position="126">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../dealworks-app/Jenkinsfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -140,20 +214,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="44" column="59" lean-forward="true" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+            <state relative-caret-position="924">
+              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
               <folding>
                 <marker date="1547164591531" expanded="true" signature="2334:2901" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -561,11 +626,13 @@
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/QA-jobs.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example8Jobs.groovy" />
-        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/project-a-workflow.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/devops/pcf.Dockerfile" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example1Jobs.groovy" />
+        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy" />
+        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy" />
+        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/utils_jobs.groovy" />
       </list>
     </option>
   </component>
@@ -604,6 +671,10 @@
       <pane id="ProjectPane">
         <subPane>
           <expand>
+            <path>
+              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dealworks-app" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
               <item name="ds1_marketing_jenkins_library" type="462c0819:PsiDirectoryNode" />
@@ -651,7 +722,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547173729093" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547218455673" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -836,14 +907,7 @@
       <workItem from="1546274866429" duration="384000" />
       <workItem from="1546277658425" duration="368000" />
       <workItem from="1546278793041" duration="35115000" />
-      <workItem from="1546640157086" duration="50006000" />
-    </task>
-    <task id="LOCAL-00119" summary="update jenkins">
-      <created>1546987108019</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1546987108019</updated>
+      <workItem from="1546640157086" duration="51391000" />
     </task>
     <task id="LOCAL-00120" summary="update jenkins">
       <created>1547047836803</created>
@@ -1181,11 +1245,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547164636679</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="update jenkins">
+      <created>1547173781299</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1547173781299</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103148000" />
+    <option name="totallyTimeSpent" value="104533000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1200,7 +1271,7 @@
     <frame x="0" y="22" width="1680" height="948" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21489622" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21489622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1223,7 +1294,7 @@
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49960285" weight="0.32872254" />
       <window_info anchor="bottom" id="Tail" order="11" weight="0.3295362" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4993895" visible="true" weight="0.2741359" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" sideWeight="0.4993895" visible="true" weight="0.2741359" />
       <window_info anchor="bottom" id="SonarQube" order="14" />
       <window_info anchor="right" id="Gradle" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1325,13 +1396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../dealworks-app/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/test/groovy/com/dslexample/JobScriptsSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1383,26 +1447,10 @@
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example7Jobs.groovy">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example5Jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example4Jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example3Jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/devops/pcf.Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="49" lean-forward="true" selection-start-column="49" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1413,12 +1461,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example3Jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
+        <state relative-caret-position="429">
           <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example4Jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/project-a-workflow.groovy">
       <provider selected="true" editor-type-id="text-editor">
@@ -1427,34 +1481,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="40" selection-start-line="40" selection-end-line="51" selection-end-column="11" />
+        <state relative-caret-position="336">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="44" column="59" lean-forward="true" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+        <state relative-caret-position="924">
+          <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
           <folding>
             <marker date="1547164591531" expanded="true" signature="2334:2901" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy">
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+        <state relative-caret-position="1386">
+          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy">
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/utils_jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="168">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dealworks-app/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
