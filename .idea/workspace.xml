@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dealworks-app/devops/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/devops/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,9 +62,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Dockerfile" value="10" />
+          <entry key="Dockerfile" value="11" />
           <entry key="Jenkinsfile" value="8" />
           <entry key="conf" value="2" />
+          <entry key="dockerignore" value="3" />
           <entry key="gdsl" value="2" />
           <entry key="gitignore" value="3" />
           <entry key="gradle" value="3" />
@@ -74,12 +78,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Docker file" value="3" />
           <entry key="Git file" value="3" />
           <entry key="Groovy" value="51" />
           <entry key="Kotlin" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="YAML" value="12" />
+          <entry key="YAML" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -87,7 +92,7 @@
           <entry key="Dockerfile" value="3" />
           <entry key="Jenkinsfile" value="1294" />
           <entry key="gradle" value="1" />
-          <entry key="groovy" value="2005" />
+          <entry key="groovy" value="2035" />
           <entry key="kts" value="47" />
           <entry key="md" value="4" />
           <entry key="txt" value="14" />
@@ -95,7 +100,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="3300" />
+          <entry key="Groovy" value="3330" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="14" />
@@ -114,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../dealworks-app/devops/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="189">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -129,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../dealworks-app/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            <state relative-caret-position="-251">
+              <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -141,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="294">
               <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
             </state>
           </provider>
@@ -150,26 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="29" column="148" lean-forward="true" selection-start-line="29" selection-start-column="148" selection-end-line="29" selection-end-column="148" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../dealworks-app/pcf/manifest-dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" selection-end-line="12" />
+            <state relative-caret-position="546">
+              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -195,8 +182,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="651">
+              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../dealworks-app/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -597,7 +593,6 @@
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/example.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/post_clean.groovy" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
-        <option value="$PROJECT_DIR$/../dealworks-app/Dockerfile" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/build.gradle" />
@@ -612,11 +607,13 @@
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/test.groovy" />
+        <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" />
+        <option value="$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml" />
+        <option value="$PROJECT_DIR$/../dealworks-app/.dockerignore" />
+        <option value="$PROJECT_DIR$/../dealworks-app/Dockerfile" />
         <option value="$PROJECT_DIR$/../dealworks-app/devops/Dockerfile" />
         <option value="$PROJECT_DIR$/../dealworks-app/Jenkinsfile" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy" />
-        <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" />
-        <option value="$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml" />
       </list>
     </option>
   </component>
@@ -721,7 +718,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547500155258" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547504322425" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -912,14 +909,7 @@
       <workItem from="1546277658425" duration="368000" />
       <workItem from="1546278793041" duration="35115000" />
       <workItem from="1546640157086" duration="52685000" />
-      <workItem from="1547226609559" duration="19369000" />
-    </task>
-    <task id="LOCAL-00166" summary="update jenkins">
-      <created>1547163234792</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1547163234792</updated>
+      <workItem from="1547226609559" duration="22141000" />
     </task>
     <task id="LOCAL-00167" summary="update jenkins">
       <created>1547164636679</created>
@@ -1257,11 +1247,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547500112352</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1547500520763</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1547500520763</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125196000" />
+    <option name="totallyTimeSpent" value="127968000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1359,13 +1356,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/example.groovy" />
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/post_clean.groovy" />
-    <entry file="file://$PROJECT_DIR$/../dealworks-app/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/src/com/dealworks/generateDockerfile.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -1521,10 +1511,52 @@
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/com/ds1_marketing/al.groovy">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/../dealworks-app/pcf/manifest-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dealworks-app/devops/.dockerignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dealworks-app/.dockerignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../dealworks-app/devops/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="189">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dealworks-app/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1542,45 +1574,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="294">
           <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../dealworks-app/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="148" lean-forward="true" selection-start-line="29" selection-start-column="148" selection-end-line="29" selection-end-column="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../dealworks-app/pcf/manifest-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-251">
+          <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
         </state>
       </provider>
     </entry>
