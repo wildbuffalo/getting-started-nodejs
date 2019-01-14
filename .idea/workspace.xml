@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../dealworks-app/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/../dealworks-app/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,12 +60,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="9" />
-          <entry key="Jenkinsfile" value="7" />
+          <entry key="Jenkinsfile" value="8" />
           <entry key="conf" value="2" />
-          <entry key="gdsl" value="1" />
+          <entry key="gdsl" value="2" />
           <entry key="gitignore" value="3" />
           <entry key="gradle" value="3" />
-          <entry key="groovy" value="34" />
+          <entry key="groovy" value="37" />
           <entry key="kts" value="1" />
           <entry key="log" value="1" />
           <entry key="md" value="1" />
@@ -73,7 +74,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="3" />
-          <entry key="Groovy" value="45" />
+          <entry key="Groovy" value="50" />
           <entry key="Kotlin" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
@@ -83,9 +84,9 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="3" />
-          <entry key="Jenkinsfile" value="1132" />
+          <entry key="Jenkinsfile" value="1173" />
           <entry key="gradle" value="1" />
-          <entry key="groovy" value="1763" />
+          <entry key="groovy" value="1845" />
           <entry key="kts" value="47" />
           <entry key="md" value="4" />
           <entry key="txt" value="14" />
@@ -93,7 +94,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="2896" />
+          <entry key="Groovy" value="3019" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="14" />
@@ -148,8 +149,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../dealworks-app/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="116" column="16" lean-forward="true" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+            <state relative-caret-position="672">
+              <caret line="118" column="53" lean-forward="true" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -157,7 +158,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-63">
+            <state relative-caret-position="-43">
               <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
@@ -166,8 +167,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="189">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/notification.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -574,7 +584,6 @@
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/Build.gradle.kts" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/src/com/dealworks/generateDockerfile.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/example.groovy" />
-        <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/post_clean.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/test.groovy" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
@@ -594,6 +603,7 @@
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy" />
         <option value="$PROJECT_DIR$/../dealworks-app/devops/Dockerfile" />
+        <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy" />
         <option value="$PROJECT_DIR$/../dealworks-app/Jenkinsfile" />
       </list>
     </option>
@@ -656,6 +666,12 @@
             </path>
             <path>
               <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ds1_marketing_jenkins_library" type="462c0819:PsiDirectoryNode" />
+              <item name="vars" type="462c0819:PsiDirectoryNode" />
+              <item name="ds1_marketing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
               <item name="getting-started-nodejs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -688,7 +704,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547492096718" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547492656897" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -879,21 +895,7 @@
       <workItem from="1546277658425" duration="368000" />
       <workItem from="1546278793041" duration="35115000" />
       <workItem from="1546640157086" duration="52685000" />
-      <workItem from="1547226609559" duration="12809000" />
-    </task>
-    <task id="LOCAL-00143" summary="update jenkins">
-      <created>1547063318584</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1547063318584</updated>
-    </task>
-    <task id="LOCAL-00144" summary="update jenkins">
-      <created>1547065308494</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1547065308494</updated>
+      <workItem from="1547226609559" duration="13473000" />
     </task>
     <task id="LOCAL-00145" summary="update jenkins">
       <created>1547065393672</created>
@@ -1224,11 +1226,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547491964362</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1547492066245</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1547492066245</updated>
+    </task>
+    <task id="LOCAL-00193" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1547492129824</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1547492129824</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118636000" />
+    <option name="totallyTimeSpent" value="119300000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1243,7 +1259,7 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14138205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14138205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1252,7 +1268,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="npm" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49960285" visible="true" weight="0.20399113" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49960285" visible="true" weight="0.20399113" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960285" weight="0.18714403" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1317,19 +1333,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/Build.gradle" />
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/pipline.gdsl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/com/ds1_marketing/al.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1352,9 +1355,6 @@
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/test.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../dealworks-app/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -1384,13 +1384,6 @@
             <caret line="1" selection-start-line="1" selection-end-line="1" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/notification.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1463,13 +1456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1512,24 +1498,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/pipline.gdsl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/test.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/com/ds1_marketing/al.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/deployment.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="189">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
+        <state relative-caret-position="-43">
           <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/notification.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../dealworks-app/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="116" column="16" lean-forward="true" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+        <state relative-caret-position="672">
+          <caret line="118" column="53" lean-forward="true" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
         </state>
       </provider>
     </entry>
