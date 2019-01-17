@@ -52,7 +52,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-
+                    hubotSend message: 'building job $BUILD_URL'
+                    hubotApprove message: 'Proceed with building this job?'
                     sh 'printenv'
                     sh 'ls'
 //                    stage = params.stage
