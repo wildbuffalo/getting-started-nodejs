@@ -107,7 +107,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="1" />
-          <entry key="Groovy" value="4046" />
+          <entry key="Groovy" value="4058" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -171,8 +171,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/project-a-workflow.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+            <state relative-caret-position="478">
+              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -729,7 +729,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548710956654" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548711437429" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -927,35 +927,7 @@
       <workItem from="1547667591389" duration="19657000" />
       <workItem from="1548255415858" duration="125000" />
       <workItem from="1548256431548" duration="87000" />
-      <workItem from="1548259731424" duration="18617000" />
-    </task>
-    <task id="LOCAL-00230" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1547585771156</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1547585771156</updated>
-    </task>
-    <task id="LOCAL-00231" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1547586312830</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1547586312830</updated>
-    </task>
-    <task id="LOCAL-00232" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1547588725651</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1547588725652</updated>
-    </task>
-    <task id="LOCAL-00233" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1547588771362</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1547588771362</updated>
+      <workItem from="1548259731424" duration="19577000" />
     </task>
     <task id="LOCAL-00234" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1547589042893</created>
@@ -1272,11 +1244,39 @@
       <option name="project" value="LOCAL" />
       <updated>1548710794070</updated>
     </task>
-    <option name="localTasksCounter" value="279" />
+    <task id="LOCAL-00279" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1548710844269</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1548710844269</updated>
+    </task>
+    <task id="LOCAL-00280" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1548710900395</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1548710900395</updated>
+    </task>
+    <task id="LOCAL-00281" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1548710953334</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1548710953334</updated>
+    </task>
+    <task id="LOCAL-00282" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1548711056765</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1548711056766</updated>
+    </task>
+    <option name="localTasksCounter" value="283" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187558000" />
+    <option name="totallyTimeSpent" value="188518000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1674,8 +1674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/project-a-workflow.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+        <state relative-caret-position="478">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
         </state>
       </provider>
     </entry>
