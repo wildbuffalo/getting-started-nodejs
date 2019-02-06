@@ -92,15 +92,15 @@ pipeline {
 
                             try{
                                 sh 'ls'
-                                timeout(1) {
-                                    sleep(1000)
+                                timeout(SECONDS,10) {
+                                    sleep(1)
                                 }
                             }
 //                            catch(error){
                             finally {
                                 echo '[FAILURE] Failed to build'
                                 sh 'ls'
-                                timeout(1) {
+                                timeout(SECONDS,10) {
                                     sleep(1000)
                                 }
                             }
