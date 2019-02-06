@@ -51,7 +51,6 @@ pipeline {
 //                }
 //            }
 //        }
-        retry(2){
             stage('Build') {
                 options {
 //                retry(2)
@@ -101,4 +100,4 @@ pipeline {
         }
 
     }
-}
+
