@@ -95,7 +95,9 @@ pipeline {
                                 timeout(1) {
                                     sleep(1000)
                                 }
-                            }finally {
+                            }
+                            catch(error){
+//                            finally {
                                 echo '[FAILURE] Failed to build'
                             }
 
