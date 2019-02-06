@@ -53,7 +53,6 @@ pipeline {
 //        }
             stage('Build') {
                 options {
-                retry(2)
 //                    timeout(1)
 //                    //   ansiColor('xterm')
                 }
@@ -89,16 +88,18 @@ pipeline {
 //                        sh 'ls'
 ////                    sleep(10000)
                     retry(2){
-                        timeout(1){
+
                             try{
                                 sh 'ls'
-                                sleep(1000)
+                                timeout(1) {
+                                    sleep(1000)
+                                }
                             }finally {
                                 echo '[FAILURE] Failed to build'
                             }
 
                         }
-                    }
+
                     }
                 }
             }
