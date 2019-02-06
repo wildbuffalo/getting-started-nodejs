@@ -67,17 +67,18 @@ pipeline {
 //                    post_notification {}
 //                    deployment( REPO, STAGE, VERSION)
 //                    deployment()
-//retry(2){
+retry(2){
     try {
         error("ssss")
     } catch(error) {
         echo "First build failed, let's retry if accepted"
-        retry(2) {
+//        retry(2) {
             input "Retry the job ?"
             build 'yourJob'
-        }
+        error("ssss")
+//        }
     }
-//}
+}
                     sh 'ls'
 //                    sleep(10000)
 
