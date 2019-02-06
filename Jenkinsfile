@@ -69,13 +69,14 @@ pipeline {
 //                    deployment()
 retry(2){
     try {
+//        error("ssss")
+//    } catch(error) {
         error("ssss")
-    } catch(error) {
         echo "First build failed, let's retry if accepted"
 //        retry(2) {
             input "Retry the job ?"
             build 'yourJob'
-        error("ssss")
+
 //        }
     }
 }
