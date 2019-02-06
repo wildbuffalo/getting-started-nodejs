@@ -93,7 +93,7 @@ pipeline {
                             try{
                                 sh 'ls'
                                 timeout(time: 10, unit: 'SECONDS') {
-                                    sleep(1)
+                                    sleep(10000)
                                 }
                             }
                             catch(error){
