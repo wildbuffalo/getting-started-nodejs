@@ -4,7 +4,7 @@ pipeline {
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
-        retry(1)
+        retry(2)
         timeout(1)
         //   ansiColor('xterm')
     }
