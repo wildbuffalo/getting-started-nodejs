@@ -93,9 +93,8 @@ pipeline {
                             try{
                                 sh 'ls'
                                 sleep(1000)
-                            }catch(error){
-                                currentBuild.result = 'FAILURE'
-                                echo "ooo"
+                            }finally {
+                                echo '[FAILURE] Failed to build'
                             }
 
                         }
