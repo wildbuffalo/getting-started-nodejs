@@ -4,8 +4,8 @@ pipeline {
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
-        retry(2)
-        timeout(1)
+//        retry(2)
+//        timeout(1)
         //   ansiColor('xterm')
     }
 //    parameters {
@@ -52,6 +52,11 @@ pipeline {
 //            }
 //        }
         stage('Build') {
+            options {
+                retry(2)
+                timeout(1)
+                //   ansiColor('xterm')
+            }
             steps {
                 script {
                     sh 'printenv'
