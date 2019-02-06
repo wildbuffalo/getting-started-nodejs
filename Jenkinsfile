@@ -71,7 +71,7 @@ retry(2){
     try {
 //        error("ssss")
 //    } catch(error) {
-        error("ssss")
+//        error("ssss")
         echo "First build failed, let's retry if accepted"
 //        retry(2) {
             input "Retry the job ?"
