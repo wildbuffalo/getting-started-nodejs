@@ -52,10 +52,11 @@ pipeline {
 //            }
 //        }
             stage('Build') {
-                options {
-//                    timeout(1)
-//                    //   ansiColor('xterm')
-                }
+//                options {
+//                retry(2)
+////                    timeout(1)
+////                    //   ansiColor('xterm')
+//                }
                 steps {
                     script {
 //                        sh 'printenv'
