@@ -4,7 +4,7 @@ pipeline {
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
-//        retry(2)
+        retry(2)
 //        timeout(1)
         //   ansiColor('xterm')
     }
@@ -53,7 +53,7 @@ pipeline {
 //        }
         stage('Build') {
             options {
-                retry(2)
+//                retry(2)
                 timeout(1)
                 //   ansiColor('xterm')
             }
