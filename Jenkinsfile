@@ -4,7 +4,7 @@ pipeline {
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
-        retry(2)
+//        retry(2)
 //        timeout(1)
         //   ansiColor('xterm')
     }
@@ -52,15 +52,15 @@ pipeline {
 //            }
 //        }
             stage('Build') {
-                options {
-//                retry(2)
-                    timeout(1)
-                    //   ansiColor('xterm')
-                }
+//                options {
+////                retry(2)
+//                    timeout(1)
+//                    //   ansiColor('xterm')
+//                }
                 steps {
                     script {
-                        sh 'printenv'
-                        sh 'ls'
+//                        sh 'printenv'
+//                        sh 'ls'
 //                    stage = params.stage
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
