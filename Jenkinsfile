@@ -52,11 +52,11 @@ pipeline {
 //            }
 //        }
             stage('Build') {
-//                options {
-////                retry(2)
+                options {
+                retry(2)
 //                    timeout(1)
 //                    //   ansiColor('xterm')
-//                }
+                }
                 steps {
                     script {
 //                        sh 'printenv'
@@ -94,6 +94,7 @@ pipeline {
                                 sh 'ls'
                                 sleep(1000)
                             }catch(error){
+                                currentBuild.result = 'FAILURE'
                                 echo "ooo"
                             }
 
