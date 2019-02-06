@@ -90,8 +90,13 @@ pipeline {
 ////                    sleep(10000)
                     retry(2){
                         timeout(1){
-                            sh 'ls'
-                            sleep(1000)
+                            try{
+                                sh 'ls'
+                                sleep(1000)
+                            }catch(error){
+                                echo "ooo"
+                            }
+
                         }
                     }
                     }
