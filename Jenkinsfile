@@ -96,8 +96,8 @@ pipeline {
                                     sleep(1)
                                 }
                             }
-//                            catch(error){
-                            finally {
+                            catch(error){
+//                            finally {
                                 echo '[FAILURE] Failed to build'
                                 sh 'ls'
                                 timeout(time: 10, unit: 'SECONDS') {
