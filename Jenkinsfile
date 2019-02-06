@@ -51,42 +51,45 @@ pipeline {
 //                }
 //            }
 //        }
-        stage('Build') {
-            options {
+        retry(2){
+            stage('Build') {
+                options {
 //                retry(2)
-                timeout(1)
-                //   ansiColor('xterm')
-            }
-            steps {
-                script {
-                    sh 'printenv'
-                    sh 'ls'
+                    timeout(1)
+                    //   ansiColor('xterm')
+                }
+                steps {
+                    script {
+                        sh 'printenv'
+                        sh 'ls'
 //                    stage = params.stage
 //                    version = params.version
 //                    test( REPO, STAGE, VERSION)
 //                    post_notification {}
 //                    deployment( REPO, STAGE, VERSION)
 //                    deployment()
-retry(2){
-    try {
+                        retry(2){
+                            try {
 //        error("ssss")
 //    } catch(error) {
 //        error("ssss")
-        sh "ls"
-    }  finally {
-            echo "First build failed, let's retry if accepted"
+                                sh "ls"
+                            }  finally {
+                                echo "First build failed, let's retry if accepted"
 //        retry(2) {
-            input "Retry the job ?"
-            build 'yourJob'
+                                input "Retry the job ?"
+                                build 'yourJob'
 
 //        }
-    }
-}
-                    sh 'ls'
+                            }
+                        }
+                        sh 'ls'
 //                    sleep(10000)
 
+                    }
                 }
             }
         }
+
     }
 }
