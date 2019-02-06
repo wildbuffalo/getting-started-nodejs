@@ -92,7 +92,7 @@ pipeline {
 
                             try{
                                 sh 'ls'
-                                timeout('SECONDS',10) {
+                                timeout(time: 10, unit: 'SECONDS') {
                                     sleep(1)
                                 }
                             }
@@ -100,7 +100,7 @@ pipeline {
                             finally {
                                 echo '[FAILURE] Failed to build'
                                 sh 'ls'
-                                timeout('SECONDS',10) {
+                                timeout(time: 10, unit: 'SECONDS') {
                                     sleep(1000)
                                 }
                             }
