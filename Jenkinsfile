@@ -67,7 +67,9 @@ pipeline {
 //                    post_notification {}
 //                    deployment( REPO, STAGE, VERSION)
 //                    deployment()
-
+retry(2){
+    
+}
                     sh 'ls'
                     sleep(10000)
 
