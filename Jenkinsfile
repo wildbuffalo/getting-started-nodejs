@@ -68,24 +68,33 @@ pipeline {
 //                    post_notification {}
 //                    deployment( REPO, STAGE, VERSION)
 //                    deployment()
-                        retry(2){
-                            try {
-//        error("ssss")
-//    } catch(error) {
-//        error("ssss")
-                                sh "ls"
-                            }  finally {
-                                echo "First build failed, let's retry if accepted"
-//        retry(2) {
-                                input "Retry the job ?"
-                                build 'yourJob'
-
-//        }
-                            }
+//                        retry(2){
+//                            try {
+////        error("ssss")
+////    } catch(error) {
+//                                timeout(1){
+//
+//                                    sleep(10000)
+//                                }
+////        error("ssss")
+//                                sh "ls"
+//                            }  finally {
+//                                echo "First build failed, let's retry if accepted"
+////        retry(2) {
+//                                input "Retry the job ?"
+//                                build 'yourJob'
+//
+////        }
+//                            }
+//                        }
+//                        sh 'ls'
+////                    sleep(10000)
+                    retry(2){
+                        timeout(1){
+                            sh 'ls'
+                            sleep(1000)
                         }
-                        sh 'ls'
-//                    sleep(10000)
-
+                    }
                     }
                 }
             }
