@@ -72,6 +72,7 @@ retry(2){
 //        error("ssss")
 //    } catch(error) {
 //        error("ssss")
+        sh "ls"
     }  finally {
             echo "First build failed, let's retry if accepted"
 //        retry(2) {
