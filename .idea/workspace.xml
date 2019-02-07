@@ -2,17 +2,29 @@
 <project version="4">
   <component name="AutomaticModuleUnloader">
     <loaded-modules>
+      <module name="dev-job-dsl-gradle-example" />
       <module name="getting-started-nodejs" />
+      <module name="dealworks-app" />
+      <module name="ds1_marketing_jenkins_library2" />
+      <module name="job-dsl-gradle-example_jobs" />
+      <module name="job-dsl-gradle-example_main" />
+      <module name="job-dsl-gradle-example_test" />
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/.gradle/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/build/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/out/" />
+    <ignored path="$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gradle/" />
+    <ignored path="$PROJECT_DIR$/../ds1_marketing_jenkins_library/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +44,9 @@
     </option>
   </component>
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/../ds1_marketing_jenkins_library">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/../job-dsl-gradle-example">
       <ProjectState />
     </projectState>
@@ -47,9 +62,9 @@
     <session id="-372108613">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
@@ -60,7 +75,7 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -84,7 +99,7 @@
         <counts>
           <entry key="Docker file" value="5" />
           <entry key="Git file" value="6" />
-          <entry key="Groovy" value="87" />
+          <entry key="Groovy" value="88" />
           <entry key="JSON" value="3" />
           <entry key="Kotlin" value="1" />
           <entry key="Markdown" value="1" />
@@ -108,7 +123,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="Git file" value="5" />
-          <entry key="Groovy" value="5202" />
+          <entry key="Groovy" value="5215" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -125,19 +140,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="252">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -145,8 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/backEndDeployment.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+            <state relative-caret-position="231">
+              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -160,10 +166,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+              <folding>
+                <marker date="1549556234368" expanded="true" signature="3387:3400" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
+            <state relative-caret-position="756">
               <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
             </state>
           </provider>
@@ -172,17 +190,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example4Jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
+            <state relative-caret-position="462">
               <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-end-line="93" />
+            <state relative-caret-position="2142">
+              <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -190,7 +208,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
+            <state relative-caret-position="1113">
               <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
             </state>
           </provider>
@@ -204,7 +222,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/node_FE_deployment.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="966">
               <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
             </state>
           </provider>
@@ -237,21 +255,39 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../job-dsl-gradle-example" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8" />
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example" value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.9-all/1aw2ic01pldw5fkvoq6t1fsz4/gradle-2.9" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library" value="4.8" />
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example" value="2.9" />
       </map>
     </option>
     <option name="availableProjects">
       <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="ds1_marketing_jenkins_library" />
+              <option name="path" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="ds1_marketing_jenkins_library" />
+                <option name="path" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
         <entry>
           <key>
             <ExternalProjectPojo>
@@ -272,6 +308,72 @@
     </option>
     <option name="availableTasks">
       <map>
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'ds1_marketing_jenkins_library'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'ds1_marketing_jenkins_library'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'ds1_marketing_jenkins_library'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'ds1_marketing_jenkins_library'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'ds1_marketing_jenkins_library'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'ds1_marketing_jenkins_library'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'ds1_marketing_jenkins_library'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'ds1_marketing_jenkins_library'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'ds1_marketing_jenkins_library'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example">
           <value>
             <list>
@@ -445,6 +547,9 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library" value="3091690576000" />
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library/gradle/wrapper/gradle-wrapper.properties" value="2007532874" />
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example" value="6187761504000" />
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example/build.gradle" value="88097559" />
@@ -454,6 +559,105 @@
     </option>
     <option name="projectBuildClasspath">
       <map>
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="ds1_marketing_jenkins_library" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-model-groovy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-resources-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-tooling-api-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-core-api-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/ant-1.9.11.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-persistent-cache-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-docs-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-cli-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-launcher-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/ant-launcher-1.9.11.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-jvm-services-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-messaging-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/groovy-all-2.4.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-build-option-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-base-services-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-core-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-model-core-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-base-services-groovy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-installation-beacon-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-process-services-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-build-cache-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-runtime-api-info-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-logging-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-wrapper-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-build-init-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-jvm-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-base-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-jvm-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-maven-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-code-quality-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-s3-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-signing-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-sftp-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ivy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-test-kit-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-java-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-groovy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-osgi-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-reporting-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-antlr-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-gcs-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ide-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-play-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-http-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-scala-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-dependency-management-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-composite-builds-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-junit-platform-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-publish-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ear-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-jvm-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-base-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ide-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-diagnostics-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-plugin-development-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-workers-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-build-cache-http-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-javascript-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-version-control-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-build-comparison-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-plugins-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-jacoco-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-plugin-use-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-announce-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-tooling-api-builders-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ide-play-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-scala-4.8.jar" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example">
           <value>
             <ExternalProjectBuildClasspathPojo>
@@ -594,6 +798,7 @@
     <option name="projectSyncType">
       <map>
         <entry key="$PROJECT_DIR$/../doc-metadata-service" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../ds1_marketing_jenkins_library" value="IMPORT" />
         <entry key="$PROJECT_DIR$/../job-dsl-gradle-example" value="IMPORT" />
         <entry key="$PROJECT_DIR$/../qanda-service" value="PREVIEW" />
       </map>
@@ -636,15 +841,15 @@
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/build_jobs.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/project-a-workflow.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/qa_jobs.groovy" />
-        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/backEndDeployment.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/frontEndDeployment.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/utils_jobs.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/node_FE_deployment.groovy" />
-        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_ds1_graphql_service.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gitignore" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
+        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy" />
+        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" />
       </list>
     </option>
   </component>
@@ -680,34 +885,58 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dealworks-app" type="462c0819:PsiDirectoryNode" />
+              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="getting-started-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="vars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-dsl-gradle-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-dsl-gradle-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-dsl-gradle-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-dsl-gradle-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549551682565" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549556284652" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -906,14 +1135,8 @@
       <workItem from="1548255415858" duration="125000" />
       <workItem from="1548256431548" duration="87000" />
       <workItem from="1548259731424" duration="43860000" />
-      <workItem from="1549052050540" duration="31255000" />
-    </task>
-    <task id="LOCAL-00358" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1549049671725</created>
-      <option name="number" value="00358" />
-      <option name="presentableId" value="LOCAL-00358" />
-      <option name="project" value="LOCAL" />
-      <updated>1549049671725</updated>
+      <workItem from="1549052050540" duration="32017000" />
+      <workItem from="1549552591150" duration="1311000" />
     </task>
     <task id="LOCAL-00359" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1549051865911</created>
@@ -1251,11 +1474,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549551362378</updated>
     </task>
-    <option name="localTasksCounter" value="407" />
+    <task id="LOCAL-00407" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1549551713809</created>
+      <option name="number" value="00407" />
+      <option name="presentableId" value="LOCAL-00407" />
+      <option name="project" value="LOCAL" />
+      <updated>1549551713809</updated>
+    </task>
+    <option name="localTasksCounter" value="408" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244056000" />
+    <option name="totallyTimeSpent" value="246129000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1270,7 +1500,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23076923" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23321123" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1287,13 +1517,13 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295362" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295362" />
       <window_info anchor="bottom" id="CheckStyle" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.501221" side_tool="true" visible="true" weight="0.20353064" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" visible="true" weight="0.32917964" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49960285" weight="0.32872254" />
       <window_info anchor="bottom" id="Tail" order="11" weight="0.3295362" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.41575092" weight="0.18691589" />
       <window_info anchor="bottom" id="SonarQube" order="14" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.3295362" />
+      <window_info anchor="bottom" id="Build" order="15" sideWeight="0.4993895" visible="true" weight="0.32917964" />
       <window_info anchor="bottom" id="TypeScript" order="16" />
       <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1561,16 +1791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-          <folding>
-            <marker date="1549315677292" expanded="true" signature="3167:3180" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/utils_jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
@@ -1604,20 +1824,41 @@
         <state relative-caret-position="-600" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example3Jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example4Jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
+        <state relative-caret-position="462">
           <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example3Jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        <state relative-caret-position="2142">
+          <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1626,15 +1867,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/node_FE_deployment.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="966">
           <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        <state relative-caret-position="252">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/backEndDeployment.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1645,31 +1893,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gitignore">
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/backEndDeployment.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/dealworks-app.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-end-line="93" />
+        <state relative-caret-position="385">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+          <folding>
+            <marker date="1549556234368" expanded="true" signature="3387:3400" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
