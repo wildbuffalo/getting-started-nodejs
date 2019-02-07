@@ -90,7 +90,8 @@ pipeline {
 ////                    sleep(10000)
                     retry(2){
                         sh 'ls'
-                        error('dddd0')
+                        test()
+//                        error('dddd0')
 //                            try{
 //                                sh 'ls'
 //                                timeout(time: 10, unit: 'SECONDS') {
