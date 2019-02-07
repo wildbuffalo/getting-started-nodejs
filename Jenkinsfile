@@ -1,4 +1,4 @@
-@Library('ds1-marketing-jenkins-library@master') _
+@Library('merrill-library@master') _
 pipeline {
     agent any
     options {
@@ -89,21 +89,22 @@ pipeline {
 //                        sh 'ls'
 ////                    sleep(10000)
                     retry(2){
-
-                            try{
-                                sh 'ls'
-                                timeout(time: 10, unit: 'SECONDS') {
-                                    sleep(10000)
-                                }
-                            }
-                            catch(error){
-//                            finally {
-                                echo '[FAILURE] Failed to build'
-                                sh 'ls'
-                                timeout(time: 10, unit: 'SECONDS') {
-                                    sleep(1000)
-                                }
-                            }
+                        sh 'ls'
+                        error('dddd0')
+//                            try{
+//                                sh 'ls'
+//                                timeout(time: 10, unit: 'SECONDS') {
+//                                    sleep(10000)
+//                                }
+//                            }
+//                            catch(error){
+////                            finally {
+//                                echo '[FAILURE] Failed to build'
+//                                sh 'ls'
+//                                timeout(time: 10, unit: 'SECONDS') {
+//                                    sleep(1000)
+//                                }
+//                            }
 
                         }
 
