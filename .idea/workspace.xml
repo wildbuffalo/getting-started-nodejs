@@ -120,7 +120,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="Git file" value="5" />
-          <entry key="Groovy" value="5246" />
+          <entry key="Groovy" value="5255" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -166,10 +166,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="46" column="234" selection-start-line="46" selection-start-column="234" selection-end-line="46" selection-end-column="234" />
+            <state relative-caret-position="178">
+              <caret line="46" column="176" selection-start-line="46" selection-start-column="176" selection-end-line="46" selection-end-column="176" />
               <folding>
-                <marker date="1549566855428" expanded="true" signature="3675:3688" ph="..." />
+                <marker date="1549567473928" expanded="true" signature="3636:3649" ph="..." />
               </folding>
             </state>
           </provider>
@@ -933,7 +933,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549566903980" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549567067017" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1133,28 +1133,7 @@
       <workItem from="1548256431548" duration="87000" />
       <workItem from="1548259731424" duration="43860000" />
       <workItem from="1549052050540" duration="32017000" />
-      <workItem from="1549552591150" duration="2859000" />
-    </task>
-    <task id="LOCAL-00360" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1549052069018</created>
-      <option name="number" value="00360" />
-      <option name="presentableId" value="LOCAL-00360" />
-      <option name="project" value="LOCAL" />
-      <updated>1549052069019</updated>
-    </task>
-    <task id="LOCAL-00361" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1549053868818</created>
-      <option name="number" value="00361" />
-      <option name="presentableId" value="LOCAL-00361" />
-      <option name="project" value="LOCAL" />
-      <updated>1549053868819</updated>
-    </task>
-    <task id="LOCAL-00362" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1549053894053</created>
-      <option name="number" value="00362" />
-      <option name="presentableId" value="LOCAL-00362" />
-      <option name="project" value="LOCAL" />
-      <updated>1549053894053</updated>
+      <workItem from="1549552591150" duration="3404000" />
     </task>
     <task id="LOCAL-00363" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1549055347000</created>
@@ -1478,11 +1457,32 @@
       <option name="project" value="LOCAL" />
       <updated>1549556324132</updated>
     </task>
-    <option name="localTasksCounter" value="409" />
+    <task id="LOCAL-00409" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1549566858980</created>
+      <option name="number" value="00409" />
+      <option name="presentableId" value="LOCAL-00409" />
+      <option name="project" value="LOCAL" />
+      <updated>1549566858980</updated>
+    </task>
+    <task id="LOCAL-00410" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1549566888821</created>
+      <option name="number" value="00410" />
+      <option name="presentableId" value="LOCAL-00410" />
+      <option name="project" value="LOCAL" />
+      <updated>1549566888821</updated>
+    </task>
+    <task id="LOCAL-00411" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1549566936472</created>
+      <option name="number" value="00411" />
+      <option name="presentableId" value="LOCAL-00411" />
+      <option name="project" value="LOCAL" />
+      <updated>1549566936472</updated>
+    </task>
+    <option name="localTasksCounter" value="412" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247677000" />
+    <option name="totallyTimeSpent" value="248222000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1892,10 +1892,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="46" column="234" selection-start-line="46" selection-start-column="234" selection-end-line="46" selection-end-column="234" />
+        <state relative-caret-position="178">
+          <caret line="46" column="176" selection-start-line="46" selection-start-column="176" selection-end-line="46" selection-end-column="176" />
           <folding>
-            <marker date="1549566855428" expanded="true" signature="3675:3688" ph="..." />
+            <marker date="1549567473928" expanded="true" signature="3636:3649" ph="..." />
           </folding>
         </state>
       </provider>
