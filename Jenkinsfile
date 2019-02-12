@@ -52,7 +52,7 @@ pipeline {
 //            }
 //        }
         stage('Build') {
-            steps{
+            steps {
                 sh 'ls'
             }
         }
@@ -68,50 +68,50 @@ pipeline {
 //                        cucumberSlackSend channel: 'alrt-ds1-marketing', json: 'cucumber.json'
             }
             success {
-                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString() )
+                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
             }
             unstable {
-                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString() )
+                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
             }
             failure {
-                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString() )
+                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
             }
         }
     }
 }
 
 def attachmenPayload = [[
-                                [
-                                        {
-                                            fallback:"${env.JOB_NAME} execution #${env.BUILD_NUMBER}" ,
-                                            color: colorCode ,
-                                            title:"${env.JOB_NAME}" ,
-                                            title_link:"${env.RUN_DISPLAY_URL}" ,
-                                            text: "" ,
-                                            fields:
-                                            [
-                                                    {
-                                                        title: "Scenarios" ,
-                                                        value: "5" ,
-                                                        short : true
-                                                    }, {
-                                                        title: "Failed" ,
-                                                        value: "5" ,
-                                                        short : true
-                                                    }, {
-                                                        title: "Success" ,
-                                                        value: "5" ,
-                                                        short : true
-                                                    }, {
-                                                        title: "Skipped" ,
-                                                        value: "5" ,
-                                                        short : true
-                                                    }, {
-                                                        title: "Undefined" ,
-                                                        value: "5" ,
-                                                        short : true
-                                                    }
-                                            ]
-                                        }
-                                ]
+
+
+                                fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
+                                color     : colorCode,
+                                title     : "${env.JOB_NAME}",
+                                title_link: "${env.RUN_DISPLAY_URL}",
+                                text      : "",
+                                fields    :
+                                        [
+                                                {
+                                                    title: "Scenarios" ,
+                                                    value: "5" ,
+                                                    short : true
+                                                }, {
+                                                    title: "Failed" ,
+                                                    value: "5" ,
+                                                    short : true
+                                                }, {
+                                                    title: "Success" ,
+                                                    value: "5" ,
+                                                    short : true
+                                                }, {
+                                                    title: "Skipped" ,
+                                                    value: "5" ,
+                                                    short : true
+                                                }, {
+                                                    title: "Undefined" ,
+                                                    value: "5" ,
+                                                    short : true
+                                                }
+                                        ]
+
+
                         ]]
