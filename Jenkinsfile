@@ -52,7 +52,10 @@ pipeline {
 //            }
 //        }
         stage('Build') {
-            println(props.report.totalScenarios)
+            steps{
+                println(props.report.totalScenarios)
+            }
+
 
         }
     }
