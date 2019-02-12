@@ -1,4 +1,6 @@
+import groovy.json.*
 @Library('merrill-library@master') _
+
 pipeline {
     agent any
     options {
