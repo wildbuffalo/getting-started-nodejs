@@ -83,7 +83,7 @@ pipeline {
 def attachmenPayload = [[
                                 [
                                         {
-                                            fallback:"${project} execution #${env.BUILD_NUMBER}" ,
+                                            fallback:"${env.JOB_NAME} execution #${env.BUILD_NUMBER}" ,
                                             color: colorCode ,
                                             title:"${env.JOB_NAME}" ,
                                             title_link:"${env.RUN_DISPLAY_URL}" ,
