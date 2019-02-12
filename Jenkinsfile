@@ -16,15 +16,15 @@ pipeline {
 //        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
 //        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
 //    }
-//    environment {
+    environment {
 //        JFROG = credentials("mrll-artifactory")
 //        CF_DOCKER_PASSWORD = "$JFROG_PSW"
 //        PCF = credentials("svc-inf-jenkins")
 //        REPO = "$params.REPO"
 //        STAGE = "$params.STAGE"
 //        VERSION = "$params.VERSION"
-//
-//    }
+
+    }
     post {
 
         success {
@@ -74,39 +74,35 @@ pipeline {
     }
 }
 
-def attachmenPayload = [[
-                                fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
-                                color     : colorCode,
-                                title     : "${env.JOB_NAME}",
-                                title_link: "${env.RUN_DISPLAY_URL}",
-                                text      : "",
-                                fields    :
-                                        [
-                                                [
-                                                        title: "Scenarios",
-                                                        value: "5",
-                                                        short: true
-                                                ], [
-                                                        title: "Failed",
-                                                        value: "5",
-                                                        short: true
+attachmenPayload = [[
+                            fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
+                            color     : colorCode,
+                            title     : "${env.JOB_NAME}",
+                            title_link: "${env.RUN_DISPLAY_URL}",
+                            text      : "",
+                            fields    :
+                                    [
+                                            [
+                                                    title: "Scenarios",
+                                                    value: "5",
+                                                    short: true
+                                            ], [
+                                                    title: "Failed",
+                                                    value: "5",
+                                                    short: true
 
-                                                ], [
-                                                        title: "Success",
-                                                        value: "5",
-                                                        short: true
-                                                ], [
-                                                        title: "Skipped",
-                                                        value: "5",
-                                                        short: true
-                                                ], [
-                                                        title: "Undefined",
-                                                        value: "5",
-                                                        short: true
-                                                ]
-
-
-                                        ]
-
-
-                        ]]
+                                            ], [
+                                                    title: "Success",
+                                                    value: "5",
+                                                    short: true
+                                            ], [
+                                                    title: "Skipped",
+                                                    value: "5",
+                                                    short: true
+                                            ], [
+                                                    title: "Undefined",
+                                                    value: "5",
+                                                    short: true
+                                            ]
+                                    ]
+                    ]]
