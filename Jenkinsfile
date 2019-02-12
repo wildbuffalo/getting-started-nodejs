@@ -16,15 +16,14 @@ pipeline {
 //        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
 //        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
 //    }
-    environment {
+//    environment {
 //        JFROG = credentials("mrll-artifactory")
 //        CF_DOCKER_PASSWORD = "$JFROG_PSW"
 //        PCF = credentials("svc-inf-jenkins")
 //        REPO = "$params.REPO"
 //        STAGE = "$params.STAGE"
 //        VERSION = "$params.VERSION"
-
-    }
+//    }
     post {
 
         success {
