@@ -53,16 +53,65 @@ pipeline {
 //        }
         stage('Build') {
             steps{
-                println($props.report.totalScenarios)
+                sh 'ls'
+            }
+        }
+        post {
+            always {
+                junit testDataPublishers: [[$class: 'SauceOnDemandReportPublisher']], testResults: 'junit/*.xml'
+//                        xunit testDataPublishers: [[$class: 'SauceOnDemandReportPublisher']], tools: [JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'junit/*.xml', skipNoTestFiles: false, stopProcessingIfError: true)]
+//                        xunit testDataPublishers: tools: [JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'junit/*.xml', skipNoTestFiles: false, stopProcessingIfError: true)]
+//                        xunit([JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'junit/*.xml', skipNoTestFiles: false, stopProcessingIfError: true)])
+//                          step([$class: 'JUnitResultArchiver', testDataPublishers: [[$class: 'SauceOnDemandReportPublisher']], testResults: 'junit/*.xml'])
+//                        sh 'cat cucumber.json'
+//                        cucumber fileIncludePattern: 'cucumber.json', sortingMethod: 'ALPHABETICAL'
+//                        cucumberSlackSend channel: 'alrt-ds1-marketing', json: 'cucumber.json'
+            }
+            success {
+                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString() )
+            }
+            unstable {
+                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString() )
+            }
+            failure {
+                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString() )
             }
         }
     }
-
 }
 
-props = readJSON text: '''{"report": {
-"totalScenarios": 5,
-"totalFailed": 4,
-"totalSuccess": 1,
-"totalSkipped": 0,
-"totalUndefined": 0}}'''
+def attachmenPayload = [[
+                                [
+                                        {
+                                            fallback:"${project} execution #${env.BUILD_NUMBER}" ,
+                                            color: colorCode ,
+                                            title:"${env.JOB_NAME}" ,
+                                            title_link:"${env.RUN_DISPLAY_URL}" ,
+                                            text: "" ,
+                                            fields:
+                                            [
+                                                    {
+                                                        title: "Scenarios" ,
+                                                        value: "5" ,
+                                                        short : true
+                                                    }, {
+                                                        title: "Failed" ,
+                                                        value: "5" ,
+                                                        short : true
+                                                    }, {
+                                                        title: "Success" ,
+                                                        value: "5" ,
+                                                        short : true
+                                                    }, {
+                                                        title: "Skipped" ,
+                                                        value: "5" ,
+                                                        short : true
+                                                    }, {
+                                                        title: "Undefined" ,
+                                                        value: "5" ,
+                                                        short : true
+                                                    }
+                                            ]
+                                        }
+                                ]
+                        ]]
