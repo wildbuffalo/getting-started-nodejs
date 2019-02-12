@@ -51,68 +51,17 @@ pipeline {
 //                }
 //            }
 //        }
-            stage('Build') {
-//                options {
-//                retry(2)
-////                    timeout(1)
-////                    //   ansiColor('xterm')
-//                }
-                steps {
-                    script {
-//                        sh 'printenv'
-//                        sh 'ls'
-//                    stage = params.stage
-//                    version = params.version
-//                    test( REPO, STAGE, VERSION)
-//                    post_notification {}
-//                    deployment( REPO, STAGE, VERSION)
-//                    deployment()
-//                        retry(2){
-//                            try {
-////        error("ssss")
-////    } catch(error) {
-//                                timeout(1){
-//
-//                                    sleep(10000)
-//                                }
-////        error("ssss")
-//                                sh "ls"
-//                            }  finally {
-//                                echo "First build failed, let's retry if accepted"
-////        retry(2) {
-//                                input "Retry the job ?"
-//                                build 'yourJob'
-//
-////        }
-//                            }
-//                        }
-//                        sh 'ls'
-////                    sleep(10000)
-                    retry(2){
-                        sh 'ls'
-                        test()
-//                        error('dddd0')
-//                            try{
-//                                sh 'ls'
-//                                timeout(time: 10, unit: 'SECONDS') {
-//                                    sleep(10000)
-//                                }
-//                            }
-//                            catch(error){
-////                            finally {
-//                                echo '[FAILURE] Failed to build'
-//                                sh 'ls'
-//                                timeout(time: 10, unit: 'SECONDS') {
-//                                    sleep(1000)
-//                                }
-//                            }
+        stage('Build') {
+            println(props.report.totalScenarios)
 
-                        }
-
-                    }
-                }
-            }
         }
-
     }
 
+}
+
+def props = readJSON text: '''{"report": {
+"totalScenarios": 5,
+"totalFailed": 4,
+"totalSuccess": 1,
+"totalSkipped": 0,
+"totalUndefined": 0}}'''
