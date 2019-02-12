@@ -28,13 +28,13 @@ pipeline {
     post {
 
         success {
-            slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+            slackSend(channel: '@zeng liu', color: 'good', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
         }
         unstable {
-            slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+            slackSend(channel: '@zeng liu', color: 'danger', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
         }
         failure {
-            slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+            slackSend(channel: '@zeng liu', color: 'danger', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
         }
 
         cleanup {
