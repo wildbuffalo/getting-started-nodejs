@@ -75,6 +75,7 @@ pipeline {
     }
 }
 def slackMessage(colorCode) {
+script{
     attachmenPayload = [[
                                 fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
                                 color     : colorCode,
@@ -108,5 +109,7 @@ def slackMessage(colorCode) {
                                         ]
                         ]]
     slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+}
+
 }
 
