@@ -59,16 +59,6 @@ pipeline {
             }
         }
         post {
-            always {
-                junit testDataPublishers: [[$class: 'SauceOnDemandReportPublisher']], testResults: 'junit/*.xml'
-//                        xunit testDataPublishers: [[$class: 'SauceOnDemandReportPublisher']], tools: [JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'junit/*.xml', skipNoTestFiles: false, stopProcessingIfError: true)]
-//                        xunit testDataPublishers: tools: [JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'junit/*.xml', skipNoTestFiles: false, stopProcessingIfError: true)]
-//                        xunit([JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'junit/*.xml', skipNoTestFiles: false, stopProcessingIfError: true)])
-//                          step([$class: 'JUnitResultArchiver', testDataPublishers: [[$class: 'SauceOnDemandReportPublisher']], testResults: 'junit/*.xml'])
-//                        sh 'cat cucumber.json'
-//                        cucumber fileIncludePattern: 'cucumber.json', sortingMethod: 'ALPHABETICAL'
-//                        cucumberSlackSend channel: 'alrt-ds1-marketing', json: 'cucumber.json'
-            }
             success {
                 slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
             }
@@ -83,8 +73,6 @@ pipeline {
 }
 
 def attachmenPayload = [[
-
-
                                 fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
                                 color     : colorCode,
                                 title     : "${env.JOB_NAME}",
