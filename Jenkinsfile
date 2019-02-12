@@ -26,38 +26,41 @@ pipeline {
 //    }
     post {
         always{
-            attachmenPayload = [[
-                                        fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
-                                        color     : colorCode,
-                                        title     : "${env.JOB_NAME}",
-                                        title_link: "${env.RUN_DISPLAY_URL}",
-                                        text      : "",
-                                        fields    :
-                                                [
-                                                        [
-                                                                title: "Scenarios",
-                                                                value: "5",
-                                                                short: true
-                                                        ], [
-                                                                title: "Failed",
-                                                                value: "5",
-                                                                short: true
+            script{
+                attachmenPayload = [[
+                                            fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
+                                            color     : colorCode,
+                                            title     : "${env.JOB_NAME}",
+                                            title_link: "${env.RUN_DISPLAY_URL}",
+                                            text      : "",
+                                            fields    :
+                                                    [
+                                                            [
+                                                                    title: "Scenarios",
+                                                                    value: "5",
+                                                                    short: true
+                                                            ], [
+                                                                    title: "Failed",
+                                                                    value: "5",
+                                                                    short: true
 
-                                                        ], [
-                                                                title: "Success",
-                                                                value: "5",
-                                                                short: true
-                                                        ], [
-                                                                title: "Skipped",
-                                                                value: "5",
-                                                                short: true
-                                                        ], [
-                                                                title: "Undefined",
-                                                                value: "5",
-                                                                short: true
-                                                        ]
-                                                ]
-                                ]]
+                                                            ], [
+                                                                    title: "Success",
+                                                                    value: "5",
+                                                                    short: true
+                                                            ], [
+                                                                    title: "Skipped",
+                                                                    value: "5",
+                                                                    short: true
+                                                            ], [
+                                                                    title: "Undefined",
+                                                                    value: "5",
+                                                                    short: true
+                                                            ]
+                                                    ]
+                                    ]]
+            }
+
         }
         success {
             slackSend(channel: '@zeng liu', color: 'good', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
