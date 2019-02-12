@@ -53,16 +53,14 @@ pipeline {
 //        }
         stage('Build') {
             steps{
-                println(props.report.totalScenarios)
+                println($props.report.totalScenarios)
             }
-
-
         }
     }
 
 }
 
-def props = readJSON text: '''{"report": {
+props = readJSON text: '''{"report": {
 "totalScenarios": 5,
 "totalFailed": 4,
 "totalSuccess": 1,
