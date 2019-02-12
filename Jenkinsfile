@@ -108,8 +108,7 @@ script{
                                                 ]
                                         ]
                         ]]
-    slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+    slackSend(channel: '#jenkins_test', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
 }
-
 }
 
