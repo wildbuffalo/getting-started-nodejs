@@ -90,27 +90,30 @@ def attachmenPayload = [[
                                 text      : "",
                                 fields    :
                                         [
-                                                {
-                                                    title: "Scenarios" ,
-                                                    value: "5" ,
-                                                    short : true
-                                                }, {
-                                                    title: "Failed" ,
-                                                    value: "5" ,
-                                                    short : true
-                                                }, {
-                                                    title: "Success" ,
-                                                    value: "5" ,
-                                                    short : true
-                                                }, {
-                                                    title: "Skipped" ,
-                                                    value: "5" ,
-                                                    short : true
-                                                }, {
-                                                    title: "Undefined" ,
-                                                    value: "5" ,
-                                                    short : true
-                                                }
+                                                [
+                                                        title: "Scenarios",
+                                                        value: "5",
+                                                        short: true
+                                                ], [
+                                                        title: "Failed",
+                                                        value: "5",
+                                                        short: true
+
+                                                ], [
+                                                        title: "Success",
+                                                        value: "5",
+                                                        short: true
+                                                ], [
+                                                        title: "Skipped",
+                                                        value: "5",
+                                                        short: true
+                                                ], [
+                                                        title: "Undefined",
+                                                        value: "5",
+                                                        short: true
+                                                ]
+
+
                                         ]
 
 
