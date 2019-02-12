@@ -1,4 +1,5 @@
 import groovy.json.*
+
 @Library('merrill-library@master') _
 
 pipeline {
@@ -25,6 +26,17 @@ pipeline {
 //
 //    }
     post {
+
+        success {
+            slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+        }
+        unstable {
+            slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+        }
+        failure {
+            slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+        }
+
         cleanup {
             cleanWs()
             dir("${env.WORKSPACE}@tmp") {
@@ -58,17 +70,7 @@ pipeline {
                 sh 'ls'
             }
         }
-        post {
-            success {
-                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
-            }
-            unstable {
-                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
-            }
-            failure {
-                slackSend(channel: '@zeng liu', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
-            }
-        }
+
     }
 }
 
