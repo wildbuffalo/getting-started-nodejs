@@ -31,11 +31,9 @@ pipeline {
         }
         unstable {
             slackMessage("danger")
-//            slackSend(channel: '@zeng liu', color: 'danger', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
         }
         failure {
             slackMessage("danger")
-//            slackSend(channel: '@zeng liu', color: 'danger', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
         }
 
         cleanup {
@@ -69,6 +67,18 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls'
+                script{
+                    def someMap = [
+                            'totalScenarios' : 5,
+                            'totalFailed' : 1
+                    ]
+                    def json = new groovy.json.JsonBuilder()
+                    json "people": someMap
+                    def file = new File("$WORKSPACE/people.json")
+                    file.write(groovy.json.JsonOutput.prettyPrint(json.toString()))
+                    sh 'cat people.json'
+                }
+
             }
         }
 
