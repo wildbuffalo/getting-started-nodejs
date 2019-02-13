@@ -73,7 +73,8 @@ pipeline {
                             'totalFailed' : 1
                     ]
                     writeJSON file: 'output.json', json: someMap
-                    sh 'cat people.json'
+                    sh 'cat output.json'
+                    sh 'ls'
                 }
 
             }
