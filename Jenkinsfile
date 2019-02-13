@@ -69,12 +69,7 @@ pipeline {
                 sh 'ls'
                 script{
 //                    def jsonSlurper = new JsonSlurper()
-                    writeFile file: 'output.json', text: '''{"report": {
-                    "totalScenarios": 5,
-                    "totalFailed": 4,
-                    "totalSuccess": 1,
-                    "totalSkipped": 0,
-                    "totalUndefined": 0}}'''
+                    writeFile file: 'output.json', text: '''{"report": {"totalScenarios": 5,"totalFailed": 4,"totalSuccess": 1,"totalSkipped": 0,"totalUndefined": 0}}'''
 //                    println(object)
 //                    assert object.report.totalUndefined == 0
 //                    def someMap = [[
@@ -84,7 +79,7 @@ pipeline {
                     sh 'cat output.json'
                     sh 'ls'
                     def props = readJSON file: 'output.json'
-                    sh "$props.report.totalScenarios"
+                    println($props.report.totalScenarios)
                 }
 
             }
