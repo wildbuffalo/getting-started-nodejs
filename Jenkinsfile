@@ -68,10 +68,10 @@ pipeline {
             steps {
                 sh 'ls'
                 script{
-                    def someMap = [
-                            'totalScenarios' : 5,
-                            'totalFailed' : 1
-                    ]
+                    def someMap = [[
+                            totalScenarios : 5,
+                            totalFailed : 1
+                    ]]
                     writeJSON file: 'output.json', json: someMap
                     sh 'cat output.json'
                     sh 'ls'
