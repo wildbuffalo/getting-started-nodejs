@@ -68,22 +68,23 @@ pipeline {
             steps {
                 sh 'ls'
                 script{
-                    def jsonSlurper = new JsonSlurper()
-                    def object = jsonSlurper.parseText('''{"report": {
+//                    def jsonSlurper = new JsonSlurper()
+                    writeFile file: 'output.json', text: '''{"report": {
                     "totalScenarios": 5,
                     "totalFailed": 4,
                     "totalSuccess": 1,
                     "totalSkipped": 0,
-                    "totalUndefined": 0}}''')
+                    "totalUndefined": 0}}'''
 //                    println(object)
 //                    assert object.report.totalUndefined == 0
 //                    def someMap = [[
 //                            totalScenarios : 5,
 //                            totalFailed : 1
 //                    ]]
-                    writeJSON file: 'output.json', json: object
                     sh 'cat output.json'
                     sh 'ls'
+                    def props = readJSON file: 'output.json'
+                    sh "$props.report.totalScenarios"
                 }
 
             }
