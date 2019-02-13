@@ -26,15 +26,7 @@ pipeline {
 //    }
     post {
 
-        success {
-            slackMessage("good")
-        }
-        unstable {
-            slackMessage("danger")
-        }
-        failure {
-            slackMessage("danger")
-        }
+
 
         cleanup {
             cleanWs()
@@ -68,60 +60,70 @@ pipeline {
             steps {
                 sh 'ls'
                 script{
-//                    def jsonSlurper = new JsonSlurper()
                     writeFile file: 'output.json', text: '''{"report": {"totalScenarios": 5,"totalFailed": 4,"totalSuccess": 1,"totalSkipped": 0,"totalUndefined": 0}}'''
-//                    println(object)
-//                    assert object.report.totalUndefined == 0
-//                    def someMap = [[
-//                            totalScenarios : 5,
-//                            totalFailed : 1
-//                    ]]
                     sh 'cat output.json'
                     sh 'ls'
-                    def props = readJSON file: 'output.json'
-                    println(props.report.totalScenarios)
+
+
                 }
 
+            }
+        }
+        post{
+            always{
+                script{
+                    def props = readJSON file: 'output.json'
+                }
+            }
+            success {
+                slackMessage("good")
+            }
+            unstable {
+                slackMessage("danger")
+            }
+            failure {
+                slackMessage("danger")
             }
         }
 
     }
 }
 def slackMessage(colorCode) {
-script{
-    attachmenPayload = [[
-                                fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
-                                color     : colorCode,
-                                title     : "${env.JOB_NAME}",
-                                title_link: "${env.RUN_DISPLAY_URL}",
-                                text      : "",
-                                fields    :
-                                        [
-                                                [
-                                                        title: "Scenarios",
-                                                        value: "5",
-                                                        short: true
-                                                ], [
-                                                        title: "Failed",
-                                                        value: "5",
-                                                        short: true
+    script{
+        attachmenPayload = [[
+                                    fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
+                                    color     : colorCode,
+                                    title     : "${env.JOB_NAME}",
+                                    title_link: "${env.RUN_DISPLAY_URL}",
+                                    text      : "",
+                                    fields    :
+                                            [
+                                                    [
+                                                            title: "Scenarios",
+                                                            value: props.report.totalScenarios,
+                                                            short: true
+                                                    ], [
+                                                            title: "Failed",
+                                                            value: props.report.totalFailed,
+                                                            short: true
 
-                                                ], [
-                                                        title: "Success",
-                                                        value: "5",
-                                                        short: true
-                                                ], [
-                                                        title: "Skipped",
-                                                        value: "5",
-                                                        short: true
-                                                ], [
-                                                        title: "Undefined",
-                                                        value: "5",
-                                                        short: true
-                                                ]
-                                        ]
-                        ]]
-    slackSend(channel: '#jenkins_test', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+                                                    ], [
+                                                            title: "Success",
+                                                            value: props.report.totalSuccess,
+                                                            short: true
+                                                    ], [
+                                                            title: "Skipped",
+                                                            value: props.report.totalSkipped,
+                                                            short: true
+                                                    ], [
+                                                            title: "Undefined",
+                                                            value: props.report.totalUndefined,
+                                                            short: true
+                                                    ]
+                                            ]
+                            ]]
+        slackSend(channel: '#jenkins_test', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+    }
 }
-}
+
 
