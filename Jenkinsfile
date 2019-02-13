@@ -68,23 +68,24 @@ pipeline {
                 }
 
             }
-        }
-        post{
-            always{
-                script{
-                    def props = readJSON file: 'output.json'
+            post{
+                always{
+                    script{
+                        def props = readJSON file: 'output.json'
+                    }
+                }
+                success {
+                    slackMessage("good")
+                }
+                unstable {
+                    slackMessage("danger")
+                }
+                failure {
+                    slackMessage("danger")
                 }
             }
-            success {
-                slackMessage("good")
-            }
-            unstable {
-                slackMessage("danger")
-            }
-            failure {
-                slackMessage("danger")
-            }
         }
+
 
     }
 }
