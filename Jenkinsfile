@@ -79,7 +79,7 @@ pipeline {
                     sh 'cat output.json'
                     sh 'ls'
                     def props = readJSON file: 'output.json'
-                    println($props.report.totalScenarios)
+                    println(props.report.totalScenarios)
                 }
 
             }
