@@ -72,10 +72,7 @@ pipeline {
                             'totalScenarios' : 5,
                             'totalFailed' : 1
                     ]
-                    def json = new groovy.json.JsonBuilder()
-                    json "people": someMap
-                    def file = new File("$WORKSPACE/people.json")
-                    file.write(groovy.json.JsonOutput.prettyPrint(json.toString()))
+                    writeJSON file: 'output.json', json: someMap
                     sh 'cat people.json'
                 }
 
