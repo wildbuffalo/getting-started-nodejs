@@ -69,11 +69,11 @@ pipeline {
 
             }
             post{
-                always{
-                    script{
-                        def props = readJSON file: 'output.json'
-                    }
-                }
+//                always{
+//                    script{
+//
+//                    }
+//                }
                 success {
                     slackMessage("good")
                 }
@@ -91,6 +91,7 @@ pipeline {
 }
 def slackMessage(colorCode) {
     script{
+        def props = readJSON file: 'output.json'
         attachmenPayload = [[
                                     fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
                                     color     : colorCode,
