@@ -96,7 +96,7 @@ def slackMessage(colorCode) {
                                     fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
                                     color     : colorCode,
                                     title     : "${env.JOB_NAME}",
-                                    title_link: "${env.RUN_DISPLAY_URL}",
+                                    title_link: "${env.BUILD_URL}",
                                     text      : "",
                                     fields    :
                                             [
