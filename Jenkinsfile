@@ -62,7 +62,7 @@ pipeline {
                 script{
                     writeFile file: 'output.json', text: '''{"report": {"totalScenarios": 5,"totalFailed": 4,"totalSuccess": 1,"totalSkipped": 0,"totalUndefined": 0}}'''
                     sh 'cat output.json'
-                    sh 'ls'
+                    sh 'printenv'
 
 
                 }
