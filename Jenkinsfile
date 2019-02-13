@@ -30,11 +30,11 @@ pipeline {
             slackMessage("good")
         }
         unstable {
-            slackMessage("good")
+            slackMessage("danger")
 //            slackSend(channel: '@zeng liu', color: 'danger', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
         }
         failure {
-            slackMessage("good")
+            slackMessage("danger")
 //            slackSend(channel: '@zeng liu', color: 'danger', attachments: new JsonBuilder(attachmenPayload).toPrettyString())
         }
 
