@@ -14,7 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/promotion.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/promotion.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/.gradle/" />
@@ -132,7 +132,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="Git file" value="5" />
-          <entry key="Groovy" value="6569" />
+          <entry key="Groovy" value="6576" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -157,13 +157,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
+            <state relative-caret-position="405">
+              <caret line="51" column="56" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="56" />
               <folding>
-                <marker date="1550260199221" expanded="true" signature="3467:3480" ph="..." />
+                <marker date="1550504852678" expanded="true" signature="3495:3508" ph="..." />
               </folding>
             </state>
           </provider>
@@ -214,11 +214,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/promotion.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -864,8 +864,8 @@
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_dealworks.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example4Jobs.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/utils_jobs.groovy" />
-        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" />
         <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/promotion.groovy" />
+        <option value="$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy" />
       </list>
     </option>
   </component>
@@ -973,7 +973,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550271673899" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550508052464" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1176,14 +1176,7 @@
       <workItem from="1548259731424" duration="43860000" />
       <workItem from="1549052050540" duration="32017000" />
       <workItem from="1549552591150" duration="37252000" />
-      <workItem from="1550003368997" duration="35918000" />
-    </task>
-    <task id="LOCAL-00502" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1550078088120</created>
-      <option name="number" value="00502" />
-      <option name="presentableId" value="LOCAL-00502" />
-      <option name="project" value="LOCAL" />
-      <updated>1550078088120</updated>
+      <workItem from="1550003368997" duration="37387000" />
     </task>
     <task id="LOCAL-00503" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1550078555887</created>
@@ -1521,11 +1514,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550271669523</updated>
     </task>
-    <option name="localTasksCounter" value="551" />
+    <task id="LOCAL-00551" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1550271917033</created>
+      <option name="number" value="00551" />
+      <option name="presentableId" value="LOCAL-00551" />
+      <option name="project" value="LOCAL" />
+      <updated>1550271917033</updated>
+    </task>
+    <option name="localTasksCounter" value="552" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317988000" />
+    <option name="totallyTimeSpent" value="319457000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1896,20 +1896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="75" column="116" lean-forward="true" selection-start-line="75" selection-start-column="116" selection-end-line="75" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example4Jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example2Jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -1924,20 +1910,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
-          <folding>
-            <marker date="1550260199221" expanded="true" signature="3467:3480" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/promotion.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/deploy.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="75" column="116" lean-forward="true" selection-start-line="75" selection-start-column="116" selection-end-line="75" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/example4Jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../job-dsl-gradle-example/src/jobs/src/qa-dealworks.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="56" />
+          <folding>
+            <marker date="1550504852678" expanded="true" signature="3495:3508" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
