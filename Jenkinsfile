@@ -9,7 +9,6 @@ pipeline {
         disableConcurrentBuilds()
 //        retry(2)
 //        timeout(1)
-        //   ansiColor('xterm')
     }
 //    parameters {
 //        string(name: 'REPO', description: 'repository name')
@@ -25,9 +24,6 @@ pipeline {
 //        VERSION = "$params.VERSION"
 //    }
     post {
-
-
-
         cleanup {
             cleanWs()
             dir("${env.WORKSPACE}@tmp") {
@@ -64,9 +60,12 @@ pipeline {
                     sh 'cat output.json'
                     sh 'printenv'
 
-
+//                    step([$class: 'JiraVersionCreatorBuilder', jiraProjectKey: 'DMC', jiraVersion: '1'])
+//                    step([$class: 'IssueFieldUpdateStep', fieldId: '', fieldValue: '', issueSelector: [$class: 'DefaultIssueSelector']])
+//                    step([$class: 'JiraReleaseVersionUpdaterBuilder', jiraProjectKey: 'DMC', jiraRelease: 'dd'])
+//                    step([$class: 'JiraIssueUpdater', issueSelector: [$class: 'DefaultIssueSelector'], labels: []])
+//                    step([$class: 'JiraIssueUpdateBuilder'])
                 }
-
             }
             post{
 //                always{
@@ -85,8 +84,6 @@ pipeline {
                 }
             }
         }
-
-
     }
 }
 def slackMessage(colorCode) {
