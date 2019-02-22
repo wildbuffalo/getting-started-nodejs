@@ -13,6 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks-graphql-service.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks-graphql-service.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -132,7 +133,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="Git file" value="5" />
-          <entry key="Groovy" value="6765" />
+          <entry key="Groovy" value="6811" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -151,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1483">
-              <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+            <state relative-caret-position="739">
+              <caret line="127" column="81" selection-start-line="127" selection-start-column="81" selection-end-line="127" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -160,8 +161,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks-graphql-service.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="495">
+              <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -828,9 +829,9 @@
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/utils_jobs.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/Jenkinsfile" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks.groovy" />
-        <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_ds1_graphql_service.groovy" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
+        <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy" />
         <option value="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks-graphql-service.groovy" />
       </list>
     </option>
@@ -932,7 +933,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550849454449" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550850912266" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1137,21 +1138,7 @@
       <workItem from="1548259731424" duration="43860000" />
       <workItem from="1549052050540" duration="32017000" />
       <workItem from="1549552591150" duration="37252000" />
-      <workItem from="1550003368997" duration="57298000" />
-    </task>
-    <task id="LOCAL-00526" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1550258131402</created>
-      <option name="number" value="00526" />
-      <option name="presentableId" value="LOCAL-00526" />
-      <option name="project" value="LOCAL" />
-      <updated>1550258131402</updated>
-    </task>
-    <task id="LOCAL-00527" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1550258766167</created>
-      <option name="number" value="00527" />
-      <option name="presentableId" value="LOCAL-00527" />
-      <option name="project" value="LOCAL" />
-      <updated>1550258766167</updated>
+      <workItem from="1550003368997" duration="57889000" />
     </task>
     <task id="LOCAL-00528" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1550258869896</created>
@@ -1482,11 +1469,25 @@
       <option name="project" value="LOCAL" />
       <updated>1550848696318</updated>
     </task>
-    <option name="localTasksCounter" value="575" />
+    <task id="LOCAL-00575" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1550849449285</created>
+      <option name="number" value="00575" />
+      <option name="presentableId" value="LOCAL-00575" />
+      <option name="project" value="LOCAL" />
+      <updated>1550849449285</updated>
+    </task>
+    <task id="LOCAL-00576" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1550849505996</created>
+      <option name="number" value="00576" />
+      <option name="presentableId" value="LOCAL-00576" />
+      <option name="project" value="LOCAL" />
+      <updated>1550849505997</updated>
+    </task>
+    <option name="localTasksCounter" value="577" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339368000" />
+    <option name="totallyTimeSpent" value="339959000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1865,13 +1866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1483">
-          <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_dealworks.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1900,10 +1894,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="127" column="81" selection-start-line="127" selection-start-column="81" selection-end-line="127" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks-graphql-service.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="495">
+          <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
         </state>
       </provider>
     </entry>
