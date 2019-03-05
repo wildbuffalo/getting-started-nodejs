@@ -12,7 +12,7 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+    <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/promotion.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/promotion.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -132,7 +132,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="Git file" value="5" />
-          <entry key="Groovy" value="7061" />
+          <entry key="Groovy" value="7066" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -169,8 +169,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/promotion.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+            <state relative-caret-position="-626">
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -875,7 +875,7 @@
     <dismissed value="$PROJECT_DIR$/../dealworks-app/package.json" />
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -950,7 +950,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zliu/Documents/dev/ds1_marketing_jenkins_library/Build.gradle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551388138113" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551819268786" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1155,14 +1155,7 @@
       <workItem from="1548259731424" duration="43860000" />
       <workItem from="1549052050540" duration="32017000" />
       <workItem from="1549552591150" duration="37252000" />
-      <workItem from="1550003368997" duration="72475000" />
-    </task>
-    <task id="LOCAL-00539" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1550266362510</created>
-      <option name="number" value="00539" />
-      <option name="presentableId" value="LOCAL-00539" />
-      <option name="project" value="LOCAL" />
-      <updated>1550266362510</updated>
+      <workItem from="1550003368997" duration="74634000" />
     </task>
     <task id="LOCAL-00540" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1550266763214</created>
@@ -1500,11 +1493,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551381224081</updated>
     </task>
-    <option name="localTasksCounter" value="588" />
+    <task id="LOCAL-00588" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1551388181122</created>
+      <option name="number" value="00588" />
+      <option name="presentableId" value="LOCAL-00588" />
+      <option name="project" value="LOCAL" />
+      <updated>1551388181122</updated>
+    </task>
+    <option name="localTasksCounter" value="589" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354545000" />
+    <option name="totallyTimeSpent" value="356704000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1516,7 +1516,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23565324" />
@@ -1924,8 +1924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/promotion.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        <state relative-caret-position="-626">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
