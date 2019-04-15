@@ -7,8 +7,6 @@ pipeline {
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
-//        retry(2)
-//        timeout(1)
     }
 //    parameters {
 //        string(name: 'REPO', description: 'repository name')
@@ -56,23 +54,9 @@ pipeline {
             steps {
                 sh 'ls'
                 script{
-                    writeFile file: 'output.json', text: '''{"report": {"totalScenarios": 5,"totalFailed": 4,"totalSuccess": 1,"totalSkipped": 0,"totalUndefined": 0}}'''
-                    sh 'cat output.json'
-                    sh 'printenv'
-
-//                    step([$class: 'JiraVersionCreatorBuilder', jiraProjectKey: 'DMC', jiraVersion: '1'])
-//                    step([$class: 'IssueFieldUpdateStep', fieldId: '', fieldValue: '', issueSelector: [$class: 'DefaultIssueSelector']])
-//                    step([$class: 'JiraReleaseVersionUpdaterBuilder', jiraProjectKey: 'DMC', jiraRelease: 'dd'])
-//                    step([$class: 'JiraIssueUpdater', issueSelector: [$class: 'DefaultIssueSelector'], labels: []])
-//                    step([$class: 'JiraIssueUpdateBuilder'])
                 }
             }
             post{
-//                always{
-//                    script{
-//
-//                    }
-//                }
                 success {
                     slackMessage("good")
                 }
