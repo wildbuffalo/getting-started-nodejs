@@ -57,57 +57,57 @@ pipeline {
                     build job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-app'), string(name: 'environment ', value: 'stage')]
                 }
             }
-            post{
-                success {
-                    slackMessage("good")
-                }
-                unstable {
-                    slackMessage("danger")
-                }
-                failure {
-                    slackMessage("danger")
-                }
-            }
+//            post{
+//                success {
+//                    slackMessage("good")
+//                }
+//                unstable {
+//                    slackMessage("danger")
+//                }
+//                failure {
+//                    slackMessage("danger")
+//                }
+//            }
         }
     }
 }
-def slackMessage(colorCode) {
-    script{
-        def props = readJSON file: 'output.json'
-        attachmenPayload = [[
-                                    fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
-                                    color     : colorCode,
-                                    title     : "${env.JOB_NAME}",
-                                    title_link: "${env.BUILD_URL}",
-                                    text      : "",
-                                    fields    :
-                                            [
-                                                    [
-                                                            title: "Scenarios",
-                                                            value: props.report.totalScenarios,
-                                                            short: true
-                                                    ], [
-                                                            title: "Failed",
-                                                            value: props.report.totalFailed,
-                                                            short: true
-
-                                                    ], [
-                                                            title: "Success",
-                                                            value: props.report.totalSuccess,
-                                                            short: true
-                                                    ], [
-                                                            title: "Skipped",
-                                                            value: props.report.totalSkipped,
-                                                            short: true
-                                                    ], [
-                                                            title: "Undefined",
-                                                            value: props.report.totalUndefined,
-                                                            short: true
-                                                    ]
-                                            ]
-                            ]]
-        slackSend(channel: '#jenkins_test', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
-    }
-}
+//def slackMessage(colorCode) {
+//    script{
+//        def props = readJSON file: 'output.json'
+//        attachmenPayload = [[
+//                                    fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
+//                                    color     : colorCode,
+//                                    title     : "${env.JOB_NAME}",
+//                                    title_link: "${env.BUILD_URL}",
+//                                    text      : "",
+//                                    fields    :
+//                                            [
+//                                                    [
+//                                                            title: "Scenarios",
+//                                                            value: props.report.totalScenarios,
+//                                                            short: true
+//                                                    ], [
+//                                                            title: "Failed",
+//                                                            value: props.report.totalFailed,
+//                                                            short: true
+//
+//                                                    ], [
+//                                                            title: "Success",
+//                                                            value: props.report.totalSuccess,
+//                                                            short: true
+//                                                    ], [
+//                                                            title: "Skipped",
+//                                                            value: props.report.totalSkipped,
+//                                                            short: true
+//                                                    ], [
+//                                                            title: "Undefined",
+//                                                            value: props.report.totalUndefined,
+//                                                            short: true
+//                                                    ]
+//                                            ]
+//                            ]]
+//        slackSend(channel: '#jenkins_test', color: colorCode, attachments: new JsonBuilder(attachmenPayload).toPrettyString())
+//    }
+//}
 
 
