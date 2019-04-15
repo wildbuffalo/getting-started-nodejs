@@ -50,10 +50,11 @@ pipeline {
 //                }
 //            }
 //        }
-        stage('Build') {
+        stage('autoscale') {
             steps {
                 sh 'ls'
                 script{
+                    build job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-app'), string(name: 'environment ', value: 'stage')]
                 }
             }
             post{
