@@ -54,7 +54,11 @@ pipeline {
 
             steps {
                 script {
-                    build job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-app'), string(name: 'environment ', value: 'stage')]
+                    build job: 'UTILS/autoscale',
+                            parameters: [
+                                    string(name: 'repo', value: 'dealworks-app'),
+                                    string(name: 'environment ', value: 'stage')
+                            ]
                 }
             }
         }
