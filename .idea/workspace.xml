@@ -13,6 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -132,7 +133,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="Git file" value="5" />
-          <entry key="Groovy" value="7270" />
+          <entry key="Groovy" value="7283" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -169,8 +170,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
+            <state relative-caret-position="315">
+              <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -1208,28 +1209,7 @@
       <workItem from="1549052050540" duration="32017000" />
       <workItem from="1549552591150" duration="37252000" />
       <workItem from="1550003368997" duration="98305000" />
-      <workItem from="1555360808567" duration="1352000" />
-    </task>
-    <task id="LOCAL-00553" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1550508658044</created>
-      <option name="number" value="00553" />
-      <option name="presentableId" value="LOCAL-00553" />
-      <option name="project" value="LOCAL" />
-      <updated>1550508658044</updated>
-    </task>
-    <task id="LOCAL-00554" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1550510259502</created>
-      <option name="number" value="00554" />
-      <option name="presentableId" value="LOCAL-00554" />
-      <option name="project" value="LOCAL" />
-      <updated>1550510259503</updated>
-    </task>
-    <task id="LOCAL-00555" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1550510462942</created>
-      <option name="number" value="00555" />
-      <option name="presentableId" value="LOCAL-00555" />
-      <option name="project" value="LOCAL" />
-      <updated>1550510462942</updated>
+      <workItem from="1555360808567" duration="2149000" />
     </task>
     <task id="LOCAL-00556" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1550511218286</created>
@@ -1553,11 +1533,32 @@
       <option name="project" value="LOCAL" />
       <updated>1555362314545</updated>
     </task>
-    <option name="localTasksCounter" value="602" />
+    <task id="LOCAL-00602" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1555362379679</created>
+      <option name="number" value="00602" />
+      <option name="presentableId" value="LOCAL-00602" />
+      <option name="project" value="LOCAL" />
+      <updated>1555362379679</updated>
+    </task>
+    <task id="LOCAL-00603" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1555362567457</created>
+      <option name="number" value="00603" />
+      <option name="presentableId" value="LOCAL-00603" />
+      <option name="project" value="LOCAL" />
+      <updated>1555362567457</updated>
+    </task>
+    <task id="LOCAL-00604" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1555362763760</created>
+      <option name="number" value="00604" />
+      <option name="presentableId" value="LOCAL-00604" />
+      <option name="project" value="LOCAL" />
+      <updated>1555362763760</updated>
+    </task>
+    <option name="localTasksCounter" value="605" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381727000" />
+    <option name="totallyTimeSpent" value="382524000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1974,8 +1975,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
+        <state relative-caret-position="315">
+          <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
         </state>
       </provider>
     </entry>

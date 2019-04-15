@@ -53,22 +53,10 @@ pipeline {
         stage('autoscale') {
 
             steps {
-//                "unit test" : {
+                script {
                     build job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-app'), string(name: 'environment ', value: 'stage')]
-//                }
                 }
-
-//            post{
-//                success {
-//                    slackMessage("good")
-//                }
-//                unstable {
-//                    slackMessage("danger")
-//                }
-//                failure {
-//                    slackMessage("danger")
-//                }
-//            }
+            }
         }
     }
 }
