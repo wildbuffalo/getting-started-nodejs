@@ -69,20 +69,20 @@ pipeline {
                                     string(name: 'environment ', value: 'stage')
                             ])
                 }
-                post {
 
-                    success {
-                        slackMessage("good")
-                    }
-                    unstable {
-                        slackMessage("danger")
-                    }
-                    failure {
-                        slackMessage("danger")
-                    }
+            }
+            post {
+
+                success {
+                    slackMessage("good")
+                }
+                unstable {
+                    slackMessage("danger")
+                }
+                failure {
+                    slackMessage("danger")
                 }
             }
-
         }
     }
 }
