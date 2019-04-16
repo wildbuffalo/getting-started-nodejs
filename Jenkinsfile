@@ -62,8 +62,10 @@ pipeline {
 //                                    $class: 'StringParameterValue',
 //                                    name: 'environment',
 //                                    value: environment[stage]
-                                    string(name: 'repo', value: 'dealworks-app'),
-                                    string(name: 'environment ', value: 'stage')
+                                    [$class: 'StringParameterValue', name: 'repo', value: 'dealworks-app'],
+                                    [$class: 'StringParameterValue', name: 'environment', value: 'stage']
+//                                    string(name: 'repo', value: 'dealworks-app'),
+//                                    string(name: 'environment ', value: 'stage')
                             ])
 //                }
             }
