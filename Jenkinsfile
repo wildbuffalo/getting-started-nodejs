@@ -54,7 +54,7 @@ pipeline {
         stage('autoscale') {
 
             steps {
-//                script {
+                script {
                     build (job: 'UTILS/autoscale',
                             parameters: [
 //                                    $class: 'StringParameterValue',
@@ -68,20 +68,21 @@ pipeline {
                                     string(name: 'repo', value: 'dealworks-app'),
                                     string(name: 'environment ', value: 'stage')
                             ])
-//                }
-            }
-            post {
+                }
+                post {
 
-                success {
-                    slackMessage("good")
-                }
-                unstable {
-                    slackMessage("danger")
-                }
-                failure {
-                    slackMessage("danger")
+                    success {
+                        slackMessage("good")
+                    }
+                    unstable {
+                        slackMessage("danger")
+                    }
+                    failure {
+                        slackMessage("danger")
+                    }
                 }
             }
+
         }
     }
 }
