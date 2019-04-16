@@ -54,7 +54,7 @@ pipeline {
 
             steps {
 //                script {
-                    build job: 'UTILS/autoscale',
+                    build (job: 'UTILS/autoscale',
                             parameters: [
 //                                    $class: 'StringParameterValue',
 //                                    name: 'repo',
@@ -64,7 +64,7 @@ pipeline {
 //                                    value: environment[stage]
                                     string(name: 'repo', value: 'dealworks-app'),
                                     string(name: 'environment ', value: 'stage')
-                            ]
+                            ])
 //                }
             }
         }
