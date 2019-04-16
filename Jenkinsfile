@@ -57,22 +57,12 @@ pipeline {
                 script {
                     build (job: 'UTILS/autoscale',
                             parameters: [
-//                                    $class: 'StringParameterValue',
-//                                    name: 'repo',
-//                                    value: repo[dealworks-app],
-//                                    $class: 'StringParameterValue',
-//                                    name: 'environment',
-//                                    value: environment[stage]
-//                                    [$class: 'StringParameterValue', name: 'repo', value: 'dealworks-app'],
-//                                    [$class: 'StringParameterValue', name: 'environment', value: 'stage']
                                     string(name: 'repo', value: 'dealworks-app'),
                                     string(name: 'environment ', value: 'stage')
                             ])
                 }
-
             }
             post {
-
                 success {
                     slackMessage("good")
                 }
@@ -88,6 +78,13 @@ pipeline {
 }
 def slackMessage(colorCode) {
     script{
+        writeFile file: 'output.json', text: '''{"report": {
+\t\t"totalScenarios": 82,
+\t\t"totalFailed": 23,
+\t\t"totalSuccess": 54,
+\t\t"totalSkipped": 0,
+\t\t"totalUndefined": 1,
+\t\t"totalDuration": "1308 seconds (21:48)"}}'''
         def props = readJSON file: 'output.json'
         attachmenPayload = [[
                                     fallback  : "${env.JOB_NAME} execution #${env.BUILD_NUMBER}",
