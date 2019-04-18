@@ -9,11 +9,11 @@ pipeline {
         skipDefaultCheckout()
         disableConcurrentBuilds()
     }
-//    parameters {
-//        string(name: 'REPO', description: 'repository name')
-//        choice(name: 'STAGE', choices: ['develop', 'stage', 'master'], description: 'The branch is respect to the environment accordingly dev to dev env, stage to stage env, master to prod env')
+    parameters {
+        string(name: 'repo', description: 'repository name')
+        choice(name: 'deploy_env', choices: ['stage', 'prod'])
 //        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
-//    }
+    }
 //    environment {
 //        JFROG = credentials("mrll-artifactory")
 //        CF_DOCKER_PASSWORD = "$JFROG_PSW"
@@ -58,7 +58,7 @@ pipeline {
                     build (job: 'UTILS/autoscale',
                             parameters: [
                                     string(name: 'repo', value: 'dealworks-app'),
-                                    choice(name: 'deploy_env ', value: 'stage')
+                                    string(name: 'deploy_env ', value: 'stage')
                             ])
                 }
             }
