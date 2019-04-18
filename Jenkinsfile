@@ -58,7 +58,7 @@ pipeline {
                     build (job: 'UTILS/autoscale',
                             parameters: [
                                     string(name: 'repo', value: 'dealworks-app'),
-                                    string(name: 'deploy_env ', value: 'stage')
+                                    choice(name: 'deploy_env ', value: 'stage')
                             ])
                 }
             }
