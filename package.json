@@ -6,6 +6,6 @@
     "instana-nodejs-sensor": "~1.64.0"
   },
   "scripts": {
-    "start": "app.js"
+    "start": "node app.js"
   }
 }
