@@ -46,22 +46,22 @@ pipeline {
                 checkout scm
                 script {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    env.repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+                    env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
                 }
             }
         }
-        stage('Build'){
-            steps{
-                docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                    def dockerfile = './devops/Dockerfile'
-                    docker_image = docker.build("$repo/pr", "--pull --rm -f ${dockerfile} .")
-                    docker_image.inside {
-                        sh 'npm install'
-                    }
-                }
-            }
-        }
+//        stage('Build'){
+//            steps{
+//                docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//                    def dockerfile = './devops/Dockerfile'
+//                    docker_image = docker.build("$repo/pr", "--pull --rm -f ${dockerfile} .")
+//                    docker_image.inside {
+//                        sh 'npm install'
+//                    }
+//                }
+//            }
+//        }
         stage('Push to PCF') {
             when {
                 expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
@@ -73,7 +73,7 @@ pipeline {
                         docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
                         docker_pcf_src.inside() {
                                 sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
-                                    cf zero-downtime-push $repo -f ./devops/manifest.yml"
+                                    cf zero-downtime-push $getRepo -f ./devops/manifest.yml"
 
                         }
                     }
