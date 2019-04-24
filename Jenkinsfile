@@ -105,7 +105,7 @@ pipeline {
 //            }
 //        }
 
-    }
+
 }
 def slackMessage(colorCode) {
     script{
