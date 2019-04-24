@@ -9,18 +9,15 @@ pipeline {
         skipDefaultCheckout()
         disableConcurrentBuilds()
     }
+    environment {
+        JFROG = credentials("mrll-artifactory")
+        CF_DOCKER_PASSWORD = "$JFROG_PSW"
+        PCF = credentials("svc-inf-jenkins")
+    }
 //    parameters {
 //        string(name: 'repo', description: 'repository name')
 //        choice(name: 'deploy_env', choices: ['stage', 'prod'])
 ////        string(name: 'VERSION', defaultValue: 'latest', description: 'pick your version from the artifactory')
-//    }
-//    environment {
-//        JFROG = credentials("mrll-artifactory")
-//        CF_DOCKER_PASSWORD = "$JFROG_PSW"
-//        PCF = credentials("svc-inf-jenkins")
-//        REPO = "$params.REPO"
-//        STAGE = "$params.STAGE"
-//        VERSION = "$params.VERSION"
 //    }
     post {
         cleanup {
