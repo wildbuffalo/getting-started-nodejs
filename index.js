@@ -1,3 +1,5 @@
+const instana = require('instana-nodejs-sensor');
+instana(); // this is fine
 const http = require("http");
 const path = require("path");
 const fs = require("fs");
