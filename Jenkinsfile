@@ -45,7 +45,7 @@ pipeline {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
-                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-serive-stage"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-serive"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
 
                 }
             }
