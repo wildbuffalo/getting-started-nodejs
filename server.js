@@ -14,8 +14,11 @@ var user = {
     }
 }
 var app = http.createServer(function (req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(user));
+    // res.setHeader('Content-Type', 'application/json');
+    // res.end(JSON.stringify(process.env.abc));
+    // console.log(process.env.abc);
+    res.send(process.env.abc)
+    // res.end(toString(process.env.abc));
 });
 // app.post('/addUser', function (req, res) {
 //     // First read existing users.
