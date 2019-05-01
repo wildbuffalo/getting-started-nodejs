@@ -45,7 +45,7 @@ pipeline {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
-                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
+//                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
 
                 }
             }
@@ -61,24 +61,24 @@ pipeline {
 //                }
 //            }
 //        }
-//        stage('Push to PCF') {
-//            when {
-//                expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
-//            }
-//            steps {
-//                script {
-//                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//                        def dockerfile = "./devops/Dockerfile"
-//                        docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
-//                        docker_pcf_src.inside() {
-//                                sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
-//                                    cf zero-downtime-push $getRepo -f ./devops/manifest.yml"
-//
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        stage('Push to PCF') {
+            when {
+                expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
+            }
+            steps {
+                script {
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                        def dockerfile = "./devops/Dockerfile"
+                        docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
+                        docker_pcf_src.inside() {
+                                sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
+                                    cf zero-downtime-push $getRepo -f ./devops/manifest.yml"
+
+                        }
+                    }
+                }
+            }
+        }
     }
 //        stage('autoscale') {
 //
