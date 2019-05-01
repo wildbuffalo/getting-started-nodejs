@@ -1,9 +1,9 @@
 // const instana = require('@instana/collector');
 // instana();
-var express = require('express');
-var app = express();
+// var express = require('express');
+// var app = express();
 var http = require("http");
-var fs = require("fs");
+// var fs = require("fs");
 
 var user = {
     "user4": {
