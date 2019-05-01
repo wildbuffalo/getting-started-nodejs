@@ -21,7 +21,7 @@ var app = http.createServer(function (req, res) {
     res.writeHead(200);
     console.log(req.method);
     console.log(req.headers);
-    console.log(process.env.VCAP_SERVICES);
+    console.log(process.env.VCAP_SERVICES.user-provided.credentials.abc);
     res.write("dddd");
     res.end();
 });
