@@ -5,20 +5,25 @@
 var http = require("http");
 // var fs = require("fs");
 
-var user = {
-    "user4": {
-        "name": "mohit",
-        "password": "password4",
-        "profession": "teacher",
-        "id": 4
-    }
-}
+// var user = {
+//     "user4": {
+//         "name": "mohit",
+//         "password": "password4",
+//         "profession": "teacher",
+//         "id": 4
+//     }
+// }
+// process.env.abc = 123;
 var app = http.createServer(function (req, res) {
     // res.setHeader('Content-Type', 'application/json');
     // res.end(JSON.stringify(process.env.abc));
-    // console.log(process.env.abc);
-    res.send(process.env.abc)
-    // res.end(toString(process.env.abc));
+    // res.end(toString(user));
+    res.writeHead(200);
+    console.log(req.method);
+    console.log(req.headers);
+    console.log(toString(process.env.abc));
+    res.write("dddd");
+    res.end();
 });
 // app.post('/addUser', function (req, res) {
 //     // First read existing users.
