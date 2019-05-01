@@ -1,5 +1,5 @@
-const instana = require('@instana/collector');
-instana();
+// const instana = require('@instana/collector');
+// instana();
 var express = require('express');
 var app = express();
 var http = require("http");
