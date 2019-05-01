@@ -2,13 +2,14 @@
   "name": "node_crash_course",
   "version": "1.0.0",
   "description": "Node crash course",
+  "engines": {
+    "node": "10.15.3"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon index"
   },
-  "author": "Brad Traversy",
-  "license": "ISC",
   "dependencies": {
     "uuid": "^3.3.2"
   },
