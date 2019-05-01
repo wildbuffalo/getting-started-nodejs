@@ -1,8 +1,9 @@
 ---
 applications:
    -  name: getting-started-nodejs
-      buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v10.15.3
+      buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
       memory: 1GB
       instances: 1
       timeout: 180
       host: getting-started-nodejs
+      stack: cflinuxfs3
