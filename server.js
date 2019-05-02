@@ -23,7 +23,7 @@ var app = http.createServer(function (req, res) {
     console.log(req.method);
     console.log(req.headers);
 
-    console.log(vcap_services);
+    console.log(vcap_services.user-provided.credentials);
     res.write("dddd");
     res.end();
 });
