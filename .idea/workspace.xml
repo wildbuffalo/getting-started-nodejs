@@ -14,6 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../job-dsl-gradle-example/.gradle/" />
@@ -138,7 +139,7 @@
           <entry key="Groovy" value="7942" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="19" />
-          <entry key="JavaScript" value="116" />
+          <entry key="JavaScript" value="192" />
           <entry key="Kotlin" value="47" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="18" />
@@ -189,8 +190,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="505">
+              <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -1029,7 +1030,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556809276735" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556811390306" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1238,20 +1239,6 @@
       <workItem from="1549552591150" duration="37252000" />
       <workItem from="1550003368997" duration="98305000" />
       <workItem from="1555360808567" duration="28297000" />
-    </task>
-    <task id="LOCAL-00622" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1555624461731</created>
-      <option name="number" value="00622" />
-      <option name="presentableId" value="LOCAL-00622" />
-      <option name="project" value="LOCAL" />
-      <updated>1555624461731</updated>
-    </task>
-    <task id="LOCAL-00623" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1555624684507</created>
-      <option name="number" value="00623" />
-      <option name="presentableId" value="LOCAL-00623" />
-      <option name="project" value="LOCAL" />
-      <updated>1555624684508</updated>
     </task>
     <task id="LOCAL-00624" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1555625202260</created>
@@ -1582,11 +1569,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556808397912</updated>
     </task>
-    <option name="localTasksCounter" value="671" />
+    <task id="LOCAL-00671" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1556809265577</created>
+      <option name="number" value="00671" />
+      <option name="presentableId" value="LOCAL-00671" />
+      <option name="project" value="LOCAL" />
+      <updated>1556809265577</updated>
+    </task>
+    <task id="LOCAL-00672" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1556809464146</created>
+      <option name="number" value="00672" />
+      <option name="presentableId" value="LOCAL-00672" />
+      <option name="project" value="LOCAL" />
+      <updated>1556809464146</updated>
+    </task>
+    <option name="localTasksCounter" value="673" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428436000" />
+    <option name="totallyTimeSpent" value="430668000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -2007,8 +2008,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="505">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

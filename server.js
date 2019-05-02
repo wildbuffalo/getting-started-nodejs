@@ -6,15 +6,23 @@ var http = require("http");
 // var fs = require("fs");
 
 // var user = {
-//     "user4": {
-//         "name": "mohit",
-//         "password": "password4",
-//         "profession": "teacher",
-//         "id": 4
+//     "VCAP_SERVICES": {
+//         "user-provided": [{
+//             "label": "user-provided",
+//             "name": "test-nodejs",
+//             "tags": [],
+//             "instance_name": "test-nodejs",
+//             "binding_name": null,
+//             "credentials": {"abc": "123"},
+//             "syslog_drain_url": "11",
+//             "volume_mounts": []
+//         }]
 //     }
-// }
+// };
 // process.env.abc = 123;
-var vcap_services = JSON.parse(process.env.VCAP_SERVICES)
+// process.env.VCAP_SERVICES
+// var vcap = JSON.parse(user);
+
 var app = http.createServer(function (req, res) {
     // res.setHeader('Content-Type', 'application/json');
     // res.end(JSON.stringify(process.env.abc));
@@ -23,7 +31,7 @@ var app = http.createServer(function (req, res) {
     console.log(req.method);
     console.log(req.headers);
 
-    console.log(vcap_services[0].credentials);
+    console.log(process.env.VCAP_SERVICES["user-provided"][0].credentials.abc);
     res.write("dddd");
     res.end();
 });
