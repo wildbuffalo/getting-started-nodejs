@@ -14,11 +14,11 @@ pipeline {
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("svc-inf-jenkins")
     }
-    parameters {
-        string(name: 'repo', defaultValue: 'latest',description: 'repository name')
-        choice(name: 'deploy_env', choices: ['stage', 'prod'])
-        string(name: 'PCF_ENV', defaultValue: 'latest',)
-    }
+//    parameters {
+//        string(name: 'repo', defaultValue: 'latest',description: 'repository name')
+//        choice(name: 'deploy_env', choices: ['stage', 'prod'])
+//        string(name: 'PCF_ENV', defaultValue: 'latest',)
+//    }
     post {
         cleanup {
             cleanWs()
