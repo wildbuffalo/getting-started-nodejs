@@ -45,9 +45,9 @@ pipeline {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
-                    load 'src/com/dealworks/test.groovy'
-                    getItemData()
-//                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
+//                    load 'src/com/dealworks/test.groovy'
+//                    getItemData()
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'prod'), string(name: 'PCF_ENV', value: 'green')])
 
                 }
             }
