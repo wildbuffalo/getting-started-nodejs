@@ -14,11 +14,11 @@ pipeline {
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("svc-inf-jenkins")
     }
-    parameters {
-        string(name: 'repo', description: 'repository name')
-        choice(name: 'deploy_env', choices: ['stage', 'prod'])
-        string(name: 'PCF_ENV')
-    }
+//    parameters {
+//        string(name: 'repo', description: 'repository name')
+//        choice(name: 'deploy_env', choices: ['stage', 'prod'])
+//        string(name: 'PCF_ENV')
+//    }
     post {
         cleanup {
             cleanWs()
@@ -47,7 +47,10 @@ pipeline {
                     sh 'printenv'
 //                    load 'src/com/dealworks/test.groovy'
 //                    getItemData()
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'green')])
                     build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'prod'), string(name: 'PCF_ENV', value: 'blue')])
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'prod'), string(name: 'PCF_ENV', value: 'green')])
 
                 }
             }
