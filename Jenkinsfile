@@ -51,10 +51,10 @@ pipeline {
                     sh 'printenv'
 //                    load 'src/com/dealworks/test.groovy'
 //                    getItemData()
-                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
-                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'green')])
-                    build(job: 'UTILS/autoscale', parameters: [[$class: 'StringParameterValue', name: 'repo', value: "dealworks-graphql-service"],[$class: 'StringParameterValue', name: 'deploy_env', value: "prod"], [$class: 'StringParameterValue', name: 'PCF_ENV', value: "blue"]])
-                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'prod'), string(name: 'PCF_ENV', value: 'green')])
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: stage), string(name: 'PCF_ENV', value: blue)])
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: stage), string(name: 'PCF_ENV', value: green)])
+                    build(job: 'UTILS/autoscale', parameters: [[$class: 'StringParameterValue', name: 'repo', value: "dealworks-graphql-service"],[$class: 'StringParameterValue', name: 'deploy_env', value: prod], [$class: 'StringParameterValue', name: 'PCF_ENV', value: blue]])
+                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: prod), string(name: 'PCF_ENV', value: green)])
                 }
             }
         }
