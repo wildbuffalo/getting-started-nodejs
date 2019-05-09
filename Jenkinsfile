@@ -18,9 +18,9 @@ pipeline {
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("svc-inf-jenkins")
-        repo = "$params.repo"
-        deploy_env = "$params.deploy_env"
-        PCF_ENV = "$params.PCF_ENV"
+//        repo = "$params.repo"
+//        deploy_env = "$params.deploy_env"
+//        PCF_ENV = "$params.PCF_ENV"
     }
 
     post {
@@ -55,7 +55,7 @@ pipeline {
                     build job: '/UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-graphql-service'), string(name: 'deploy_env', value: 'stage'), string(name: 'PCF_ENV', value: 'green')], quietPeriod: 0, wait: false
                     build job: '/UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-graphql-service'), string(name: 'deploy_env', value: 'prod'), string(name: 'PCF_ENV', value: 'blue')], quietPeriod: 0, wait: false
 //                    build(job: 'UTILS/autoscale', parameters: [[$class: 'StringParameterValue', name: 'repo', value: "dealworks-graphql-service"],[$class: 'StringParameterValue', name: 'deploy_env', value: "prod"], [$class: 'StringParameterValue', name: 'PCF_ENV', value: "blue"]])
-                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'prod'), string(name: 'PCF_ENV', value: 'green')])
+                    build job: '/UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-graphql-service'), string(name: 'deploy_env', value: 'prod'), string(name: 'PCF_ENV', value: 'green')], quietPeriod: 0, wait: false
                 }
             }
         }
