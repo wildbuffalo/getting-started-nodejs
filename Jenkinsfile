@@ -9,16 +9,20 @@ pipeline {
         skipDefaultCheckout()
         disableConcurrentBuilds()
     }
+    parameters {
+        string(name: 'repo', defaultValue: 'latest',description: 'repository name')
+        choice(name: 'deploy_env', choices: ['stage', 'prod'])
+        string(name: 'PCF_ENV', defaultValue: 'latest',)
+    }
     environment {
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("svc-inf-jenkins")
+        repo = params.repo
+        deploy_env = params.deploy_env
+        PCF_ENV = params.PCF_ENV
     }
-//    parameters {
-//        string(name: 'repo', defaultValue: 'latest',description: 'repository name')
-//        choice(name: 'deploy_env', choices: ['stage', 'prod'])
-//        string(name: 'PCF_ENV', defaultValue: 'latest',)
-//    }
+
     post {
         cleanup {
             cleanWs()
@@ -49,7 +53,7 @@ pipeline {
 //                    getItemData()
 //                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')])
 //                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'stage'), string(name: 'PCF_ENV', value: 'green')])
-                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'prod'), string(name: 'PCF_ENV', value: 'blue')])
+                    build(job: 'UTILS/autoscale', parameters: [[$class: 'StringParameterValue', name: 'repo', value: "dealworks-graphql-service"],[$class: 'StringParameterValue', name: 'deploy_env', value: "prod"], [$class: 'StringParameterValue', name: 'PCF_ENV', value: "blue"]])
 //                    build(job: 'UTILS/autoscale', parameters: [string(name: 'repo', value: "dealworks-graphql-service"), string(name: 'deploy_env ', value: 'prod'), string(name: 'PCF_ENV', value: 'green')])
                 }
             }
