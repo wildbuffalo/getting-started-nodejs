@@ -49,6 +49,9 @@ pipeline {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
+                    withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
+                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
+                    }
 //                    load 'src/com/dealworks/test.groovy'
 //                    getItemData()
 //                    build job: '/UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-graphql-service'), string(name: 'deploy_env', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')], quietPeriod: 0, wait: false
