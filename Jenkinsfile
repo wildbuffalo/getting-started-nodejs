@@ -47,7 +47,7 @@ pipeline {
                 checkout scm
                 script {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                    env.getRepo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+                    repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
                     withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
                         echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
@@ -104,7 +104,7 @@ pipeline {
 
 //                            sh "ls /home/jenkins/src/"
                                 sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
-                                    cf zero-downtime-push $getRepo -f ./devops/manifest.yml"
+                                    cf zero-downtime-push $repo -f ./devops/manifest.yml"
 
                         }
                     }
