@@ -3,7 +3,7 @@ applications:
 - name: getting-started-nodejs
 #      buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
   docker:
-    image: merrillcorp-dealworks.jfrog.io/getting-started-nodejs/master:latest
+    image: merrillcorp-dealworks.jfrog.io/getting-started-nodejs/master
     username: svc-inf-jenkins
   memory: 1GB
   instances: 1
