@@ -78,12 +78,14 @@ pipeline {
             }
             steps {
                 script {
+                    def manifest = libraryResource "com/merrill/dealworks/dealworks-graphql-service/manifest.yml"
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                         def dockerfile = "./devops/Dockerfile"
                         docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
                         docker_pcf_src.inside() {
+                            writeFile file: '/home/jenkins/src/manifest.yml', text: "$manifest"
                                 sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
-                                    cf zero-downtime-push $getRepo -f ./devops/manifest.yml"
+                                    cf zero-downtime-push $getRepo -f ./manifest.yml"
 
                         }
                     }
