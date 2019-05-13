@@ -63,13 +63,16 @@ pipeline {
         }
         stage('Build'){
             steps{
-                docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                    def dockerfile = './Dockerfile'
-                    docker_image = docker.build("$repo", "--pull --rm -f ${dockerfile} .")
-                    docker_image.inside {
-                        sh 'ls'
+                script{
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                        def dockerfile = './Dockerfile'
+                        docker_image = docker.build("$repo", "--pull --rm -f ${dockerfile} .")
+                        docker_image.inside {
+                            sh 'ls'
+                        }
                     }
                 }
+
             }
         }
         stage('Archive to Artifactory') {
