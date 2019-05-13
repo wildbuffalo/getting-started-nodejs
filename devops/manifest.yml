@@ -9,6 +9,6 @@ applications:
   instances: 1
   timeout: 180
   host: getting-started-nodejs
-  stack: cflinuxfs3
+#  stack: cflinuxfs3
   services:
     - test-nodejs
