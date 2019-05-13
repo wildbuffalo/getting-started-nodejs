@@ -84,6 +84,7 @@ pipeline {
                         docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
                         docker_pcf_src.inside() {
                             writeFile file: '/home/jenkins/src/manifest.yml', text: "$manifest"
+                            sh "ls"
                                 sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
                                     cf zero-downtime-push $getRepo -f ./manifest.yml"
 
