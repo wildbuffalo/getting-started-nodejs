@@ -101,8 +101,8 @@ pipeline {
                         def dockerfile = "./devops/Dockerfile"
                         docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
                         docker_pcf_src.inside() {
-                                sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
-                                    cf zero-downtime-push $repo -f ./devops/manifest.yml -env CF_DOCKER_PASSWORD=$JFROG_PSW"
+                                sh "CF_DOCKER_PASSWORD=$JFROG_PSW cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
+                                    cf zero-downtime-push $repo -f ./devops/manifest.yml"
 
 //                            sh "ls /home/jenkins/src/"
 
