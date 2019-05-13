@@ -61,17 +61,31 @@ pipeline {
                 }
             }
         }
-//        stage('Build'){
-//            steps{
-//                docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//                    def dockerfile = './devops/Dockerfile'
-//                    docker_image = docker.build("$repo/pr", "--pull --rm -f ${dockerfile} .")
-//                    docker_image.inside {
-//                        sh 'npm install'
-//                    }
-//                }
-//            }
-//        }
+        stage('Build'){
+            steps{
+                docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                    def dockerfile = './devops/Dockerfile'
+                    docker_image = docker.build("$repo/pr", "--pull --rm -f ${dockerfile} .")
+                    docker_image.inside {
+                        sh 'npm install'
+                    }
+                }
+            }
+        }
+        stage('Archive to Artifactory') {
+            when {
+                expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
+            }
+            steps {
+                script {
+
+                    docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                        docker_image.push('latest')
+                        docker_image.push()
+                    }
+                }
+            }
+        }
         stage('Push to PCF') {
             when {
                 expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
