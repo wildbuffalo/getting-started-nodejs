@@ -13,7 +13,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df23a7ca-f0f4-4f5a-a8dd-4ccaafeecc50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_dealworks_graphql_service.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_dealworks_graphql_service.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -221,8 +220,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_dealworks_graphql_service.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="156" column="42" selection-start-line="156" selection-start-column="42" selection-end-line="156" selection-end-column="42" />
+            <state relative-caret-position="464">
+              <caret line="159" column="68" lean-forward="true" selection-start-line="159" selection-start-column="68" selection-end-line="159" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -1037,7 +1036,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557782121349" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557856557653" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1246,13 +1245,6 @@
       <workItem from="1549552591150" duration="37252000" />
       <workItem from="1550003368997" duration="98305000" />
       <workItem from="1555360808567" duration="28297000" />
-    </task>
-    <task id="LOCAL-00684" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1557252715092</created>
-      <option name="number" value="00684" />
-      <option name="presentableId" value="LOCAL-00684" />
-      <option name="project" value="LOCAL" />
-      <updated>1557252715092</updated>
     </task>
     <task id="LOCAL-00685" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1557252966487</created>
@@ -1590,11 +1582,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557782110201</updated>
     </task>
-    <option name="localTasksCounter" value="733" />
+    <task id="LOCAL-00733" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1557782374627</created>
+      <option name="number" value="00733" />
+      <option name="presentableId" value="LOCAL-00733" />
+      <option name="project" value="LOCAL" />
+      <updated>1557782374627</updated>
+    </task>
+    <option name="localTasksCounter" value="734" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="468806000" />
+    <option name="totallyTimeSpent" value="469292000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -2022,8 +2021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_dealworks_graphql_service.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="156" column="42" selection-start-line="156" selection-start-column="42" selection-end-line="156" selection-end-column="42" />
+        <state relative-caret-position="464">
+          <caret line="159" column="68" lean-forward="true" selection-start-line="159" selection-start-column="68" selection-end-line="159" selection-end-column="68" />
         </state>
       </provider>
     </entry>
