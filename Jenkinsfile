@@ -2,7 +2,10 @@ import groovy.json.*
 
 //@Library('merrill-library@master') _
 @Library('ds1-marketing-jenkins-library@master') _
-
+def secrets = [
+        [ secretType: 'Certificate', name: 'MyCert00', version: '', envVariable: 'CERTIFICATE' ],
+        [ secretType: 'Secret', name: 'APOLLO-DEV', version: '', envVariable: 'SECRET' ]
+]
 pipeline {
     agent any
     options {
@@ -49,8 +52,12 @@ pipeline {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                     repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
                     sh 'printenv'
-                    withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
-                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
+//                    withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
+//                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
+//                    }
+                    withAzureKeyvault(secrets) {
+//                        sh 'echo $CERTIFICATE'
+                        sh 'echo $SECRET'
                     }
 //                    load 'src/com/dealworks/test.groovy'
 //                    getItemData()
