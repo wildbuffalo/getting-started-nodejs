@@ -52,10 +52,15 @@ pipeline {
 //                    withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
 //                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
 //                    }
-                    withCredentials([azureServicePrincipal('A_SP')]) {
-                        echo "$AZURE_SUBSCRIPTION_ID or $AZURE_TENANT_ID or $AZURE_CLIENT_SECRET or $AZURE_CLIENT_ID"
-//                        sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
+
+
+                    withDockerContainer('microsoft/azure-cli') {
+                        withCredentials([azureServicePrincipal('A_SP')]) {
+                            echo "$AZURE_SUBSCRIPTION_ID or $AZURE_TENANT_ID or $AZURE_CLIENT_SECRET or $AZURE_CLIENT_ID"
+                            sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
+                        }
                     }
+
 //                    load 'src/com/dealworks/test.groovy'
 //                    getItemData()
 //                    build job: '/UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-graphql-service'), string(name: 'deploy_env', value: 'stage'), string(name: 'PCF_ENV', value: 'blue')], quietPeriod: 0, wait: false
