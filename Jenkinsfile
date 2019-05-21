@@ -54,7 +54,7 @@ pipeline {
 //                    }
 
 
-                    withDockerContainer('microsoft/azure-cli') {
+                    withDockerContainer(args: '-u root', image: 'microsoft/azure-cli') {
                         withCredentials([azureServicePrincipal('A_SP')]) {
                             echo "$AZURE_SUBSCRIPTION_ID or $AZURE_TENANT_ID or $AZURE_CLIENT_SECRET or $AZURE_CLIENT_ID"
                             sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
