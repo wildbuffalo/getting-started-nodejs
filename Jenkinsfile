@@ -53,6 +53,7 @@ pipeline {
 //                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
 //                    }
                     withCredentials([azureServicePrincipal('A_SP')]) {
+                        echo "$AZURE_SUBSCRIPTION_ID or $AZURE_TENANT_ID or $AZURE_CLIENT_SECRET or $AZURE_CLIENT_ID"
 //                        sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
                     }
 //                    load 'src/com/dealworks/test.groovy'
