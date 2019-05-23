@@ -79,7 +79,7 @@ pipeline {
 //                        docker_image.inside {
 //                            sh 'ls'
 //                        }
-                        def customImage = docker.build("-f --pull", "merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest")
+                        def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
                         customImage.inside {
                             sh "ls"
                         }
