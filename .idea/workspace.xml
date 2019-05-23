@@ -69,20 +69,21 @@
     <session id="-372108613">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -135,7 +136,7 @@
         <counts>
           <entry key="Dockerfile" value="5" />
           <entry key="Git file" value="5" />
-          <entry key="Groovy" value="8869" />
+          <entry key="Groovy" value="8870" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="58" />
           <entry key="JavaScript" value="197" />
@@ -157,8 +158,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+            <state relative-caret-position="872">
+              <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -175,7 +176,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/frontEndDeployment.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
+            <state relative-caret-position="756">
               <caret line="36" column="71" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
             </state>
           </provider>
@@ -184,7 +185,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_ds1_graphql_service.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="2793">
               <caret line="133" column="85" selection-start-line="133" selection-start-column="85" selection-end-line="133" selection-end-column="85" />
             </state>
           </provider>
@@ -193,7 +194,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="3045">
               <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
             </state>
           </provider>
@@ -202,7 +203,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
+            <state relative-caret-position="609">
               <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
             </state>
           </provider>
@@ -211,7 +212,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
+            <state relative-caret-position="819">
               <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
             </state>
           </provider>
@@ -904,100 +905,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="merrill" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="merrill" type="462c0819:PsiDirectoryNode" />
-              <item name="dealworks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="merrill" type="462c0819:PsiDirectoryNode" />
-              <item name="dealworks" type="462c0819:PsiDirectoryNode" />
-              <item name="dealworks-graphql-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="merrill" type="462c0819:PsiDirectoryNode" />
-              <item name="dealworks" type="462c0819:PsiDirectoryNode" />
-              <item name="ds1-graphql-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dealworks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ds1_marketing_jenkins_library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="vars" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="getting-started-nodejs" type="b2602c69:ProjectViewProjectNode" />
               <item name="getting-started-nodejs" type="462c0819:PsiDirectoryNode" />
@@ -1018,7 +930,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558470668059" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558534681392" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1039,463 +951,6 @@
       <recent name="$PROJECT_DIR$/../ds1_marketing_jenkins_library" />
       <recent name="$PROJECT_DIR$/../dealworks-app/devops" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_dealworks_graphql_service.groovy</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/Dockerfile</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/angular.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/app/app.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/app/app.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/app/containers/buyers-page/buyers-page.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/app/containers/buyers-page/buyers-page.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/app/containers/buyers-page/buyers-page.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/app/containers/buyers-page/buyers-page.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/app/containers/buyers-page/buyers-page.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/polyfills.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/devops/manifest-dev.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/devops/manifest-prod.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/devops/manifest-stage.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/api-error/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/common-auth.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/config/app.conf.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/services/auth.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/services/auth.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/data-models/src/lib/router-tab.interfaces.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui-bottom-sheet/src/lib/+state/bottom-sheet.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui-bottom-sheet/src/lib/+state/bottom-sheet.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui-bottom-sheet/src/lib/+state/bottom-sheet.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui-bottom-sheet/src/lib/+state/bottom-sheet.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui-bottom-sheet/src/lib/+state/bottom-sheet.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/charts/src/lib/chart-card/chart-card.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/collapsible-panel/src/lib/collapsible-panel/collapsible-panel.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/collapsible-panel/src/lib/collapsible-panel/collapsible-panel.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/collapsible-panel/src/lib/collapsible-panel/collapsible-panel.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/data-table/src/lib/data-table.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/data-table/src/lib/data-table.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/rich-text/src/lib/common-ui-rich-text.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/router-tabs/src/lib/router-tabs/router-tabs.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/router-tabs/src/lib/router-tabs/router-tabs.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/utils/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/apollo/src/lib/dealworks-apollo.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/buyer-activity-dialog/buyer-activity-dialog.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/buyer-activity-form/buyer-activity-form.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/buyer-activity-form/buyer-activity-form.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/buyer-activity-form/buyer-activity-form.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/buyer-activity-form/buyer-activity-form.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/dealworks-buyer-activity-dialogs.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bid-details/buyer-bid-details.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids/buyer-bids.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-bids/src/lib/buyer-bids/buyer-bids.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-nda-details/buyer-nda-details.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/buyer-ndas/buyer-ndas.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-ndas/src/lib/dealworks-buyer-ndas.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/add-buyers/add-buyers.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-activities/buyer-activities.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-activities/buyer-activities.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-contacts/buyer-contacts.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-contacts/buyer-contacts.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-details/buyer-details.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-tracker/buyer-tracker.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-tracker/buyer-tracker.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer-tracker/buyer-tracker.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer/buyer.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer/buyer.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/buyer/buyer.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer/src/lib/dealworks-buyer.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/ui/src/lib/dealworks-common-ui.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/ui/src/lib/email-preview/email-preview.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.facade.mock.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.reducer.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.reducer.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/buyer.selectors.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/email.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/email.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/+state/email.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/add-company/add-company.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/add-company/add-company.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/add-company/add-company.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/contact-form/contact-form.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/dealworks-data-access-buyer.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/dynamic-fields-dialog/dynamic-fields-dialog.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/+state/deal-doc.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/+state/deal-doc.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/+state/deal-doc.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/+state/deal-doc.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/+state/deal-doc.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/dealworks-data-access-deal-doc.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/file-upload-form/file-upload-form.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/deal-doc/src/lib/update-deal-doc/update-deal-doc.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.adapter.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.facade.mock.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.reducer.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.reducer.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/+state/draft.selectors.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/draft/src/lib/dealworks-data-access-draft.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.reducer.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.reducer.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/inbound-email/src/lib/+state/inbound-email.selectors.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/+state/project.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/+state/project.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/+state/project.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/add-user/add-user.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/add-user/add-user.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/dealworks-data-access-project.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/services/project.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/services/project.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-models/src/lib/buyer.interfaces.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-models/src/lib/buyer.mocks.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-models/src/lib/draft.interfaces.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-models/src/lib/files.interfaces.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/draft.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/draft.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/email.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/email.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/files.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/files.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/project.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/project.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/edit-project/src/lib/dealworks-edit-project.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/edit-project/src/lib/edit-project-form/edit-project-form.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/edit-project/src/lib/edit-project-form/edit-project-form.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/edit-project/src/lib/edit-project-form/edit-project-form.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/dealworks-email-drafts.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-draft-card/email-draft-card.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-draft-card/email-draft-card.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-draft-card/email-draft-card.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-draft-card/email-draft-card.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts-preview/email-drafts-preview.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts-preview/email-drafts-preview.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts-preview/email-drafts-preview.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts-preview/email-drafts-preview.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts-preview/email-drafts-preview.guard.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts/email-drafts.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts/email-drafts.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts/email-drafts.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/lib/email-drafts/email-drafts.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email-drafts/src/test.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/bulk-email/bulk-email.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/bulk-email/bulk-email.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/bulk-email/bulk-email.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/bulk-email/bulk-email.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/dealworks-email.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/recipient-table/recipient-table.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/recipient-table/recipient-table.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/buyer/buyer.fragments.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/buyer/buyer.mutations.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/buyer/buyer.queries.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/draft/draft.queries.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/email/email.fragments.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/files/files.mutations.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/project/project.queries.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/header/src/lib/header/header.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/header/src/lib/header/header.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/header/src/lib/header/header.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/inbox/src/lib/dealworks-inbox.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/inbox/src/lib/inbox/inbox.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/inbox/src/lib/inbox/inbox.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/inbox/src/lib/inbox/inbox.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/inbox/src/lib/inbox/inbox.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/dealworks-settings.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/outbound-email/outbound-email.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/outbound-email/outbound-email.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/outbound-email/outbound-email.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/outbound-email/outbound-email.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/settings/settings.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/settings/settings.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/sidenav/src/lib/sidenav/sidenav.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/nx.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/package-lock.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_mat-bottom-sheet.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_mat-select.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_mat-table.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_material-overrides.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/tsconfig.json</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/apps/dealworks/src/assets/img/logomark.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/karma.conf.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/src/lib/app-dynamics.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/src/lib/heap-analytics.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/src/test.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/tsconfig.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/tsconfig.lib.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/tsconfig.spec.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/analytics/tslint.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/services/activity.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/services/activity.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/services/local-storage.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/auth/src/lib/services/local-storage.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/karma.conf.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/src/lib/click-once.directive.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/src/lib/click-once.directive.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/src/lib/click-once.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/src/lib/common-ui-click-once.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/src/test.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/tsconfig.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/tsconfig.lib.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/tsconfig.spec.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/ui/click-once/tslint.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/utils/src/lib/environments/environments.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/utils/src/lib/environments/environments.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/utils/src/lib/uuid/uuid.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/common/utils/src/lib/uuid/uuid.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/email-form/email-form.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/email-form/email-form.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/email-form/email-form.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/buyer-activity-dialogs/src/lib/email-form/email-form.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/karma.conf.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/lib/dealworks-common-attachments-testing.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/lib/dealworks-common-attachments.module.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/lib/dealworks-common-attachments.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/lib/services/attachments.service.mock.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/lib/services/attachments.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/lib/services/attachments.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/src/test.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/tsconfig.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/tsconfig.lib.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/tsconfig.spec.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/attachments/tslint.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/ui/src/lib/email-autocomplete/email-autocomplete.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/ui/src/lib/email-autocomplete/email-autocomplete.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/ui/src/lib/email-autocomplete/email-autocomplete.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/common/ui/src/lib/email-autocomplete/email-autocomplete.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/karma.conf.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/lib/+state/buyer-records.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/lib/+state/buyer-records.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/lib/+state/buyer-records.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/lib/+state/buyer-records.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/lib/+state/buyer-records.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/lib/dealworks-data-access-buyer-records.module.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/lib/dealworks-data-access-buyer-records.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/src/test.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/tsconfig.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/tsconfig.lib.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/tsconfig.spec.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-records/tslint.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/email-warning-dialog/email-warning-dialog.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/email-warning-dialog/email-warning-dialog.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/email-warning-dialog/email-warning-dialog.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/email-warning-dialog/email-warning-dialog.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/watermark-settings-dialog/watermark-settings-dialog.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/watermark-settings-dialog/watermark-settings-dialog.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/watermark-settings-dialog/watermark-settings-dialog.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/watermark-settings-dialog/watermark-settings-dialog.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/karma.conf.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.adapter.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.facade.mock.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.facade.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.reducer.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.reducer.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/+state/download.selectors.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/bottom-sheet/bottom-sheet.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/bottom-sheet/bottom-sheet.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/bottom-sheet/bottom-sheet.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/bottom-sheet/bottom-sheet.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/dealworks-data-access-download-testing.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/dealworks-data-access-download.module.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/lib/dealworks-data-access-download.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/src/test.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/tsconfig.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/tsconfig.lib.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/tsconfig.spec.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/download/tslint.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/services/unique-project-name.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/project/src/lib/services/unique-project-name.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer-records.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-services/src/lib/services/buyer-records.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/apollo-batch-service/apollo-batch.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/apollo-batch-service/apollo-batch.service.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/buyer-records/buyer-records.mutations.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/buyer-records/buyer-records.queries.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/buyer-records/buyer-records.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/buyer-records/buyer-records.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/buyer-records/buyer-records.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/settings/src/lib/buyer-records/buyer-records.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_mat-autocomplete.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/src/styles/material-overrides/_mat-spinner.scss</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/karma.conf.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/index.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/+state/buyer-activities.actions.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/+state/buyer-activities.effects.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/+state/buyer-activities.effects.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/+state/buyer-activities.init.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/+state/buyer-activities.interfaces.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/+state/buyer-activities.reducer.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/+state/buyer-activities.reducer.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/dealworks-data-access-buyer-activities.module.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/dealworks-data-access-buyer-activities.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/lib/services/buyer-activities.facade.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/src/test.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/tsconfig.lib.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/tsconfig.spec.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer-activities/tslint.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/report-bottom-sheet/report-bottom-sheet.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/report-bottom-sheet/report-bottom-sheet.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/report-bottom-sheet/report-bottom-sheet.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/data-access/buyer/src/lib/report-bottom-sheet/report-bottom-sheet.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/dealworks-email.module.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/email-autocomplete/email-autocomplete.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/email-autocomplete/email-autocomplete.component.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/email-autocomplete/email-autocomplete.component.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/email-autocomplete/email-autocomplete.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/email/src/lib/email-autocomplete/email-autocomplete.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/draft/draft.mutations.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/mutation-service/mutation.service.spec.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../dealworks-app/libs/dealworks/graphql/src/lib/mutation-service/mutation.service.ts</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
@@ -1684,13 +1139,7 @@
       <workItem from="1549552591150" duration="37252000" />
       <workItem from="1550003368997" duration="98305000" />
       <workItem from="1555360808567" duration="28297000" />
-    </task>
-    <task id="LOCAL-00714" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
-      <created>1557774350749</created>
-      <option name="number" value="00714" />
-      <option name="presentableId" value="LOCAL-00714" />
-      <option name="project" value="LOCAL" />
-      <updated>1557774350749</updated>
+      <workItem from="1558543015469" duration="585000" />
     </task>
     <task id="LOCAL-00715" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
       <created>1557774968588</created>
@@ -2028,11 +1477,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558470479666</updated>
     </task>
-    <option name="localTasksCounter" value="763" />
+    <task id="LOCAL-00763" summary="Merge branch 'develop' of https://github.com/MerrillCorporation/dealworks-app into develop&#10;&#10;# Conflicts:&#10;#&#9;package-lock.json">
+      <created>1558470749461</created>
+      <option name="number" value="00763" />
+      <option name="presentableId" value="LOCAL-00763" />
+      <option name="project" value="LOCAL" />
+      <updated>1558470749461</updated>
+    </task>
+    <option name="localTasksCounter" value="764" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="489405000" />
+    <option name="totallyTimeSpent" value="490491000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -2045,9 +1501,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23809524" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24114774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -2057,7 +1512,7 @@
       <window_info id="npm" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4981685" visible="true" weight="0.20353064" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497558" visible="true" weight="0.18691589" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497558" weight="0.18691589" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -2224,13 +1679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build.groovy" />
     <entry file="file://$PROJECT_DIR$/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js" />
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1688" />
@@ -2279,21 +1728,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/person.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
           <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2395,48 +1835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/resources/com/merrill/dealworks/dealworks-graphql-service/autoscale.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/frontEndDeployment.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="36" column="71" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devops/manifest.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks-api.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -2451,17 +1849,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devops/manifest.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/frontEndDeployment.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="71" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/vars/build_ds1_graphql_service.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="2793">
           <caret line="133" column="85" selection-start-line="133" selection-start-column="85" selection-end-line="133" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/qa_jobs.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        <state relative-caret-position="3045">
+          <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/jobs/src/qa-dealworks.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ds1_marketing_jenkins_library/resources/com/merrill/dealworks/dealworks-graphql-service/autoscale.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>

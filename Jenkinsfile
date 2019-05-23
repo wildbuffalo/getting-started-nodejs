@@ -54,12 +54,12 @@ pipeline {
 //                    }
 
 
-                    withDockerContainer(args: '-u root', image: 'microsoft/azure-cli') {
-                        withCredentials([azureServicePrincipal('A_SP')]) {
-                            echo "$AZURE_SUBSCRIPTION_ID or $AZURE_TENANT_ID or $AZURE_CLIENT_SECRET or $AZURE_CLIENT_ID"
-                            sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
-                        }
-                    }
+//                    withDockerContainer(args: '-u root', image: 'microsoft/azure-cli') {
+//                        withCredentials([azureServicePrincipal('A_SP')]) {
+//                            echo "$AZURE_SUBSCRIPTION_ID or $AZURE_TENANT_ID or $AZURE_CLIENT_SECRET or $AZURE_CLIENT_ID"
+//                            sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
+//                        }
+//                    }
 
 //                    load 'src/com/dealworks/test.groovy'
 //                    getItemData()
@@ -74,10 +74,14 @@ pipeline {
             steps{
                 script{
                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                        def dockerfile = './Dockerfile'
-                        docker_image = docker.build("$repo", "--pull --rm -f ${dockerfile} .")
-                        docker_image.inside {
-                            sh 'ls'
+//                        def dockerfile = './Dockerfile'
+//                        docker_image = docker.build("$repo", "--pull --rm -f ${dockerfile} .")
+//                        docker_image.inside {
+//                            sh 'ls'
+//                        }
+                        def customImage = docker.build("merrillcorp-dealworks.jfrog.io/tools:latest")
+                        customImage.inside {
+                            sh "ls"
                         }
                     }
                 }
