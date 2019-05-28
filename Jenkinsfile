@@ -103,15 +103,15 @@ spec:
                 container('docker') {
                     script {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-//                        def dockerfile = './Dockerfile'
-//                        docker_image = docker.build("$repo", "--pull --rm -f ${dockerfile} .")
-//                        docker_image.inside {
-//                            sh 'ls'
-//                        }
-                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
-                            customImage.inside {
-                                sh "ls"
-                            }
+                        def dockerfile = './Dockerfile'
+                        docker_image = docker.build("$repo", "--pull --rm -f ${dockerfile} .")
+                        docker_image.inside {
+                            sh 'ls'
+                        }
+//                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
+//                            customImage.inside {
+//                                sh "ls"
+//                            }
                         }
                     }
                 }
