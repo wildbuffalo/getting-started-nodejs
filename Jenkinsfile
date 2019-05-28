@@ -66,7 +66,7 @@ spec:
         stage('Checkout') {
             //  agent any
             steps {
-                container('maven') {
+                container('node') {
                 checkout scm
                 script {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
