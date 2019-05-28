@@ -26,7 +26,7 @@ spec:
     command:
     - cat
     tty: true
-  - name: Docker    
+  - name: docker    
     image: docker
     command:
     - cat
@@ -100,7 +100,7 @@ spec:
         }
         stage('Build') {
             steps {
-                container('Docker') {
+                container('docker') {
                     script {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 //                        def dockerfile = './Dockerfile'
@@ -122,7 +122,7 @@ spec:
                 expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
             }
             steps {
-                container('Docker') {
+                container('docker') {
                     script {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                             docker_image.push('latest')
@@ -137,7 +137,7 @@ spec:
                 expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
             }
             steps {
-                container('Docker') {
+                container('docker') {
                     script {
 //                    def manifest = libraryResource "com/merrill/dealworks/dealworks-graphql-service/manifest.yml"
 //                    writeFile file: '/home/jenkins/src/manifest.yml', text: "$manifest"
