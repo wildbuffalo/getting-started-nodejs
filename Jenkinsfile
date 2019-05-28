@@ -4,7 +4,30 @@ import groovy.json.*
 @Library('ds1-marketing-jenkins-library@master') _
 
 pipeline {
-    agent any
+    agent {
+        kubernetes {
+            label 'mypod'
+            defaultContainer 'jnlp'
+            yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: some-label-value
+spec:
+  containers:
+  - name: node
+    image: node:alpine
+    command:
+    - cat
+    tty: true
+  - name: busybox
+    image: busybox
+    command:
+    - cat
+    tty: true
+"""
+        }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
@@ -22,23 +45,23 @@ pipeline {
 //        deploy_env = "$params.deploy_env"
 //        PCF_ENV = "$params.PCF_ENV"
     }
-
-    post {
-        cleanup {
-            cleanWs()
-            dir("${env.WORKSPACE}@tmp") {
-                cleanWs()
-            }
-            node('master') {
-                dir("${env.WORKSPACE}@libs") {
-                    cleanWs()
-                }
-                dir("${env.WORKSPACE}@script") {
-                    cleanWs()
-                }
-            }
-        }
-    }
+//
+//    post {
+//        cleanup {
+//            cleanWs()
+//            dir("${env.WORKSPACE}@tmp") {
+//                cleanWs()
+//            }
+//            node('master') {
+//                dir("${env.WORKSPACE}@libs") {
+//                    cleanWs()
+//                }
+//                dir("${env.WORKSPACE}@script") {
+//                    cleanWs()
+//                }
+//            }
+//        }
+//    }
 
     stages {
         stage('Checkout') {
