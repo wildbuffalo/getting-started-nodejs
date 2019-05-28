@@ -104,7 +104,7 @@ spec:
                     script {
                         docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                         def dockerfile = './Dockerfile'
-                        docker_image = docker.build("abcd", "--pull --rm -f ${dockerfile} .")
+                        docker_image = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
                         docker_image.inside {
                             sh 'ls'
                         }
