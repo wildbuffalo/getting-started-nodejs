@@ -66,6 +66,7 @@ spec:
         stage('Checkout') {
             //  agent any
             steps {
+                container('maven') {
                 checkout scm
                 script {
                     env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
@@ -89,6 +90,7 @@ spec:
 //                    build job: '/UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-graphql-service'), string(name: 'deploy_env', value: 'prod'), string(name: 'PCF_ENV', value: 'blue')], quietPeriod: 0, wait: false
 //                    build job: '/UTILS/autoscale', parameters: [string(name: 'repo', value: 'dealworks-graphql-service'), string(name: 'deploy_env', value: 'prod'), string(name: 'PCF_ENV', value: 'green')], quietPeriod: 0, wait: false
                 }
+            }
             }
         }
         stage('Build') {
