@@ -26,6 +26,11 @@ spec:
     command:
     - cat
     tty: true
+  - name: Docker    
+    image: docker
+    command:
+    - cat
+    tty: true
 """
         }
     }
