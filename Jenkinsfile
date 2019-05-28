@@ -41,10 +41,8 @@ spec:
     environment {
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
-        PCF = credentials("svc-inf-jenkins")
-//        repo = "$params.repo"
-//        deploy_env = "$params.deploy_env"
-//        PCF_ENV = "$params.PCF_ENV"
+        PCF = credentials("PCF")
+
     }
 //
 //    post {
