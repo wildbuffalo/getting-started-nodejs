@@ -115,6 +115,8 @@ spec:
                             sh 'ls'
 
                         }
+                        docker_image.push('latest')
+                        docker_image.push()
                         sh 'docker ps'
 //                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
 //                            customImage.inside {
@@ -132,10 +134,11 @@ spec:
             steps {
                 container('docker') {
                     script {
-                        withDockerRegistry([credentialsId: 'azure_registry', url: 'mrllus2cbacr.azurecr.io']) {
-                            docker_image.push('latest')
-                            docker_image.push()
-                        }
+//                        withDockerRegistry([credentialsId: 'azure_registry', url: 'mrllus2cbacr.azurecr.io']) {
+//                            docker_image.push('latest')
+//                            docker_image.push()
+//                        }
+                        sh "ls"
                     }
                 }
             }
