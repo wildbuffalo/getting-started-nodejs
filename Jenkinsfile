@@ -132,10 +132,10 @@ spec:
             steps {
                 container('docker') {
                     script {
-//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
                             docker_image.push('latest')
                             docker_image.push()
-//                        }
+                        }
                     }
                 }
             }
