@@ -28,16 +28,16 @@ spec:
     tty: true
   - name: docker    
     image: docker
-    securityContext:
-      privileged: true
+    tty: true
     volumeMounts:
-      - name: dind-storage
-        mountPath: /var/lib/docker
+    - name: dockersock
+      mountPath: /var/run/docker.sock
+  volumes:
+  - name: dockersock
+    hostPath:
+      path: /var/run/docker.sock
   imagePullSecrets:
   -   name: cbacr
-  volumes:
-    - name: dind-storage
-      emptyDir: {}
 """
         }
     }
