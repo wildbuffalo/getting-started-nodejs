@@ -149,7 +149,7 @@ spec:
                     script {
 //                    def manifest = libraryResource "com/merrill/dealworks/dealworks-graphql-service/manifest.yml"
 //                    writeFile file: '/home/jenkins/src/manifest.yml', text: "$manifest"
-                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
+                        withDockerRegistry([credentialsId: 'azure_registry', url: 'mrllus2cbacr.azurecr.io']) {
                             def dockerfile = "./devops/Dockerfile"
                             docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
                             docker_pcf_src.inside() {
