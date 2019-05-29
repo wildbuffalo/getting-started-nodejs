@@ -21,16 +21,20 @@ spec:
     command:
     - cat
     tty: true
-  - name: busybox
-    image: busybox
+  - name: tools  
+    image: mrllus2cbacr.azurecr.io/dealworks/tools:latest   
     command:
     - cat
     tty: true
   - name: docker    
     image: docker
-    command:
-    - cat
-    tty: true
+    securityContext:
+      privileged: true
+    volumeMounts:
+      - name: dind-storage
+        mountPath: /var/lib/docker
+  imagePullSecrets:
+  -   name: cbacr
 """
         }
     }
@@ -71,7 +75,7 @@ spec:
         stage('Checkout') {
             //  agent any
             steps {
-                container('node') {
+                container('tools') {
                 checkout scm
                 script {
 //                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
