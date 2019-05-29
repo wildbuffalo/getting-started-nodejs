@@ -132,7 +132,7 @@ spec:
             steps {
                 container('docker') {
                     script {
-                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
+                        withDockerRegistry([credentialsId: 'azure_registry', url: 'mrllus2cbacr.azurecr.io']) {
                             docker_image.push('latest')
                             docker_image.push()
                         }
