@@ -35,6 +35,9 @@ spec:
         mountPath: /var/lib/docker
   imagePullSecrets:
   -   name: cbacr
+  volumes:
+    - name: dind-storage
+      emptyDir: {}
 """
         }
     }
