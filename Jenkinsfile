@@ -109,20 +109,23 @@ spec:
                 container('docker') {
                     script {
 //                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                        def dockerfile = './Dockerfile'
-                        docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
-                        docker_image.inside {
-                            sh 'ls'
+                        withDockerRegistry([credentialsId: 'azure_registry', url: 'https://mrllus2cbacr.azurecr.io']) {
 
-                        }
-                        docker_image.push('latest')
-                        docker_image.push()
-                        sh 'docker ps'
+                            def dockerfile = './Dockerfile'
+                            docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
+                            docker_image.inside {
+                                sh 'ls'
+
+                            }
+                            docker_image.push('latest')
+                            docker_image.push()
+                            sh 'docker ps'
 //                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
 //                            customImage.inside {
 //                                sh "ls"
 //                            }
 //                        }
+                        }
                     }
                 }
             }
