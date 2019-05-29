@@ -109,9 +109,9 @@ spec:
             steps {
                 container('docker') {
                     script {
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                         def dockerfile = './Dockerfile'
-                        docker_image = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
+                        docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
                         docker_image.inside {
                             sh 'ls'
                         }
@@ -119,22 +119,22 @@ spec:
 //                            customImage.inside {
 //                                sh "ls"
 //                            }
-                        }
+//                        }
                     }
                 }
             }
         }
         stage('Archive to Artifactory') {
             when {
-                expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
+                expression { BRANCH_NAME ==~ /(master|stage|develop|cloudbee)/ }
             }
             steps {
                 container('docker') {
                     script {
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                             docker_image.push('latest')
                             docker_image.push()
-                        }
+//                        }
                     }
                 }
             }
@@ -148,13 +148,13 @@ spec:
                     script {
 //                    def manifest = libraryResource "com/merrill/dealworks/dealworks-graphql-service/manifest.yml"
 //                    writeFile file: '/home/jenkins/src/manifest.yml', text: "$manifest"
-                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
+//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
                             def dockerfile = "./devops/Dockerfile"
                             docker_pcf_src = docker.build("docker_pcf_src", "--pull --rm -f ${dockerfile} .")
                             docker_pcf_src.inside() {
                                 sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
                                     cf zero-downtime-push $repo -f ./devops/manifest.yml"
-                            }
+//                            }
                         }
                     }
                 }
