@@ -17,13 +17,9 @@ spec:
   containers:
   - name: node
     image: node:alpine
-    command:
-    - cat
     tty: true
   - name: tools  
     image: mrllus2cbacr.azurecr.io/dealworks/tools:latest   
-    command:
-    - cat
     tty: true
   - name: docker    
     image: docker
