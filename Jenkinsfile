@@ -53,6 +53,7 @@ spec:
         JFROG = credentials("mrll-artifactory")
         CF_DOCKER_PASSWORD = "$JFROG_PSW"
         PCF = credentials("PCF")
+        A_Docker = credentials("azure_registry")
 
     }
 //
@@ -114,7 +115,7 @@ spec:
                             def dockerfile = './Dockerfile'
                             docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
                             docker_image.inside {
-                                sh 'ls'
+                                sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
 
                             }
                             docker_image.push('latest')
