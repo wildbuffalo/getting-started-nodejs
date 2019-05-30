@@ -82,7 +82,7 @@ spec:
                 script {
 //                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
 //                    repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
-                    sh 'printenv'
+//                    sh 'printenv'
 //                    withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
 //                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
 //                    }
@@ -108,8 +108,8 @@ spec:
             steps {
                 container('docker') {
                     script {
-//                        docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
-                        withDockerRegistry([credentialsId: 'azure_registry', url: 'https://mrllus2cbacr.azurecr.io']) {
+                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
+//                        withDockerRegistry([credentialsId: 'azure_registry', url: 'https://mrllus2cbacr.azurecr.io']) {
 
                             def dockerfile = './Dockerfile'
                             docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
