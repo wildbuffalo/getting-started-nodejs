@@ -122,7 +122,7 @@ spec:
                                 sh "npm install"
 
                             }
-                            sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
+//                            sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
                             docker_image.push('latest')
                             docker_image.push()
                             sh 'docker ps'
