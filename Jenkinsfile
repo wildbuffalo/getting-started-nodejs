@@ -104,11 +104,11 @@ spec:
         }
         stage('Build') {
             steps {
-                kubernetes.pod('buildpod').withImage('maven').inside {
-                    //for a single container you can avoid the .withNewContainer() thing.
-//                    git 'https://github.com/jenkinsci/kubernetes-pipeline.git'
-                    sh 'ls'
-                }
+//                kubernetes.pod('buildpod').withImage('maven').inside {
+//                    //for a single container you can avoid the .withNewContainer() thing.
+////                    git 'https://github.com/jenkinsci/kubernetes-pipeline.git'
+//                    sh 'ls'
+//                }
 //                container('tools') {
 //                    script {
 //                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
@@ -118,7 +118,7 @@ spec:
 ////                            docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm .")
 ////                            docker_image.inside {
 //////                                sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
-////                                sh "ls"
+                                sh "ls"
 ////
 ////                            }
 //                            docker_image.push('latest')
