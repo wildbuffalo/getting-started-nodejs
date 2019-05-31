@@ -7,6 +7,7 @@ pipeline {
     agent {
         kubernetes {
             label 'mypod'
+            defaultContainer 'jnlp'
             yaml """
 apiVersion: v1
 kind: Pod
@@ -103,29 +104,34 @@ spec:
         }
         stage('Build') {
             steps {
-                container('docker') {
-                    script {
-                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
-//                        withDockerRegistry([credentialsId: 'azure_registry', url: 'https://mrllus2cbacr.azurecr.io']) {
-
-                            def dockerfile = './Dockerfile'
-                            docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm -f ${dockerfile} .")
-                            docker_image.inside {
-//                                sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
-                                sh "ls"
-
-                            }
-                            docker_image.push('latest')
-                            docker_image.push()
-                            sh 'docker ps'
-//                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
-//                            customImage.inside {
-//                                sh "ls"
-//                            }
-//                        }
-                        }
-                    }
+                kubernetes.pod('buildpod').withImage('maven').inside {
+                    //for a single container you can avoid the .withNewContainer() thing.
+//                    git 'https://github.com/jenkinsci/kubernetes-pipeline.git'
+                    sh 'ls'
                 }
+//                container('tools') {
+//                    script {
+//                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
+////                        withDockerRegistry([credentialsId: 'azure_registry', url: 'https://mrllus2cbacr.azurecr.io']) {
+//
+////                            def dockerfile = './Dockerfile' -f ${dockerfile}
+////                            docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:latest", "--pull --rm .")
+////                            docker_image.inside {
+//////                                sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
+////                                sh "ls"
+////
+////                            }
+//                            docker_image.push('latest')
+//                            docker_image.push()
+//                            sh 'docker ps'
+////                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
+////                            customImage.inside {
+////                                sh "ls"
+////                            }
+////                        }
+//                        }
+//                    }
+//                }
             }
         }
         stage('Archive to Artifactory') {
@@ -136,8 +142,8 @@ spec:
                 container('docker') {
                     script {
 //                        withDockerRegistry([credentialsId: 'azure_registry', url: 'mrllus2cbacr.azurecr.io']) {
-//                            docker_image.push('latest')
-//                            docker_image.push()
+                            docker_image.push('latest')
+                            docker_image.push()
 //                        }
                         sh "ls"
                     }
