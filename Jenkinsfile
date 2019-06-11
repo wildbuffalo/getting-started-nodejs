@@ -6,35 +6,35 @@ import groovy.json.*
 pipeline {
     agent {
         kubernetes {
-            label 'mypod'
-            defaultContainer 'jnlp'
-            yaml """
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    some-label: some-label-value
-spec:
-  containers:
-  - name: node
-    image: node:alpine
-    tty: true
-  - name: tools  
-    image: mrllus2cbacr.azurecr.io/dealworks/tools:latest   
-    tty: true
-  - name: docker    
-    image: docker
-    tty: true
-    volumeMounts:
-    - name: dockersock
-      mountPath: /var/run/docker.sock
-  volumes:
-  - name: dockersock
-    hostPath:
-      path: /var/run/docker.sock
-  imagePullSecrets:
-  -   name: cbacr
-"""
+            label 'dealworks'
+//             defaultContainer 'jnlp'
+//             yaml """
+// apiVersion: v1
+// kind: Pod
+// metadata:
+//   labels:
+//     some-label: some-label-value
+// spec:
+//   containers:
+//   - name: node
+//     image: node:alpine
+//     tty: true
+//   - name: tools  
+//     image: mrllus2cbacr.azurecr.io/dealworks/tools:latest   
+//     tty: true
+//   - name: docker    
+//     image: docker
+//     tty: true
+//     volumeMounts:
+//     - name: dockersock
+//       mountPath: /var/run/docker.sock
+//   volumes:
+//   - name: dockersock
+//     hostPath:
+//       path: /var/run/docker.sock
+//   imagePullSecrets:
+//   -   name: cbacr
+// """
         }
     }
     options {
