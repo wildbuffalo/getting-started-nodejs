@@ -308,10 +308,10 @@ pipeline {
                     script {
                         
                         sh "ls"
+                        sh "cf -v"
                         sh "sonar-scanner -v"
                         sh "sonar-scanner \
                             -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com"
-                            sh "cf -v"
                     }
                 }
             }
