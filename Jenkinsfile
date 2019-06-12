@@ -247,9 +247,23 @@
 //     }
 // }
 
+// agent {
+//     node {
+//         label 'my-defined-label'
+//         customWorkspace '/some/other/path'
+//     }
+// }
+//  node('dealworks'){
+//             //container = the container label
 
- node('dealworks'){
-            //container = the container label
+//         }
+pipeline {
+    agent { 
+        node {
+            label 'dealworks'
+        }
+         } 
+    stages {
             stage('Build'){
                 container('node'){
                     sh "npm -v"
@@ -260,4 +274,5 @@
                     sh "docker -v"
                 }
             }
-        }
+    }
+}
