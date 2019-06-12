@@ -310,6 +310,7 @@ pipeline {
                         sh "ls"
                         sh "sonar-scanner \
                             -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com"
+                            sh "cf -v"
                     }
                 }
             }
