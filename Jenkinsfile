@@ -264,7 +264,7 @@ pipeline {
         }
     }
     stages {
-        stage('Build') {
+        stage('checkout') {
             steps {
                 container('tools') {
                     script {
@@ -292,11 +292,6 @@ pipeline {
                             docker_image.push('latest')
                             docker_image.push()
                             sh 'docker ps'
-//                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
-//                            customImage.inside {
-//                                sh "ls"
-//                            }
-//                        }
                         }
                     }
                 }
