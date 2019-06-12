@@ -257,7 +257,7 @@
             }
             stage('Build Docker Image'){
                 container('docker'){
-                    sh "docker -version"
+                    sh "docker -v"
                 }
             }
         }
