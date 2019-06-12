@@ -302,6 +302,27 @@ pipeline {
                 }
             }
         }
+        stage('Static Analysis') {
+            steps {
+                container('tools') {
+                    script {
+                        sh "sonar-scanner \
+                            -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com"
+                    }
+                }
+            }
+        }
+        stage('Deployment') {
+            steps {
+                container('tools') {
+                    script {
+                        sh "printenv"
+                        sh "cf login -a https://api.sys.us2.devb.foundry.mrll.com -u $PCF_USR -p $PCF_PSW -s devb -o us2-datasiteone &&\
+                            cf zero-downtime-push $repo -f ./devops/manifest.yml"
+                    }
+                }
+            }
+        }
     }
 }
 
