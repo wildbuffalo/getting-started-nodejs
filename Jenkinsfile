@@ -289,7 +289,7 @@ pipeline {
                             docker_image.inside {
 
                                 sh "ls"
-                                sh "npm install"
+                                // sh "npm install"
 
                             }
 //                            sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
