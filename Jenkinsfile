@@ -266,7 +266,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                container('git-container') {
+                container('git') {
                     script {
                         env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                         repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
