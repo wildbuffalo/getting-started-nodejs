@@ -265,13 +265,18 @@ pipeline {
          } 
     stages {
             stage('Build'){
-                container('node'){
-                    sh "npm -v"
+                steps{
+                    container('node'){
+                        sh "npm -v"
+                    }
                 }
+
             }
             stage('Build Docker Image'){
-                container('docker'){
-                    sh "docker -v"
+                steps{
+                    container('docker'){
+                        sh "docker -v"
+                    }
                 }
             }
     }
