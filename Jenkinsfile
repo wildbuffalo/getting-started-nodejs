@@ -263,6 +263,10 @@ pipeline {
             label 'dealworks'
         }
     }
+    options {
+        disableConcurrentBuilds()
+        skipDefaultCheckout true
+    }
     stages {
         stage('checkout') {
             steps {
