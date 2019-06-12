@@ -306,8 +306,9 @@ pipeline {
             steps {
                 container('tools') {
                     script {
-                        sh "sonar-scanner -v"
+                        
                         sh "ls"
+                        sh "sonar-scanner -v"
                         sh "sonar-scanner \
                             -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com"
                             sh "cf -v"
