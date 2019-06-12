@@ -259,7 +259,7 @@
 //         }
 pipeline {
     agent {
-        node {
+        kubernetes {
             label 'dealworks'
 //             defaultContainer 'jnlp'
             yaml """
@@ -291,6 +291,7 @@ spec:
       path: /var/run/docker.sock
   imagePullSecrets:
   -   name: cbacr"""
+        
         }
     }
     options {
