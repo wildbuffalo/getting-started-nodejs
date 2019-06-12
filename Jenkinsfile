@@ -8,7 +8,7 @@ pipeline {
         kubernetes {
             label 'dealworks'
 //             defaultContainer 'jnlp'
-            customWorkspace "/home/jenkins/$workspace"
+            customWorkspace "/home/jenkins/$WORKSPACE"
             yamlFile 'pod.yml'
 //             yaml """
 // apiVersion: v1
