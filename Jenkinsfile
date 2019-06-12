@@ -261,6 +261,36 @@ pipeline {
     agent {
         node {
             label 'dealworks'
+//             defaultContainer 'jnlp'
+            yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: some-label-value
+spec:
+  containers:
+  - name: node
+    image: node:alpine
+    tty: true
+  - name: tools  
+    image: mrllus2cbacr.azurecr.io/dealworks/tools
+    tty: true
+  - name: sonar  
+    image: rllus2cbacr.azurecr.io/dealworks/sonar-scanner:3.3.0-alpine
+    tty: true
+  - name: docker    
+    image: docker
+    tty: true
+    volumeMounts:
+    - name: dockersock
+      mountPath: /var/run/docker.sock
+  volumes:
+  - name: dockersock
+    hostPath:
+      path: /var/run/docker.sock
+  imagePullSecrets:
+  -   name: cbacr"""
         }
     }
     options {
