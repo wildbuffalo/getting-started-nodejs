@@ -258,53 +258,51 @@
 
 //         }
 pipeline {
-    agent { 
+    agent {
         node {
             label 'dealworks'
         }
-         } 
+    }
     stages {
-            stage('Build'){
-                steps{
-                    container('git'){
-                        script {
+        stage('Build') {
+            steps {
+                container('git') {
+                    script {
                         env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                         repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
-                        }
                     }
                 }
-                    }
-                }
-
             }
-            stage('Build Docker Image'){
-                steps{
-                    container('docker'){
-                    script {
-                        docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
+        }
+    }
+
+}
+stage('Build Docker Image') {
+    steps {
+        container('docker') {
+            script {
+                docker.withRegistry('https://mrllus2cbacr.azurecr.io', 'azure_registry') {
 //                        withDockerRegistry([credentialsId: 'azure_registry', url: 'https://mrllus2cbacr.azurecr.io']) {
-                            def dockerfile = './Dockerfile'
-                            docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:$gitCommit", "--pull --rm -f ${dockerfile} .")
-                            docker_image.inside {
+                    def dockerfile = './Dockerfile'
+                    docker_image = docker.build("mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs:$gitCommit", "--pull --rm -f ${dockerfile} .")
+                    docker_image.inside {
 
-                                sh "ls"
-                                sh "npm install"
+                        sh "ls"
+                        sh "npm install"
 
-                            }
+                    }
 //                            sh "docker login https://mrllus2cbacr.azurecr.io --username $A_Docker_USR --password $A_Docker_PSW"
-                            docker_image.push('latest')
-                            docker_image.push()
-                            sh 'docker ps'
+                    docker_image.push('latest')
+                    docker_image.push()
+                    sh 'docker ps'
 //                            def customImage = docker.build("merrillcorp-dealworks.jfrog.io/getting-started-nodejs:latest", "--pull")
 //                            customImage.inside {
 //                                sh "ls"
 //                            }
 //                        }
-                        }
-                    }
-                }
-                    }
                 }
             }
+        }
     }
+
 }
