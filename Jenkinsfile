@@ -305,10 +305,10 @@ pipeline {
         stage('Static Analysis') {
             steps {
                 container('tools') {
-                    script {
+                    // script {
                         sh "sonar-scanner \
                             -Dsonar.host.url=https://sonarqube.devtools.merrillcorp.com"
-                    }
+                    // }
                 }
             }
         }
