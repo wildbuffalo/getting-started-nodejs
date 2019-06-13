@@ -271,10 +271,10 @@ metadata:
 spec:
   containers:
   - name: tools  
-    image: mrllus2cbacr.azurecr.io/dealworks/tools
+    image: alpine/git
     tty: true
   - name: sonar  
-    image: mrllus2cbacr.azurecr.io/dealworks/sonar-scanner:3.3.0-alpine
+    image: frekele/gradle
     tty: true
     alwaysPullImage: true
   - name: docker    
@@ -297,17 +297,17 @@ spec:
         skipDefaultCheckout true
     }
     stages {
-//         stage('checkout') {
-//             steps {
-//                 container('tools') {
-//                     checkout scm
-//                     script {
-//                         env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-//                         repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
-//                     }
-//                 }
-//             }
-//         }
+        stage('checkout') {
+            steps {
+                container('git') {
+                    checkout scm
+                    script {
+                        env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+                        repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
+                    }
+                }
+            }
+        }
 //         stage('Build Docker Image') {
 //             steps {
 //                 container('docker') {
