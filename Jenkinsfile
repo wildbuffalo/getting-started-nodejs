@@ -271,7 +271,8 @@ metadata:
 spec:
   containers:
     - name: sonar  
-      image: newtmitch/sonar-scanner"""
+      image: newtmitch/sonar-scanner
+      alwaysPullImage: true"""
 //   - name: tools  
 //     image: mrllus2cbacr.azurecr.io/dealworks/tools
 //     tty: true
