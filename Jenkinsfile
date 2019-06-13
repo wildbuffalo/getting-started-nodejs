@@ -25,7 +25,6 @@ spec:
   - name: sonar  
     image: amd64/gradle
     tty: true
-    alwaysPullImage: true
   - name: docker    
     image: docker
     tty: true
