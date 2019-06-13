@@ -270,9 +270,6 @@ metadata:
     some-label: some-label-value
 spec:
   containers:
-  - name: node
-    image: node:alpine
-    tty: true
   - name: tools  
     image: mrllus2cbacr.azurecr.io/dealworks/tools
     tty: true
