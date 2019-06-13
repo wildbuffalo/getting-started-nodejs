@@ -23,7 +23,7 @@ imagePullSecrets: [ 'cbacr' ])
             // git url: 'https://github.com/hashicorp/terraform.git'
             container('git') {
                 stage('Build a Go project') {
-                    sh "git -v"
+                    sh "git --version"
                 }
             }
         }
