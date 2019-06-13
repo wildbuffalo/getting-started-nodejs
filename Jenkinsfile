@@ -274,7 +274,7 @@ spec:
     image: mrllus2cbacr.azurecr.io/dealworks/tools
     tty: true
   - name: sonar  
-    image: newtmitch/sonar-scanner
+    image: nginx
     tty: true
   - name: docker    
     image: docker
