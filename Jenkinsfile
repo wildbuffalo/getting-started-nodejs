@@ -271,10 +271,13 @@ metadata:
 spec:
   containers:
   - name: tools  
+    image: alpine/make
+    tty: true
+  - name: ab  
     image: alpine/git
     tty: true
   - name: sonar  
-    image: frekele/gradle
+    image: amd64/gradle
     tty: true
     alwaysPullImage: true
   - name: docker    
