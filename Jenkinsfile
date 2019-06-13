@@ -261,7 +261,7 @@ pipeline {
     agent {
         kubernetes {
             label 'abc'
-//             defaultContainer 'jnlp'
+            defaultContainer 'jnlp'
             yaml """
 apiVersion: v1
 kind: Pod
@@ -270,27 +270,24 @@ metadata:
     some-label: some-label-value
 spec:
   containers:
-    - name: sonar  
-      image: newtmitch/sonar-scanner
-      alwaysPullImage: true"""
-//   - name: tools  
-//     image: mrllus2cbacr.azurecr.io/dealworks/tools
-//     tty: true
-//   - name: sonar  
-//     image: newtmitch/sonar-scanner
-//     tty: true
-//   - name: docker    
-//     image: docker
-//     tty: true
-//     volumeMounts:
-//     - name: dockersock
-//       mountPath: /var/run/docker.sock
-//   volumes:
-//   - name: dockersock
-//     hostPath:
-//       path: /var/run/docker.sock
-//   imagePullSecrets:
-//   -   name: cbacr"""
+  - name: tools  
+    image: mrllus2cbacr.azurecr.io/dealworks/tools
+    tty: true
+  - name: sonar  
+    image: newtmitch/sonar-scanner
+    tty: true
+  - name: docker    
+    image: docker
+    tty: true
+    volumeMounts:
+    - name: dockersock
+      mountPath: /var/run/docker.sock
+  volumes:
+  - name: dockersock
+    hostPath:
+      path: /var/run/docker.sock
+  imagePullSecrets:
+  -   name: cbacr"""
         
         }
     }
