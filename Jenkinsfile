@@ -274,7 +274,7 @@ spec:
     image: mrllus2cbacr.azurecr.io/dealworks/tools
     tty: true
   - name: sonar  
-    image: mrllus2cbacr.azurecr.io/dealworks/sonar-scanner
+    image: mrllus2cbacr.azurecr.io/dealworks/sonar-scanner:3.3.0-alpine
     tty: true
     alwaysPullImage: true
   - name: docker    
