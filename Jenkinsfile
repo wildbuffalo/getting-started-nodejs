@@ -1,15 +1,21 @@
-def label = "mypod-${UUID.randomUUID().toString()}"
-podTemplate(label: label, containers: [
-    containerTemplate(name: 'gradle', image: 'amd64/gradle:latest', ttyEnabled: true, command: 'cat'),
-    containerTemplate(name: 'git', image: 'alpine/git:latest', ttyEnabled: true, command: 'cat')
-  ]) {
-
+// def label = "mypod-${UUID.randomUUID().toString()}"
+podTemplate(label: dealworks, containers: [
+    containerTemplate(name: 'sonar', image: 'newtmitch/sonar-scanner', ttyEnabled: true, command: 'cat'),
+    containerTemplate(name: 'git', image: 'mrllus2cbacr.azurecr.io/dealworks/tools', ttyEnabled: true, command: 'cat'),
+    containerTemplate(name: 'docker', image: 'docker', ttyEnabled: true, command: 'cat')
+  ],
+    volumes: [
+        hostPathVolume(mountPath: '/var/run/docker.sock',
+        hostPath: '/var/run/docker.sock',
+    ],
+  imagePullSecrets: [ 'cbacr' ],) 
+  {
     node(label) {
         stage('Get a Maven project') {
             git 'https://github.com/jenkinsci/kubernetes-plugin.git'
-            container('gradle') {
+            container('sonar') {
                 stage('Build a Maven project') {
-                    sh 'gradle -v'
+                    sh 'sonar-scaner -v'
                 }
             }
         }
@@ -19,6 +25,14 @@ podTemplate(label: label, containers: [
             container('git') {
                 stage('Build a Go project') {
                     sh "git -v"
+                }
+            }
+        }
+        stage('docker') {
+            // git url: 'https://github.com/hashicorp/terraform.git'
+            container('docker') {
+                stage('Build a Go project') {
+                    sh "docker -v"
                 }
             }
         }
