@@ -9,7 +9,7 @@ volumes: [
 ],
 imagePullSecrets: [ 'cbacr' ]) 
   {
-    node(label) {
+    node('abc') {
         stage('Get a Maven project') {
             git 'https://github.com/jenkinsci/kubernetes-plugin.git'
             container('sonar') {
