@@ -14,7 +14,7 @@ imagePullSecrets: [ 'cbacr' ])
             git 'https://github.com/jenkinsci/kubernetes-plugin.git'
             container('sonar') {
                 stage('Build a Maven project') {
-                    sh 'sonar-scaner -v'
+                    sh 'sonar-scanner -v'
                 }
             }
         }
