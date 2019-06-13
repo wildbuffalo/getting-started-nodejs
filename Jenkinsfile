@@ -260,7 +260,7 @@
 pipeline {
     agent {
         kubernetes {
-            label 'dealworks'
+            label 'abc'
 //             defaultContainer 'jnlp'
             yaml """
 apiVersion: v1
