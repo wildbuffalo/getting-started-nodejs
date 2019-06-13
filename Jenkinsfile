@@ -6,9 +6,10 @@ podTemplate(label: dealworks, containers: [
   ],
     volumes: [
         hostPathVolume(mountPath: '/var/run/docker.sock',
-        hostPath: '/var/run/docker.sock',
+        hostPath: '/var/run/docker.sock'
     ],
-  imagePullSecrets: [ 'cbacr' ],) 
+  imagePullSecrets: [ 'cbacr' ]
+  ) 
   {
     node(label) {
         stage('Get a Maven project') {
