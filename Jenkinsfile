@@ -5,7 +5,7 @@ import groovy.json.*
 
 pipeline {
     agent {
-        label 'test'
+        label 'test2'
 //         kubernetes {
 //             label 'mypod'
 //             defaultContainer 'jnlp'
