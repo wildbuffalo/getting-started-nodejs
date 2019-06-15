@@ -5,7 +5,7 @@ import groovy.json.*
 
 pipeline {
     agent {
-        node {label 'test2'}
+        node {label 'dealworks'}
 //         kubernetes {
 //             label 'mypod'
 //             defaultContainer 'jnlp'
@@ -81,7 +81,7 @@ pipeline {
         stage('Checkout') {
             //  agent any
             steps {
-                container('tools') {
+                container('sonar') {
                     // checkout scm
                     sh 'sonar-scanner '
                     script {
