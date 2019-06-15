@@ -8,47 +8,39 @@ pipeline {
         // node {label 'test'}
         kubernetes {
             label 'mypod',
-            containerTemplate(name: 'sonar', image: 'newtmitch/sonar-scanner', ttyEnabled: true, alwaysPullImage: true ),
-            containerTemplate(name: 'git', image: 'mrllus2cbacr.azurecr.io/dealworks/tools', ttyEnabled: true, command: 'cat'),
-            containerTemplate(name: 'docker', image: 'docker', ttyEnabled: true, command: 'cat'),
-            volumes: [
-                    hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
-            ],
-            imagePullSecrets: [ 'cbacr' ]
-
-//             defaultContainer 'jnlp'
-//             yaml """
-// apiVersion: v1
-// kind: Pod
-// metadata:
-//   labels:
-//     some-label: some-label-value
-// spec:
-//   containers:
-//   - name: tools  
-//     image: alpine/make
-//     tty: true
-//   - name: ab  
-//     image: alpine/git
-//     tty: true
-//   - name: sonar  
-//     image: amd64/gradle
-//     tty: true
-//   - name: docker    
-//     image: docker
-//     tty: true
-//     volumeMounts:
-//     - name: dockersock
-//       mountPath: /var/run/docker.sock
-//   volumes:
-//   - name: dockersock
-//     hostPath:
-//       path: /var/run/docker.sock
-//   imagePullSecrets:
-//   -   name: cbacr
-//   """
-//         }
-    }}
+            defaultContainer 'jnlp'
+            yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: some-label-value
+spec:
+  containers:
+  - name: tools  
+    image: alpine/make
+    tty: true
+  - name: ab  
+    image: alpine/git
+    tty: true
+  - name: sonar  
+    image: amd64/gradle
+    tty: true
+  - name: docker    
+    image: docker
+    tty: true
+    volumeMounts:
+    - name: dockersock
+      mountPath: /var/run/docker.sock
+  volumes:
+  - name: dockersock
+    hostPath:
+      path: /var/run/docker.sock
+  imagePullSecrets:
+  -   name: cbacr
+  """
+        }
+    }
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
@@ -86,12 +78,12 @@ pipeline {
         stage('Checkout') {
             //  agent any
             steps {
-                container('sonar') {
+                container('ab') {
                     checkout scm
                     script {
 //                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
 //                    repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
-                        sh 'sonar-scanner -v'
+                        sh 'git --version'
 //                    withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
 //                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
 //                    }
