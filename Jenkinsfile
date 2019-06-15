@@ -7,8 +7,8 @@ pipeline {
     agent {
         // node {label 'test'}
         kubernetes {
-            label 'mypod',
-            defaultContainer 'jnlp'
+            label 'mypod'
+            // defaultContainer 'jnlp'
             yaml """
 apiVersion: v1
 kind: Pod
