@@ -29,9 +29,9 @@ imagePullSecrets: [ 'cbacr' ])
         }
         stage('docker') {
             // git url: 'https://github.com/hashicorp/terraform.git'
-            container('docker') {
+            container('git') {
                 stage('Build a Go project') {
-                    sh "docker -v"
+                    sh "sonar-scanner -v"
                 }
             }
         }
