@@ -15,7 +15,7 @@ volumes: [
         hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
 ],
 imagePullSecrets: [ 'cbacr' ]
-}
+
 //             defaultContainer 'jnlp'
 //             yaml """
 // apiVersion: v1
