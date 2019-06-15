@@ -1,6 +1,6 @@
 // def label = "mypod-${UUID.randomUUID().toString()}"
 podTemplate(label: 'abc', containers: [
-    containerTemplate(name: 'sonar', image: 'mrllus2cbacr.azurecr.io/dealworks/sonar-scanner', ttyEnabled: true, command: 'cat', alwaysPullImage: true),
+    containerTemplate(name: 'sonar', image: 'mrllus2cbacr.azurecr.io/dealworks/sonar-scanner:3.3.0-alpine', ttyEnabled: true, command: 'cat', alwaysPullImage: true),
     containerTemplate(name: 'git', image: 'mrllus2cbacr.azurecr.io/dealworks/tools', ttyEnabled: true, command: 'cat',alwaysPullImage: true),
     containerTemplate(name: 'docker', image: 'docker', ttyEnabled: true, command: 'cat', alwaysPullImage: true)
 ],
