@@ -5,44 +5,44 @@ import groovy.json.*
 
 pipeline {
     agent {
-        // node {label 'test'}
-        kubernetes {
-            label 'mypod'
-            defaultContainer 'jnlp'
-            yaml """
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    some-label: some-label-value
-spec:
-  containers:
-  - name: tools  
-    image: mrllus2cbacr.azurecr.io/dealworks/sonar-scanner  
-    tty: true
-    command:
-    - cat
-  - name: node
-    image: node:10-alpine
-    tty: true
-    command:
-    - cat
-  - name: docker    
-    image: docker
-    tty: true
-    command:
-    - cat
-    volumeMounts:
-    - name: dockersock
-      mountPath: /var/run/docker.sock
-  volumes:
-  - name: dockersock
-    hostPath:
-      path: /var/run/docker.sock
-  imagePullSecrets:
-  -   name: cbacr
-  """
-        }
+        node {label 'test2'}
+//         kubernetes {
+//             label 'mypod'
+//             defaultContainer 'jnlp'
+//             yaml """
+// apiVersion: v1
+// kind: Pod
+// metadata:
+//   labels:
+//     some-label: some-label-value
+// spec:
+//   containers:
+//   - name: tools  
+//     image: mrllus2cbacr.azurecr.io/dealworks/sonar-scanner  
+//     tty: true
+//     command:
+//     - cat
+//   - name: node
+//     image: node:10-alpine
+//     tty: true
+//     command:
+//     - cat
+//   - name: docker    
+//     image: docker
+//     tty: true
+//     command:
+//     - cat
+//     volumeMounts:
+//     - name: dockersock
+//       mountPath: /var/run/docker.sock
+//   volumes:
+//   - name: dockersock
+//     hostPath:
+//       path: /var/run/docker.sock
+//   imagePullSecrets:
+//   -   name: cbacr
+//   """
+//         }
     }
     options {
         skipDefaultCheckout()
