@@ -8,14 +8,13 @@ pipeline {
         // node {label 'test'}
         kubernetes {
             label 'mypod'
-                containerTemplate(name: 'sonar', image: 'newtmitch/sonar-scanner', ttyEnabled: true, alwaysPullImage: true,)
-//     containerTemplate(name: 'git', image: 'mrllus2cbacr.azurecr.io/dealworks/tools', ttyEnabled: true, command: 'cat'),
-//     containerTemplate(name: 'docker', image: 'docker', ttyEnabled: true, command: 'cat')
-// ],
-// volumes: [
-//         hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
-// ],
-// imagePullSecrets: [ 'cbacr' ]
+            containerTemplate(name: 'sonar', image: 'newtmitch/sonar-scanner', ttyEnabled: true, alwaysPullImage: true,),
+            containerTemplate(name: 'git', image: 'mrllus2cbacr.azurecr.io/dealworks/tools', ttyEnabled: true, command: 'cat'),
+            containerTemplate(name: 'docker', image: 'docker', ttyEnabled: true, command: 'cat'),
+volumes: [
+        hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
+],
+imagePullSecrets: [ 'cbacr' ]
 }
 //             defaultContainer 'jnlp'
 //             yaml """
