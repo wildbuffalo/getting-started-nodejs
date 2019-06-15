@@ -48,7 +48,7 @@ pipeline {
 //   -   name: cbacr
 //   """
 //         }
-    }
+    }}
     options {
         skipDefaultCheckout()
         disableConcurrentBuilds()
