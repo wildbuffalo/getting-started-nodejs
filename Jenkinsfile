@@ -20,12 +20,18 @@ spec:
   - name: tools  
     image: mrllus2cbacr.azurecr.io/dealworks/tools:latest   
     tty: true
+    command:
+    - cat
   - name: node
     image: node:10-alpine
     tty: true
+    command:
+    - cat
   - name: docker    
     image: docker
     tty: true
+    command:
+    - cat
     volumeMounts:
     - name: dockersock
       mountPath: /var/run/docker.sock
