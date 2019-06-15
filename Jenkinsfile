@@ -18,7 +18,7 @@ metadata:
 spec:
   containers:
   - name: tools  
-    image: mrllus2cbacr.azurecr.io/dealworks/tools:latest   
+    image: mrllus2cbacr.azurecr.io/dealworks/sonar-scanner  
     tty: true
     command:
     - cat
