@@ -18,13 +18,10 @@ metadata:
 spec:
   containers:
   - name: tools  
-    image: alpine/make
+    image: mrllus2cbacr.azurecr.io/dealworks/tools:latest   
     tty: true
-  - name: ab  
-    image: alpine/git
-    tty: true
-  - name: sonar  
-    image: amd64/gradle
+  - name: node
+    image: node:10-alpine
     tty: true
   - name: docker    
     image: docker
