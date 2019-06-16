@@ -81,7 +81,7 @@ pipeline {
         stage('Checkout') {
             //  agent any
             steps {
-                container('sonar') {
+                container('tools') {
                     // checkout scm
                     sh 'sonar-scanner '
                     script {
