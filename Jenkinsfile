@@ -111,6 +111,7 @@ pipeline {
         }
         stage('gradle') {
             steps {
+            container('gradle') {
                 script {
                     sh "gradle -v"
 //                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
@@ -125,6 +126,7 @@ pipeline {
 //                         }
 //                     }
                 }
+            }
             }
         }
 //         stage('Archive to Artifactory') {
