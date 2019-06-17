@@ -83,11 +83,11 @@ pipeline {
             steps {
                 container('tools') {
                     // checkout scm
-                    sh 'sonar-scanner '
+                    sh 'sonar-scanner -v'
                     script {
 //                    env.gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
 //                    repo = sh(returnStdout: true, script: "basename -s .git `git config --get remote.origin.url`").trim()
-                        sh 'sonar-scanner '
+                        sh 'sonar-scanner -v'
 //                    withEnv(['API_DOMAIN_G=apps.eu2.prodg.foundry.mrll.com', 'API_DOMAIN_B=apps.eu2.prodb.foundry.mrll.com','APOLLO_ENGINE_KEY=service:ds1marketing-prod-eu:vcQfDMrixBnFuowjbxSK-g']) {
 //                        echo "$API_DOMAIN_G,$API_DOMAIN_B,$APOLLO_ENGINE_KEY"
 //                    }
