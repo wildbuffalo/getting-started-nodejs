@@ -5,7 +5,7 @@ import groovy.json.*
 
 pipeline {
     agent {
-        node {label 'dealworks'}
+        node {label 'gradlePT'}
 //         kubernetes {
 //             label 'mypod'
 //             defaultContainer 'jnlp'
@@ -109,9 +109,10 @@ pipeline {
                 }
             }
         }
-//         stage('Build') {
-//             steps {
-//                 script {
+        stage('gradle') {
+            steps {
+                script {
+                    sh "gradle -v"
 //                     docker.withRegistry('https://merrillcorp-dealworks.jfrog.io', 'mrll-artifactory') {
 // //                        def dockerfile = './Dockerfile'
 // //                        docker_image = docker.build("$repo", "--pull --rm -f ${dockerfile} .")
@@ -123,9 +124,9 @@ pipeline {
 //                             sh "ls"
 //                         }
 //                     }
-//                 }
-//             }
-//         }
+                }
+            }
+        }
 //         stage('Archive to Artifactory') {
 //             when {
 //                 expression { BRANCH_NAME ==~ /(master|stage|develop)/ }
