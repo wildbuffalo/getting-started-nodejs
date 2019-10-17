@@ -21,7 +21,7 @@ var http = require("http");
 // };
 // process.env.abc = 123;
 // process.env.VCAP_SERVICES
-var vcap = JSON.parse(process.env.VCAP_SERVICES);
+// var vcap = JSON.parse(process.env.VCAP_SERVICES);
 
 var app = http.createServer(function (req, res) {
     // res.setHeader('Content-Type', 'application/json');
@@ -31,7 +31,7 @@ var app = http.createServer(function (req, res) {
     console.log(req.method);
     console.log(req.headers);
 
-    console.log(vcap["user-provided"][0].credentials.abc);
+    // console.log(vcap["user-provided"][0].credentials.abc);
     res.write("dddd");
     res.end();
 });
