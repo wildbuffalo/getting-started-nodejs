@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs/cloudbee:latest
 # Create app directory
 WORKDIR /usr/src/app
 
