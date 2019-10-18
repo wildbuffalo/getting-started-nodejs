@@ -9,7 +9,7 @@ applications:
     username: mrllus2cbacr
   memory: 1GB
   instances: 1
-  timeout: 180
+  timeout: 2
 
   # host: getting-started-nodejs
 #  stack: cflinuxfs3
