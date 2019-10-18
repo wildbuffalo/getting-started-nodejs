@@ -1,17 +1,17 @@
 ---
 applications:
 - name: getting-started-nodejs
-  routes:
-  - route: getting-started-nodejs.apps.us2.devg.foundry.mrll.com
+  # routes:
+  # - route: getting-started-nodejs.apps.us2.devg.foundry.mrll.com
 #      buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
   docker:
     image: mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs/cloudbee:latest  
     username: mrllus2cbacr
   memory: 1GB
   instances: 1
-  timeout: 2
+  timeout: 5
 
-  # host: getting-started-nodejs
+  host: getting-started-nodejs
 #  stack: cflinuxfs3
   # services:
   #   - test-nodejs

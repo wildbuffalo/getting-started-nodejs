@@ -19,5 +19,5 @@ WORKDIR /usr/src/app
 # Bundle app source
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3000 61001 61002
 CMD [ "npm", "start" ]  
