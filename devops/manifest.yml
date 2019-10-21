@@ -4,7 +4,7 @@ applications:
   # routes:
   # - route: getting-started-nodejs.apps.us2.devg.foundry.mrll.com
   docker:
-    image: mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs/cloudbee:latest  
+    image: mrllus2cbacr.azurecr.io/dealworks/getting-started-nodejs/cloudbee:latest
     username: mrllus2cbacr
   memory: 1GB
   instances: 1
