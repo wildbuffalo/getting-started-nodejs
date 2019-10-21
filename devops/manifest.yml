@@ -8,8 +8,10 @@ applications:
     username: mrllus2cbacr
   memory: 1GB
   instances: 1
-  timeout: 180
+  timeout: 60
   # host: getting-started-nodejs
 #  stack: cflinuxfs3
   # services:
   #   - test-nodejs
+  health-check-type: process
+  
